@@ -1,1 +1,0 @@
-# 10ta.github.io

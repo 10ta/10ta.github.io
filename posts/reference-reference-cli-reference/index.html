@@ -1,0 +1,411 @@
+<!DOCTYPE html><html lang="en"> <head><!-- Global Metadata --><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="generator" content="Astro v4.16.7"><!-- Canonical URL --><link rel="canonical" href="https://10ta.github.io/posts/reference-reference-cli-reference/"><!-- Sitemap --><link rel="sitemap" href="/sitemap-index.xml"><!-- Primary Meta Tags --><title>CLI Commands</title><meta name="title" content="CLI Commands"><meta name="description" content=""><!-- Open Graph / Facebook --><meta property="og:type" content="website"><meta property="og:url" content="https://10ta.github.io/posts/reference-reference-cli-reference/"><meta property="og:title" content="CLI Commands"><meta property="og:description" content=""><meta property="og:image" content="https://10ta.github.io/blog-placeholder-1.avif"><!-- Twitter --><meta property="twitter:card" content="summary_large_image"><meta property="twitter:url" content="https://10ta.github.io/posts/reference-reference-cli-reference/"><meta property="twitter:title" content="CLI Commands"><meta property="twitter:description" content=""><meta property="twitter:image" content="https://10ta.github.io/blog-placeholder-1.avif"><link rel="stylesheet" href="/_astro/_page_.Bdwf1GY7.css"><script type="module" src="/_astro/hoisted.CPfS8Ggc.js"></script>
+<script type="module" src="/_astro/page.DTIbhfSr.js"></script>
+<script>!(function(w,p,f,c){if(!window.crossOriginIsolated && !navigator.serviceWorker) return;c=w[p]=Object.assign(w[p]||{},{"lib":"/~partytown/","debug":false});c[f]=(c[f]||[]).concat(["dataLayer.push"])})(window,'partytown','forward');/* Partytown 0.10.2 - MIT builder.io */
+const t={preserveBehavior:!1},e=e=>{if("string"==typeof e)return[e,t];const[n,r=t]=e;return[n,{...t,...r}]},n=Object.freeze((t=>{const e=new Set;let n=[];do{Object.getOwnPropertyNames(n).forEach((t=>{"function"==typeof n[t]&&e.add(t)}))}while((n=Object.getPrototypeOf(n))!==Object.prototype);return Array.from(e)})());!function(t,r,o,i,a,s,c,d,l,p,u=t,f){function h(){f||(f=1,"/"==(c=(s.lib||"/~partytown/")+(s.debug?"debug/":""))[0]&&(l=r.querySelectorAll('script[type="text/partytown"]'),i!=t?i.dispatchEvent(new CustomEvent("pt1",{detail:t})):(d=setTimeout(v,1e4),r.addEventListener("pt0",w),a?y(1):o.serviceWorker?o.serviceWorker.register(c+(s.swPath||"partytown-sw.js"),{scope:c}).then((function(t){t.active?y():t.installing&&t.installing.addEventListener("statechange",(function(t){"activated"==t.target.state&&y()}))}),console.error):v())))}function y(e){p=r.createElement(e?"script":"iframe"),t._pttab=Date.now(),e||(p.style.display="block",p.style.width="0",p.style.height="0",p.style.border="0",p.style.visibility="hidden",p.setAttribute("aria-hidden",!0)),p.src=c+"partytown-"+(e?"atomics.js?v=0.10.2":"sandbox-sw.html?"+t._pttab),r.querySelector(s.sandboxParent||"body").appendChild(p)}function v(n,o){for(w(),i==t&&(s.forward||[]).map((function(n){const[r]=e(n);delete t[r.split(".")[0]]})),n=0;n<l.length;n++)(o=r.createElement("script")).innerHTML=l[n].innerHTML,o.nonce=s.nonce,r.head.appendChild(o);p&&p.parentNode.removeChild(p)}function w(){clearTimeout(d)}s=t.partytown||{},i==t&&(s.forward||[]).map((function(r){const[o,{preserveBehavior:i}]=e(r);u=t,o.split(".").map((function(e,r,o){var a;u=u[o[r]]=r+1<o.length?u[o[r]]||(a=o[r+1],n.includes(a)?[]:{}):(()=>{let e=null;if(i){const{methodOrProperty:n,thisObject:r}=((t,e)=>{let n=t;for(let t=0;t<e.length-1;t+=1)n=n[e[t]];return{thisObject:n,methodOrProperty:e.length>0?n[e[e.length-1]]:void 0}})(t,o);"function"==typeof n&&(e=(...t)=>n.apply(r,...t))}return function(){let n;return e&&(n=e(arguments)),(t._ptf=t._ptf||[]).push(o,arguments),n}})()}))})),"complete"==r.readyState?h():(t.addEventListener("DOMContentLoaded",h),t.addEventListener("load",h))}(window,document,navigator,top,window.crossOriginIsolated);;(e=>{e.addEventListener("astro:before-swap",e=>{let r=document.body.querySelector("iframe[src*='/~partytown/']");if(r)e.newDocument.body.append(r)})})(document);</script></head> <body class="flex flex-col min-h-screen mx-auto max-w-6xl px-4 dark:prose-invert sm:px-6 lg:px-8"> <header class="z-50 flex w-full flex-wrap py-7 md:flex-nowrap md:justify-start"> <nav class="relative mx-auto flex w-full max-w-7xl basis-full flex-wrap items-center px-4" aria-label="Global"> <div class=""> <a class="flex-none text-xl font-semibold" href="/" aria-label="Astroverse"> AstroMelody </a> </div> <div class="ms-auto flex items-center gap-x-2 py-1"> <a class="inline-flex items-center gap-x-2 rounded-xl border border-transparent px-3 py-2 text-sm font-medium disabled:pointer-events-none disabled:opacity-50" href="/search/" href="/search/"> <i class="icon-base i-tabler-search"></i> </a> <div class="dropdown dropdown-end"> <div tabindex="0" role="button" class="flex size-[38px] items-center justify-center rounded-xl text-sm font-semibold"> <i class="icon-base i-tabler-category-2"></i> </div> <ul tabindex="0" class="menu dropdown-content z-[1] w-52 rounded-box bg-base-100 p-2 shadow"> <li> <a href="/category/One/1/" class="px-4 py-3 font-medium"> One </a> </li><li> <a href="/category/Two/1/" class="px-4 py-3 font-medium"> Two </a> </li><li> <a href="/category/Three/1/" class="px-4 py-3 font-medium"> Three </a> </li> </ul> </div> <label class="swap swap-rotate rounded-xl px-3 py-2 text-sm"> <!-- this hidden checkbox controls the state --> <input type="checkbox" class="theme-controller" data-unchecked-value="corporate" value="halloween"> <!-- sun icon --> <i class="icon-base swap-off i-tabler-sun-filled"></i> <!-- moon icon --> <i class="icon-base swap-on i-tabler-moon-filled"></i> </label> </div> </nav> </header> <!-- Save theme to localStorage --> <script>
+  const lightTheme =  document.querySelector('.theme-controller')?.getAttribute('data-unchecked-value');
+  // ☝️ This script prevent the FART effect.
+  if (localStorage.getItem("theme") === null) {
+    document.documentElement.setAttribute("data-theme", lightTheme);
+  } else
+    document.documentElement.setAttribute(
+      "data-theme",
+      localStorage.getItem("theme"),
+    );
+  // "theme" LocalStorage value is set by the package to remember user preference.
+  // The value is checked and applyed before rendering anything.
+</script>  <!-- 内容区域，确保其动态调整高度 --> <main class="flex-grow">  <main> <article class="prose mx-auto dark:prose-invert"> <div class="prose-h1 text-center"> <h1>CLI Commands</h1> </div> <div> <picture> <source srcset="/_astro/photo-1491900177661-4e1cd2d7cce2_Z1EpNFt.avif 392w, /_astro/photo-1491900177661-4e1cd2d7cce2_2ee12J.avif 700w, /_astro/photo-1491900177661-4e1cd2d7cce2_Zte0X6.avif 980w, /_astro/photo-1491900177661-4e1cd2d7cce2_1tY5mg.avif 1960w" type="image/avif" sizes="(max-width: 360px) 392px, 
+           (max-width: 720px) 700px, 
+           (max-width: 1600px) 980px, 
+           1960px"> <img src="/_astro/photo-1491900177661-4e1cd2d7cce2_1tY5mg.avif" srcset="/_astro/photo-1491900177661-4e1cd2d7cce2_Z1EpNFt.avif 392w, /_astro/photo-1491900177661-4e1cd2d7cce2_2ee12J.avif 700w, /_astro/photo-1491900177661-4e1cd2d7cce2_Zte0X6.avif 980w, /_astro/photo-1491900177661-4e1cd2d7cce2_1tY5mg.avif 1960w" alt="blue boats parked on river between multicolored buildings at sunset" sizes="(max-width: 360px) 392px, 
+           (max-width: 720px) 700px, 
+           (max-width: 1600px) 980px, 
+           1960px" class="mx-auto w-full max-w-full object-cover" width="1960" height="1102" loading="lazy" decoding="async"> </picture> </div> <div> <p>You can use the Command-Line Interface (CLI) provided by Astro to develop, build, and preview your project from a terminal window.</p>
+<h3 id="astro-commands"><code>astro</code> commands</h3>
+<p><a href="#astro-commands">Section titled astro commands</a>
+Use the CLI by running one of the <strong>commands</strong> documented on this page with your preferred package manager, optionally followed by any <strong>flags</strong>. Flags customize the behavior of a command.</p>
+<p>One of the commands you’ll use most often is <code>astro dev</code>. This command starts the development server and gives you a live, updating preview of your site in a browser as you work:</p>
+<ul>
+<li><a href="#tab-panel-605">npm</a></li>
+<li><a href="#tab-panel-606">pnpm</a></li>
+<li><a href="#tab-panel-607">Yarn</a></li>
+</ul>
+<p>Terminal window</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span># start the development servernpx astro dev</span></span>
+<span class="line"><span></span></span></code></pre>
+<p>Terminal window</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span># start the development serverpnpm astro dev</span></span>
+<span class="line"><span></span></span></code></pre>
+<p>Terminal window</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span># start the development serveryarn astro dev</span></span>
+<span class="line"><span></span></span></code></pre>
+<p>You can type <code>astro --help</code> in your terminal to display a list of all available commands:</p>
+<ul>
+<li><a href="#tab-panel-608">npm</a></li>
+<li><a href="#tab-panel-609">pnpm</a></li>
+<li><a href="#tab-panel-610">Yarn</a></li>
+</ul>
+<p>Terminal window</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>npx astro --help</span></span>
+<span class="line"><span></span></span></code></pre>
+<p>Terminal window</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>pnpm astro --help</span></span>
+<span class="line"><span></span></span></code></pre>
+<p>Terminal window</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>yarn astro --help</span></span>
+<span class="line"><span></span></span></code></pre>
+<p>The following message will display in your terminal:</p>
+<p>Terminal window</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>astro [command] [...flags]</span></span>
+<span class="line"><span>Commands              add  Add an integration.            build  Build your project and write it to disk.            check  Check your project for errors.              dev  Start the development server.             docs  Open documentation in your web browser.             info  List info about your current Astro setup.          preview  Preview your build locally.             sync  Generate TypeScript types for all Astro modules.      preferences  Configure user preferences.        telemetry  Configure telemetry settings.</span></span>
+<span class="line"><span>Global Flags  --config &#x3C;path>  Specify your config file.    --root &#x3C;path>  Specify your project root folder.     --site &#x3C;url>  Specify your project site.--base &#x3C;pathname>  Specify your project base.        --verbose  Enable verbose logging.         --silent  Disable all logging.        --version  Show the version number and exit.           --open  Open the app in the browser on server start.           --help  Show this help message.</span></span>
+<span class="line"><span></span></span></code></pre>
+<p>Note</p>
+<p>The extra <code>--</code> before any flag is necessary for <code>npm</code> to pass your flags to the <code>astro</code> command.</p>
+<h3 id="packagejson-scripts"><code>package.json</code> scripts</h3>
+<p><a href="#packagejson-scripts">Section titled package.json scripts</a>
+You can also use scripts in <code>package.json</code> for shorter versions of these commands. Using a script allows you to use the same commands that you may be familiar with from other projects, such as <code>npm run build</code>.</p>
+<p>The following scripts for the most common <code>astro</code> commands (<code>astro dev</code>, <code>astro build</code>, and <code>astro preview</code>) are added for you automatically when you create a project using <a href="/en/install-and-setup/">the <code>create astro</code> wizard</a>.</p>
+<p>When you follow the instructions to <a href="/en/install-and-setup/#manual-setup">install Astro manually</a>, you are instructed to add these scripts yourself. You can also add more scripts to this list manually for any commands you use frequently.</p>
+<p>package.json</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>{  "scripts": {    "dev": "astro dev",    "start": "astro dev",    "build": "astro build",    "preview": "astro preview"  }}</span></span>
+<span class="line"><span></span></span></code></pre>
+<p>You will often use these <code>astro</code> commands, or the scripts that run them, without any flags. Add flags to the command when you want to customize the command’s behavior. For example, you may wish to start the development server on a different port, or build your site with verbose logs for debugging.</p>
+<ul>
+<li><a href="#tab-panel-611">npm</a></li>
+<li><a href="#tab-panel-612">pnpm</a></li>
+<li><a href="#tab-panel-613">Yarn</a></li>
+</ul>
+<p>Terminal window</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span># run the dev server on port 8080 using the `start` script in `package.json`npm run start -- --port 8080</span></span>
+<span class="line"><span># build your site with verbose logs using the `build` script in `package.json`npm run build -- --verbose</span></span>
+<span class="line"><span></span></span></code></pre>
+<p>Terminal window</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span># run the dev server on port 8080 using the `start` script in `package.json`pnpm start --port 8080</span></span>
+<span class="line"><span># build your site with verbose logs using the `build` script in `package.json`pnpm build --verbose</span></span>
+<span class="line"><span></span></span></code></pre>
+<p>Terminal window</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span># run the dev server on port 8080 using the `start` script in `package.json`yarn start --port 8080</span></span>
+<span class="line"><span># build your site with verbose logs using the `build` script in `package.json`yarn build --verbose</span></span>
+<span class="line"><span></span></span></code></pre>
+<h2 id="astro-dev"><code>astro dev</code></h2>
+<p><a href="#astro-dev">Section titled astro dev</a>
+Runs Astro’s development server. This is a local HTTP server that doesn’t bundle assets. It uses Hot Module Replacement (HMR) to update your browser as you save changes in your editor.</p>
+<h2 id="astro-build"><code>astro build</code></h2>
+<p><a href="#astro-build">Section titled astro build</a>
+Builds your site for deployment. By default, this will generate static files and place them in a <code>dist/</code> directory. If <a href="/en/guides/server-side-rendering/">SSR is enabled</a>, this will generate the necessary server files to serve your site.</p>
+<p>Can be combined with the <a href="#common-flags">common flags</a> documented below.</p>
+<h2 id="astro-preview"><code>astro preview</code></h2>
+<p><a href="#astro-preview">Section titled astro preview</a>
+Starts a local server to serve the contents of your static directory (<code>dist/</code> by default) created by running <code>astro build</code>.</p>
+<p>This command allows you to preview your site locally <a href="#astro-build">after building</a> to catch any errors in your build output before deploying it. It is not designed to be run in production. For help with production hosting, check out our guide on <a href="/en/guides/deploy/">Deploying an Astro Website</a>.</p>
+<p>Since Astro 1.5.0, <code>astro preview</code> also works for SSR builds if you use an adapter that supports it. Currently, only the <a href="/en/guides/integrations-guide/node/">Node adapter</a> supports <code>astro preview</code>.</p>
+<p>Can be combined with the <a href="#common-flags">common flags</a> documented below.</p>
+<h2 id="astro-check"><code>astro check</code></h2>
+<p><a href="#astro-check">Section titled astro check</a>
+Runs diagnostics (such as type-checking within <code>.astro</code> files) against your project and reports errors to the console. If any errors are found the process will exit with a code of <strong>1</strong>.</p>
+<p>This command is intended to be used in CI workflows.</p>
+<h3 id="flags">Flags</h3>
+<p>Use these flags to customize the behavior of the command.</p>
+<h4 id="--watch"><code>--watch</code></h4>
+<p><a href="#--watch">Section titled —watch</a>
+The command will watch for any changes in your project, and will report any errors.</p>
+<h4 id="--root-path-to-dir"><code>--root &#x3C;path-to-dir></code></h4>
+<p><a href="#--root-path-to-dir">Section titled —root &#x26;lt;path-to-dir&#x26;gt;</a>
+Specifies a different root directory to check. Uses the current working directory by default.</p>
+<h4 id="--tsconfig-path-to-file"><code>--tsconfig &#x3C;path-to-file></code></h4>
+<p><a href="#--tsconfig-path-to-file">Section titled —tsconfig &#x26;lt;path-to-file&#x26;gt;</a>
+Specifies a <code>tsconfig.json</code> file to use manually. If not provided, Astro will attempt to find a config, or infer the project’s config automatically.</p>
+<h4 id="--minimumfailingseverity-errorwarninghint"><code>--minimumFailingSeverity &#x3C;error|warning|hint></code></h4>
+<p><a href="#--minimumfailingseverity-errorwarninghint">Section titled —minimumFailingSeverity &#x26;lt;error|warning|hint&#x26;gt;</a>
+Specifies the minimum severity needed to exit with an error code. Defaults to <code>error</code>.</p>
+<p>For example, running <code>astro check --minimumFailingSeverity warning</code> will cause the command to exit with an error if any warnings are detected.</p>
+<h4 id="--minimumseverity-errorwarninghint"><code>--minimumSeverity &#x3C;error|warning|hint></code></h4>
+<p><a href="#--minimumseverity-errorwarninghint">Section titled —minimumSeverity &#x26;lt;error|warning|hint&#x26;gt;</a>
+Specifies the minimum severity to output. Defaults to <code>hint</code>.</p>
+<p>For example, running <code>astro check --minimumSeverity warning</code> will show errors and warning, but not hints.</p>
+<h4 id="--preservewatchoutput"><code>--preserveWatchOutput</code></h4>
+<p><a href="#--preservewatchoutput">Section titled —preserveWatchOutput</a>
+Specifies not to clear the ouput between checks when in watch mode.</p>
+<h4 id="--nosync"><code>--noSync</code></h4>
+<p><a href="#--nosync">Section titled —noSync</a>
+Specifies not to run <code>astro sync</code> before checking the project.</p>
+<p>Read more about <a href="/en/guides/typescript/#type-checking">type checking in Astro</a>.</p>
+<h2 id="astro-sync"><code>astro sync</code></h2>
+<p><a href="#astro-sync">Section titled astro sync</a></p>
+<p><strong>Added in:</strong>
+<code>astro@2.0.0</code></p>
+<p>Tip</p>
+<p>Running <code>astro dev</code>, <code>astro build</code> or <code>astro check</code> will run the <code>sync</code> command as well.</p>
+<p>Generates TypeScript types for all Astro modules. This sets up a <a href="/en/guides/typescript/#setup"><code>src/env.d.ts</code> file</a> for type inferencing, and defines modules for features that rely on generated types:</p>
+<ul>
+<li>The <code>astro:content</code> module for the <a href="/en/guides/content-collections/">Content Collections API</a>.</li>
+<li>The <code>astro:db</code> module for <a href="/en/guides/astro-db/">Astro DB</a>.</li>
+<li>The <code>astro:env</code> module for <a href="/en/reference/configuration-reference/#experimentalenv">experimental Astro Env</a>.</li>
+<li>The <code>astro:actions</code> module for <a href="/en/guides/actions/">Astro Actions</a></li>
+</ul>
+<h2 id="astro-add"><code>astro add</code></h2>
+<p><a href="#astro-add">Section titled astro add</a>
+Adds an integration to your configuration. Read more in <a href="/en/guides/integrations-guide/#automatic-integration-setup">the integrations guide</a>.</p>
+<h2 id="astro-docs"><code>astro docs</code></h2>
+<p><a href="#astro-docs">Section titled astro docs</a>
+Launches the Astro Docs website directly from the terminal.</p>
+<h2 id="astro-info"><code>astro info</code></h2>
+<p><a href="#astro-info">Section titled astro info</a>
+Reports useful information about your current Astro environment. Useful for providing information when opening an issue.</p>
+<p>Terminal window</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>astro info</span></span>
+<span class="line"><span></span></span></code></pre>
+<p>Example output:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>Astro                    v3.0.12Node                     v20.5.1System                   macOS (arm64)Package Manager          pnpmOutput                   serverAdapter                  @astrojs/vercel/serverlessIntegrations             none</span></span>
+<span class="line"><span></span></span></code></pre>
+<h2 id="astro-preferences"><code>astro preferences</code></h2>
+<p><a href="#astro-preferences">Section titled astro preferences</a>
+Manage user preferences with the <code>astro preferences</code> command. User preferences are specific to individual Astro users, unlike the <code>astro.config.mjs</code> file which changes behavior for everyone working on a project.</p>
+<p>User preferences are scoped to the current project by default, stored in a local <code>.astro/settings.json</code> file.</p>
+<p>Using the <code>--global</code> flag, user preferences can also be applied to every Astro project on the current machine. Global user preferences are stored in an operating system-specific location.</p>
+<h3 id="available-preferences">Available preferences</h3>
+<ul>
+<li><code>devToolbar</code> — Enable or disable the development toolbar in the browser. (Default: <code>true</code>)</li>
+<li><code>checkUpdates</code> — Enable or disable automatic update checks for the Astro CLI. (Default: <code>true</code>)</li>
+</ul>
+<p>The <code>list</code> command prints the current settings of all configurable user preferences. It also supports a machine-readable <code>--json</code> output.</p>
+<p>Terminal window</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>astro preferences list</span></span>
+<span class="line"><span></span></span></code></pre>
+<p>Example terminal output:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Preference</th><th>Value</th></tr></thead><tbody><tr><td>devToolbar.enabled</td><td>true</td></tr><tr><td></td><td></td></tr><tr><td>checkUpdates.enabled</td><td>true</td></tr></tbody></table>
+<p>You can <code>enable</code>, <code>disable</code>, or <code>reset</code> preferences to their default.</p>
+<p>For example, to disable the devToolbar in a specific Astro project:</p>
+<p>Terminal window</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>astro preferences disable devToolbar</span></span>
+<span class="line"><span></span></span></code></pre>
+<p>To disable the devToolbar in all Astro projects on the current machine:</p>
+<p>Terminal window</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>astro preferences disable --global devToolbar</span></span>
+<span class="line"><span></span></span></code></pre>
+<p>The devToolbar can later be enabled with:</p>
+<p>Terminal window</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>astro preferences enable devToolbar</span></span>
+<span class="line"><span></span></span></code></pre>
+<p>The <code>reset</code> command resets a preference to its default value:</p>
+<p>Terminal window</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>astro preferences reset devToolbar</span></span>
+<span class="line"><span></span></span></code></pre>
+<h2 id="astro-telemetry"><code>astro telemetry</code></h2>
+<p><a href="#astro-telemetry">Section titled astro telemetry</a>
+Sets telemetry configuration for the current CLI user. Telemetry is anonymous data that provides the Astro team insights into which Astro features are most often used. For more information see <a href="https://astro.build/telemetry/">Astro’s telemetry page</a>.</p>
+<p>Telemetry can be disabled with this CLI command:</p>
+<p>Terminal window</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>astro telemetry disable</span></span>
+<span class="line"><span></span></span></code></pre>
+<p>Telemetry can later be re-enabled with:</p>
+<p>Terminal window</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>astro telemetry enable</span></span>
+<span class="line"><span></span></span></code></pre>
+<p>The <code>reset</code> command resets the telemetry data:</p>
+<p>Terminal window</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>astro telemetry reset</span></span>
+<span class="line"><span></span></span></code></pre>
+<p>Want to disable telemetry in CI environments?</p>
+<p>Add the <code>astro telemetry disable</code> command to your CI scripts or set the <code>ASTRO_TELEMETRY_DISABLED</code> environment variable.</p>
+<h2 id="common-flags">Common flags</h2>
+<p><a href="#common-flags">Section titled Common flags</a></p>
+<h3 id="--root-path"><code>--root &#x3C;path></code></h3>
+<p><a href="#--root-path">Section titled —root &#x26;lt;path&#x26;gt;</a>
+Specifies the path to the project root. If not specified, the current working directory is assumed to be the root.</p>
+<p>The root is used for finding the Astro configuration file.</p>
+<p>Terminal window</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>astro --root myRootFolder/myProjectFolder dev</span></span>
+<span class="line"><span></span></span></code></pre>
+<h3 id="--config-path"><code>--config &#x3C;path></code></h3>
+<p><a href="#--config-path">Section titled —config &#x26;lt;path&#x26;gt;</a>
+Specifies the path to the config file relative to the project root. Defaults to <code>astro.config.mjs</code>. Use this if you use a different name for your configuration file or have your config file in another folder.</p>
+<p>Terminal window</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>astro --config config/astro.config.mjs dev</span></span>
+<span class="line"><span></span></span></code></pre>
+<h3 id="--outdir-path"><code>--outDir &#x3C;path></code></h3>
+<p><a href="#--outdir-path">Section titled —outDir &#x26;lt;path&#x26;gt;</a></p>
+<p><strong>Added in:</strong>
+<code>astro@3.3.0</code></p>
+<p>Configures the <a href="/en/reference/configuration-reference/#outdir"><code>outDir</code></a> for your project. Passing this flag will override the <code>outDir</code> value in your <code>astro.config.mjs</code> file, if one exists.</p>
+<h3 id="--site-url"><code>--site &#x3C;url></code></h3>
+<p><a href="#--site-url">Section titled —site &#x26;lt;url&#x26;gt;</a>
+Configures the <a href="/en/reference/configuration-reference/#site"><code>site</code></a> for your project. Passing this flag will override the <code>site</code> value in your <code>astro.config.mjs</code> file, if one exists.</p>
+<h3 id="--base-pathname"><code>--base &#x3C;pathname></code></h3>
+<p><a href="#--base-pathname">Section titled —base &#x26;lt;pathname&#x26;gt;</a></p>
+<p><strong>Added in:</strong>
+<code>astro@1.4.1</code></p>
+<p>Configures the <a href="/en/reference/configuration-reference/#base"><code>base</code></a> for your project. Passing this flag will override the <code>base</code> value in your <code>astro.config.mjs</code> file, if one exists.</p>
+<h3 id="--port-number"><code>--port &#x3C;number></code></h3>
+<p><a href="#--port-number">Section titled —port &#x26;lt;number&#x26;gt;</a>
+Specifies which port to run the dev server and preview server on. Defaults to <code>4321</code>.</p>
+<h3 id="--host-optional-host-address"><code>--host [optional host address]</code></h3>
+<p>[Section titled —host [optional host address]](#—host-optional-host-address)
+Sets which network IP addresses the dev server and preview server should listen on (i.e. non-localhost IPs). This can be useful for testing your project on local devices like a mobile phone during development.</p>
+<ul>
+<li><code>--host</code> — listen on all addresses, including LAN and public addresses</li>
+<li><code>--host &#x3C;custom-address></code> — expose on a network IP address at <code>&#x3C;custom-address></code></li>
+</ul>
+<p>Caution</p>
+<p>Do not use the <code>--host</code> flag to expose the dev server and preview server in a production environment. The servers are designed for local use while developing your site only.</p>
+<h3 id="--verbose"><code>--verbose</code></h3>
+<p><a href="#--verbose">Section titled —verbose</a>
+Enables verbose logging, which is helpful when debugging an issue.</p>
+<h3 id="--silent"><code>--silent</code></h3>
+<p><a href="#--silent">Section titled —silent</a>
+Enables silent logging, which will run the server without any console output.</p>
+<h2 id="global-flags">Global flags</h2>
+<p><a href="#global-flags">Section titled Global flags</a>
+Use these flags to get information about the <code>astro</code> CLI.</p>
+<h3 id="--version"><code>--version</code></h3>
+<p><a href="#--version">Section titled —version</a>
+Prints the Astro version number and exits.</p>
+<h3 id="--open"><code>--open</code></h3>
+<p><a href="#--open">Section titled —open</a>
+Automatically opens the app in the browser on server start. Can be passed a full URL string (e.g. <code>--open http://example.com</code>) or a pathname (e.g. <code>--open /about</code>) to specify the URL to open.</p>
+<h3 id="--help"><code>--help</code></h3>
+<p><a href="#--help">Section titled —help</a>
+Prints the help message and exits.</p>
+<h2 id="advanced-apis-experimental">Advanced APIs (Experimental)</h2>
+<p><a href="#advanced-apis-experimental">Section titled Advanced APIs (Experimental)</a>
+If you need more control when running Astro, the <code>"astro"</code> package also exports APIs to programmatically run the CLI commands.</p>
+<p>These APIs are experimental and their API signature may change. Any updates will be mentioned in the <a href="https://github.com/withastro/astro/blob/main/packages/astro/CHANGELOG.md">Astro changelog</a> and the information below will always show the current, up-to-date information.</p>
+<h3 id="astroinlineconfig"><code>AstroInlineConfig</code></h3>
+<p><a href="#astroinlineconfig">Section titled AstroInlineConfig</a>
+The <code>AstroInlineConfig</code> type is used by all of the command APIs below. It extends from the user <a href="/en/reference/configuration-reference/">Astro config</a> type:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>interface AstroInlineConfig extends AstroUserConfig {  configFile?: string | false;  mode?: "development" | "production";  logLevel?: "debug" | "info" | "warn" | "error" | "silent";}</span></span>
+<span class="line"><span></span></span></code></pre>
+<h4 id="configfile"><code>configFile</code></h4>
+<p><a href="#configfile">Section titled configFile</a>
+<strong>Type:</strong> <code>string | false</code></p>
+<p><strong>Default:</strong> <code>undefined</code></p>
+<p>A custom path to the Astro config file.</p>
+<p>If this value is undefined (default) or unset, Astro will search for an <code>astro.config.(js,mjs,ts,mts)</code> file relative to the <code>root</code> and load the config file if found.</p>
+<p>If a relative path is set, it will resolve based on the <code>root</code> option.</p>
+<p>Set to <code>false</code> to disable loading any config files.</p>
+<p>The inline config passed in this object will take highest priority when merging with the loaded user config.</p>
+<h4 id="mode"><code>mode</code></h4>
+<p><a href="#mode">Section titled mode</a>
+<strong>Type:</strong> <code>"development" | "production"</code></p>
+<p><strong>Default:</strong> <code>"development"</code> when running <code>astro dev</code>, <code>"production"</code> when running <code>astro build</code></p>
+<p>The mode used when building your site to generate either “development” or “production” code.</p>
+<h4 id="loglevel"><code>logLevel</code></h4>
+<p><a href="#loglevel">Section titled logLevel</a>
+<strong>Type:</strong> <code>"debug" | "info" | "warn" | "error" | "silent"</code></p>
+<p><strong>Default:</strong> <code>"info"</code></p>
+<p>The logging level to filter messages logged by Astro.</p>
+<ul>
+<li><code>"debug"</code>: Log everything, including noisy debugging diagnostics.</li>
+<li><code>"info"</code>: Log informational messages, warnings, and errors.</li>
+<li><code>"warn"</code>: Log warnings and errors.</li>
+<li><code>"error"</code>: Log errors only.</li>
+<li><code>"silent"</code>: No logging.</li>
+</ul>
+<h3 id="dev"><code>dev()</code></h3>
+<p><a href="#dev">Section titled dev()</a>
+<strong>Type:</strong> <code>(inlineConfig: AstroInlineConfig) => Promise&#x3C;DevServer></code></p>
+<p>Similar to <a href="#astro-dev"><code>astro dev</code></a>, it runs Astro’s development server.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>import { dev } from "astro";</span></span>
+<span class="line"><span>const devServer = await dev({  root: "./my-project",});</span></span>
+<span class="line"><span>// Stop the server if neededawait devServer.stop();</span></span>
+<span class="line"><span></span></span></code></pre>
+<h4 id="devserver"><code>DevServer</code></h4>
+<p><a href="#devserver">Section titled DevServer</a></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>export interface DevServer {  address: AddressInfo;  handle: (req: http.IncomingMessage, res: http.ServerResponse&#x3C;http.IncomingMessage>) => void;  watcher: vite.FSWatcher;  stop(): Promise&#x3C;void>;}</span></span>
+<span class="line"><span></span></span></code></pre>
+<h5 id="address"><code>address</code></h5>
+<p><a href="#address">Section titled address</a>
+The address the dev server is listening on.</p>
+<p>This property contains the value returned by Node’s <a href="https://nodejs.org/api/net.html#serveraddress"><code>net.Server#address()</code> method</a>.</p>
+<h5 id="handle"><code>handle()</code></h5>
+<p><a href="#handle">Section titled handle()</a>
+A handle for raw Node HTTP requests. You can call <code>handle()</code> with an <a href="https://nodejs.org/api/http.html#class-httpincomingmessage"><code>http.IncomingMessage</code></a> and an <a href="https://nodejs.org/api/http.html#class-httpserverresponse"><code>http.ServerResponse</code></a> instead of sending a request through the network.</p>
+<h5 id="watcher"><code>watcher</code></h5>
+<p><a href="#watcher">Section titled watcher</a>
+The <a href="https://github.com/paulmillr/chokidar#getting-started">Chokidar file watcher</a> as exposed by <a href="https://vite.dev/guide/api-javascript#vitedevserver">Vite’s development server</a>.</p>
+<h5 id="stop"><code>stop()</code></h5>
+<p><a href="#stop">Section titled stop()</a>
+Stops the development server. This closes all idle connections and stops listening for new connections.</p>
+<p>Returns a <code>Promise</code> that resolves once all pending requests have been fulfilled and all idle connections have been closed.</p>
+<h3 id="build"><code>build()</code></h3>
+<p><a href="#build">Section titled build()</a>
+<strong>Type:</strong> <code>(inlineConfig: AstroInlineConfig) => Promise&#x3C;void></code></p>
+<p>Similar to <a href="#astro-build"><code>astro build</code></a>, it builds your site for deployment.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>import { build } from "astro";</span></span>
+<span class="line"><span>await build({  root: "./my-project",});</span></span>
+<span class="line"><span></span></span></code></pre>
+<h3 id="preview"><code>preview()</code></h3>
+<p><a href="#preview">Section titled preview()</a>
+<strong>Type:</strong> <code>(inlineConfig: AstroInlineConfig) => Promise&#x3C;PreviewServer></code></p>
+<p>Similar to <a href="#astro-preview"><code>astro preview</code></a>, it starts a local server to serve your build output.</p>
+<p>If no adapter is set in the configuration, the preview server will only serve the built static files.
+If an adapter is set in the configuration, the preview server is provided by the adapter. Adapters are not required to provide a preview server, so this feature may not be available depending on your adapter of choice.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>import { preview } from "astro";</span></span>
+<span class="line"><span>const previewServer = await preview({  root: "./my-project",});</span></span>
+<span class="line"><span>// Stop the server if neededawait previewServer.stop();</span></span>
+<span class="line"><span></span></span></code></pre>
+<h4 id="previewserver"><code>PreviewServer</code></h4>
+<p><a href="#previewserver">Section titled PreviewServer</a></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>export interface PreviewServer {  host?: string;  port: number;  closed(): Promise&#x3C;void>;  stop(): Promise&#x3C;void>;}</span></span>
+<span class="line"><span></span></span></code></pre>
+<h5 id="host"><code>host</code></h5>
+<p><a href="#host">Section titled host</a>
+The host where the server is listening for connections.</p>
+<p>Adapters are allowed to leave this field unset. The value of <code>host</code> is implementation-specific.</p>
+<h5 id="port"><code>port</code></h5>
+<p><a href="#port">Section titled port</a>
+The port where the server is listening for connections.</p>
+<h5 id="stop-1"><code>stop()</code></h5>
+<p><a href="#stop-1">Section titled stop()</a>
+Asks the preview server to close, stop accepting requests, and drop idle connections.</p>
+<p>The returned <code>Promise</code> resolves when the close request has been sent. This does not mean that the server has closed yet. Use the <a href="#closed"><code>closed()</code></a> method if you need to ensure the server has fully closed.</p>
+<h5 id="closed"><code>closed()</code></h5>
+<p><a href="#closed">Section titled closed()</a>
+Returns a <code>Promise</code> that will resolve once the server is closed and reject if an error happens on the server.</p>
+<h3 id="sync"><code>sync()</code></h3>
+<p><a href="#sync">Section titled sync()</a>
+<strong>Type:</strong> <code>(inlineConfig: AstroInlineConfig) => Promise&#x3C;void></code></p>
+<p>Similar to <a href="#astro-sync"><code>astro sync</code></a>, it generates TypeScript types for all Astro modules.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>import { sync } from "astro";</span></span>
+<span class="line"><span>await sync({  root: "./my-project",});</span></span>
+<span class="line"><span></span></span></code></pre>
+<p>Reference</p> </div> <div class="prose-a:no-underline flex gap-2"> <span class="badge badge-outline badge-md"> <a href="/tags/astro/1/">astro</a> </span><span class="badge badge-outline badge-md"> <a href="/tags/CSharp/1/">CSharp</a> </span><span class="badge badge-outline badge-md"> <a href="/tags/Less/1/">Less</a> </span> </div> <div class="mt-4 flex justify-between"> <small>Publish on <span class="font-weight-bold">2024-01-09</span>，Update on <span class="font-weight-bold">2025-01-09</span></small> </div> </article> <div class="mt-12"> <div class="grid grid-cols-1 gap-4 md:grid-cols-3"> <div class="card mb-4 overflow-hidden rounded-xl border  transition-transform duration-500 hover:-translate-y-1 hover:scale-105"> <a href="/posts/manage-your-content-guides-markdown-content/"> <picture> <source srcset="/_astro/photo-1472377723522-4768db9c41ce_cr2OL.avif 392w, /_astro/photo-1472377723522-4768db9c41ce_ZY6gfW.avif 700w, /_astro/photo-1472377723522-4768db9c41ce_1nCPx9.avif 980w, /_astro/photo-1472377723522-4768db9c41ce_Z1EwWzk.avif 1960w" type="image/avif" sizes="(max-width: 360px) 392px, 
+           (max-width: 720px) 700px, 
+           (max-width: 1600px) 980px, 
+           1960px"> <img src="/_astro/photo-1472377723522-4768db9c41ce_Z1EwWzk.avif" srcset="/_astro/photo-1472377723522-4768db9c41ce_cr2OL.avif 392w, /_astro/photo-1472377723522-4768db9c41ce_ZY6gfW.avif 700w, /_astro/photo-1472377723522-4768db9c41ce_1nCPx9.avif 980w, /_astro/photo-1472377723522-4768db9c41ce_Z1EwWzk.avif 1960w" alt="white and brown concrete house near trees at daytime" sizes="(max-width: 360px) 392px, 
+           (max-width: 720px) 700px, 
+           (max-width: 1600px) 980px, 
+           1960px" class="mx-auto w-full max-w-full object-cover" width="1960" height="1102" loading="lazy" decoding="async"> </picture> <div class="card-body"> <div class="flex items-center gap-1 text-xs"> <span class="badge badge-outline">astro-build</span><span class="badge badge-outline">Go</span><span class="badge badge-outline">Css</span> </div> <p class="text-xs"><span class="font-weight-bold">2024-02-21</span></p> <h2 class="card-title">Markdown in Astro</h2> </div> </a> </div><div class="card mb-4 overflow-hidden rounded-xl border  transition-transform duration-500 hover:-translate-y-1 hover:scale-105"> <a href="/posts/welcome-world-guides-deploy/"> <picture> <source srcset="/_astro/photo-1480074568708-e7b720bb3f09_Z2vlXMC.avif 392w, /_astro/photo-1480074568708-e7b720bb3f09_1nhPUA.avif 700w, /_astro/photo-1480074568708-e7b720bb3f09_Z1kab5f.avif 980w, /_astro/photo-1480074568708-e7b720bb3f09_vUEOm.avif 1960w" type="image/avif" sizes="(max-width: 360px) 392px, 
+           (max-width: 720px) 700px, 
+           (max-width: 1600px) 980px, 
+           1960px"> <img src="/_astro/photo-1480074568708-e7b720bb3f09_vUEOm.avif" srcset="/_astro/photo-1480074568708-e7b720bb3f09_Z2vlXMC.avif 392w, /_astro/photo-1480074568708-e7b720bb3f09_1nhPUA.avif 700w, /_astro/photo-1480074568708-e7b720bb3f09_Z1kab5f.avif 980w, /_astro/photo-1480074568708-e7b720bb3f09_vUEOm.avif 1960w" alt="white house under maple trees" sizes="(max-width: 360px) 392px, 
+           (max-width: 720px) 700px, 
+           (max-width: 1600px) 980px, 
+           1960px" class="mx-auto w-full max-w-full object-cover" width="1960" height="1102" loading="lazy" decoding="async"> </picture> <div class="card-body"> <div class="flex items-center gap-1 text-xs"> <span class="badge badge-outline">guide</span><span class="badge badge-outline">CSharp</span><span class="badge badge-outline">Sass</span> </div> <p class="text-xs"><span class="font-weight-bold">2024-02-16</span></p> <h2 class="card-title">Deploy your Astro Site</h2> </div> </a> </div><div class="card mb-4 overflow-hidden rounded-xl border  transition-transform duration-500 hover:-translate-y-1 hover:scale-105"> <a href="/posts/core-concepts-concepts-islands/"> <picture> <source srcset="/_astro/photo-1483366774565-c783b9f70e2c_jGYEQ.avif 392w, /_astro/photo-1483366774565-c783b9f70e2c_ZQPjpR.avif 700w, /_astro/photo-1483366774565-c783b9f70e2c_1uSMne.avif 980w, /_astro/photo-1483366774565-c783b9f70e2c_21yqnd.avif 1960w" type="image/avif" sizes="(max-width: 360px) 392px, 
+           (max-width: 720px) 700px, 
+           (max-width: 1600px) 980px, 
+           1960px"> <img src="/_astro/photo-1483366774565-c783b9f70e2c_21yqnd.avif" srcset="/_astro/photo-1483366774565-c783b9f70e2c_jGYEQ.avif 392w, /_astro/photo-1483366774565-c783b9f70e2c_ZQPjpR.avif 700w, /_astro/photo-1483366774565-c783b9f70e2c_1uSMne.avif 980w, /_astro/photo-1483366774565-c783b9f70e2c_21yqnd.avif 1960w" alt="worm's-eye view photography of concrete building" sizes="(max-width: 360px) 392px, 
+           (max-width: 720px) 700px, 
+           (max-width: 1600px) 980px, 
+           1960px" class="mx-auto w-full max-w-full object-cover" width="1960" height="1102" loading="lazy" decoding="async"> </picture> <div class="card-body"> <div class="flex items-center gap-1 text-xs"> <span class="badge badge-outline">tutorial</span><span class="badge badge-outline">CSharp</span><span class="badge badge-outline">Less</span> </div> <p class="text-xs"><span class="font-weight-bold">2024-02-12</span></p> <h2 class="card-title">Astro Islands</h2> </div> </a> </div> </div> </div> </main>  </main> <footer class="mx-auto mt-auto w-full max-w-[85rem] py-10"> <nav class="mx-auto w-full max-w-[85rem] px-4" aria-label="Footer"> <div class="flex flex-col items-center sm:flex-row sm:justify-between"> <div id="navbar-alignment" class="internal-links sm:order-2"> <div class="mt-2 flex flex-row gap-5 sm:mt-0 sm:flex-row sm:items-center sm:ps-5"> <a href="/posts/core-concepts-concepts-why-astro/" class="inline-flex gap-x-2 text-sm"> Astro </a><a href="/posts/assets-guides-styling/" class="inline-flex gap-x-2 text-sm"> Styling </a><a href="/tags/" class="inline-flex gap-x-2 text-sm"> Tags </a> </div> </div> <div class="mt-2 flex flex-wrap gap-2 sm:order-3 sm:mb-0 sm:gap-0"> <button type="button" class="relative inline-flex h-12 w-12 items-center gap-x-2 px-4 py-3 disabled:pointer-events-none disabled:opacity-50"> <a href="/rss.xml" class="absolute inset-0 z-10" aria-label="RSS"></a> <i class="i-tabler-rss icon-base"></i> </button><button type="button" class="relative inline-flex h-12 w-12 items-center gap-x-2 px-4 py-3 disabled:pointer-events-none disabled:opacity-50"> <a href="https://twitter.com/astrodotbuild" class="absolute inset-0 z-10" aria-label="Twitter"></a> <i class="i-tabler-brand-twitter icon-base"></i> </button><button type="button" class="relative inline-flex h-12 w-12 items-center gap-x-2 px-4 py-3 disabled:pointer-events-none disabled:opacity-50"> <a href="https://github.com/isooosi" class="absolute inset-0 z-10" aria-label="GitHub"></a> <i class="i-tabler-brand-github icon-base"></i> </button> </div> <div class="mt-2 sm:order-1 sm:mb-0"> <a class="flex-none text-sm" href="/" aria-label="Brand">AstroMelody &copy; 2025</a> </div> </div> </nav> </footer> </body></html>

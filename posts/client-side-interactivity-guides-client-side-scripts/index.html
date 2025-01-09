@@ -1,0 +1,159 @@
+<!DOCTYPE html><html lang="en"> <head><!-- Global Metadata --><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="generator" content="Astro v4.16.7"><!-- Canonical URL --><link rel="canonical" href="https://10ta.github.io/posts/client-side-interactivity-guides-client-side-scripts/"><!-- Sitemap --><link rel="sitemap" href="/sitemap-index.xml"><!-- Primary Meta Tags --><title>Scripts and Event Handling</title><meta name="title" content="Scripts and Event Handling"><meta name="description" content="How to add client-side interactivity to Astro components using native browser JavaScript APIs."><!-- Open Graph / Facebook --><meta property="og:type" content="website"><meta property="og:url" content="https://10ta.github.io/posts/client-side-interactivity-guides-client-side-scripts/"><meta property="og:title" content="Scripts and Event Handling"><meta property="og:description" content="How to add client-side interactivity to Astro components using native browser JavaScript APIs."><meta property="og:image" content="https://10ta.github.io/blog-placeholder-1.avif"><!-- Twitter --><meta property="twitter:card" content="summary_large_image"><meta property="twitter:url" content="https://10ta.github.io/posts/client-side-interactivity-guides-client-side-scripts/"><meta property="twitter:title" content="Scripts and Event Handling"><meta property="twitter:description" content="How to add client-side interactivity to Astro components using native browser JavaScript APIs."><meta property="twitter:image" content="https://10ta.github.io/blog-placeholder-1.avif"><link rel="stylesheet" href="/_astro/_page_.Bdwf1GY7.css"><script type="module" src="/_astro/hoisted.CPfS8Ggc.js"></script>
+<script type="module" src="/_astro/page.DTIbhfSr.js"></script>
+<script>!(function(w,p,f,c){if(!window.crossOriginIsolated && !navigator.serviceWorker) return;c=w[p]=Object.assign(w[p]||{},{"lib":"/~partytown/","debug":false});c[f]=(c[f]||[]).concat(["dataLayer.push"])})(window,'partytown','forward');/* Partytown 0.10.2 - MIT builder.io */
+const t={preserveBehavior:!1},e=e=>{if("string"==typeof e)return[e,t];const[n,r=t]=e;return[n,{...t,...r}]},n=Object.freeze((t=>{const e=new Set;let n=[];do{Object.getOwnPropertyNames(n).forEach((t=>{"function"==typeof n[t]&&e.add(t)}))}while((n=Object.getPrototypeOf(n))!==Object.prototype);return Array.from(e)})());!function(t,r,o,i,a,s,c,d,l,p,u=t,f){function h(){f||(f=1,"/"==(c=(s.lib||"/~partytown/")+(s.debug?"debug/":""))[0]&&(l=r.querySelectorAll('script[type="text/partytown"]'),i!=t?i.dispatchEvent(new CustomEvent("pt1",{detail:t})):(d=setTimeout(v,1e4),r.addEventListener("pt0",w),a?y(1):o.serviceWorker?o.serviceWorker.register(c+(s.swPath||"partytown-sw.js"),{scope:c}).then((function(t){t.active?y():t.installing&&t.installing.addEventListener("statechange",(function(t){"activated"==t.target.state&&y()}))}),console.error):v())))}function y(e){p=r.createElement(e?"script":"iframe"),t._pttab=Date.now(),e||(p.style.display="block",p.style.width="0",p.style.height="0",p.style.border="0",p.style.visibility="hidden",p.setAttribute("aria-hidden",!0)),p.src=c+"partytown-"+(e?"atomics.js?v=0.10.2":"sandbox-sw.html?"+t._pttab),r.querySelector(s.sandboxParent||"body").appendChild(p)}function v(n,o){for(w(),i==t&&(s.forward||[]).map((function(n){const[r]=e(n);delete t[r.split(".")[0]]})),n=0;n<l.length;n++)(o=r.createElement("script")).innerHTML=l[n].innerHTML,o.nonce=s.nonce,r.head.appendChild(o);p&&p.parentNode.removeChild(p)}function w(){clearTimeout(d)}s=t.partytown||{},i==t&&(s.forward||[]).map((function(r){const[o,{preserveBehavior:i}]=e(r);u=t,o.split(".").map((function(e,r,o){var a;u=u[o[r]]=r+1<o.length?u[o[r]]||(a=o[r+1],n.includes(a)?[]:{}):(()=>{let e=null;if(i){const{methodOrProperty:n,thisObject:r}=((t,e)=>{let n=t;for(let t=0;t<e.length-1;t+=1)n=n[e[t]];return{thisObject:n,methodOrProperty:e.length>0?n[e[e.length-1]]:void 0}})(t,o);"function"==typeof n&&(e=(...t)=>n.apply(r,...t))}return function(){let n;return e&&(n=e(arguments)),(t._ptf=t._ptf||[]).push(o,arguments),n}})()}))})),"complete"==r.readyState?h():(t.addEventListener("DOMContentLoaded",h),t.addEventListener("load",h))}(window,document,navigator,top,window.crossOriginIsolated);;(e=>{e.addEventListener("astro:before-swap",e=>{let r=document.body.querySelector("iframe[src*='/~partytown/']");if(r)e.newDocument.body.append(r)})})(document);</script></head> <body class="flex flex-col min-h-screen mx-auto max-w-6xl px-4 dark:prose-invert sm:px-6 lg:px-8"> <header class="z-50 flex w-full flex-wrap py-7 md:flex-nowrap md:justify-start"> <nav class="relative mx-auto flex w-full max-w-7xl basis-full flex-wrap items-center px-4" aria-label="Global"> <div class=""> <a class="flex-none text-xl font-semibold" href="/" aria-label="Astroverse"> AstroMelody </a> </div> <div class="ms-auto flex items-center gap-x-2 py-1"> <a class="inline-flex items-center gap-x-2 rounded-xl border border-transparent px-3 py-2 text-sm font-medium disabled:pointer-events-none disabled:opacity-50" href="/search/" href="/search/"> <i class="icon-base i-tabler-search"></i> </a> <div class="dropdown dropdown-end"> <div tabindex="0" role="button" class="flex size-[38px] items-center justify-center rounded-xl text-sm font-semibold"> <i class="icon-base i-tabler-category-2"></i> </div> <ul tabindex="0" class="menu dropdown-content z-[1] w-52 rounded-box bg-base-100 p-2 shadow"> <li> <a href="/category/One/1/" class="px-4 py-3 font-medium"> One </a> </li><li> <a href="/category/Two/1/" class="px-4 py-3 font-medium"> Two </a> </li><li> <a href="/category/Three/1/" class="px-4 py-3 font-medium"> Three </a> </li> </ul> </div> <label class="swap swap-rotate rounded-xl px-3 py-2 text-sm"> <!-- this hidden checkbox controls the state --> <input type="checkbox" class="theme-controller" data-unchecked-value="corporate" value="halloween"> <!-- sun icon --> <i class="icon-base swap-off i-tabler-sun-filled"></i> <!-- moon icon --> <i class="icon-base swap-on i-tabler-moon-filled"></i> </label> </div> </nav> </header> <!-- Save theme to localStorage --> <script>
+  const lightTheme =  document.querySelector('.theme-controller')?.getAttribute('data-unchecked-value');
+  // ☝️ This script prevent the FART effect.
+  if (localStorage.getItem("theme") === null) {
+    document.documentElement.setAttribute("data-theme", lightTheme);
+  } else
+    document.documentElement.setAttribute(
+      "data-theme",
+      localStorage.getItem("theme"),
+    );
+  // "theme" LocalStorage value is set by the package to remember user preference.
+  // The value is checked and applyed before rendering anything.
+</script>  <!-- 内容区域，确保其动态调整高度 --> <main class="flex-grow">  <main> <article class="prose mx-auto dark:prose-invert"> <div class="prose-h1 text-center"> <h1>Scripts and Event Handling</h1> </div> <div> <picture> <source srcset="/_astro/photo-1414438992182-69e404046f80_ZV2v1D.avif 392w, /_astro/photo-1414438992182-69e404046f80_Z27zO7m.avif 700w, /_astro/photo-1414438992182-69e404046f80_f9hFJ.avif 980w, /_astro/photo-1414438992182-69e404046f80_Z1na9tu.avif 1960w" type="image/avif" sizes="(max-width: 360px) 392px, 
+           (max-width: 720px) 700px, 
+           (max-width: 1600px) 980px, 
+           1960px"> <img src="/_astro/photo-1414438992182-69e404046f80_Z1na9tu.avif" srcset="/_astro/photo-1414438992182-69e404046f80_ZV2v1D.avif 392w, /_astro/photo-1414438992182-69e404046f80_Z27zO7m.avif 700w, /_astro/photo-1414438992182-69e404046f80_f9hFJ.avif 980w, /_astro/photo-1414438992182-69e404046f80_Z1na9tu.avif 1960w" alt="Leaning Tower of Pisa, Italy" sizes="(max-width: 360px) 392px, 
+           (max-width: 720px) 700px, 
+           (max-width: 1600px) 980px, 
+           1960px" class="mx-auto w-full max-w-full object-cover" width="1960" height="1102" loading="lazy" decoding="async"> </picture> </div> <div> <p>You can add interactivity to your Astro components without <a href="/en/guides/framework-components/">using a UI framework</a> like React, Svelte, Vue, etc. using standard HTML <code>&#x3C;script></code> tags. This allows you to send JavaScript to run in the browser and add functionality to your Astro components.</p>
+<h2 id="client-side-scripts">Client-Side Scripts</h2>
+<p><a href="#client-side-scripts">Section titled Client-Side Scripts</a>
+Scripts can be used to add event listeners, send analytics data, play animations, and everything else JavaScript can do on the web.</p>
+<p>src/components/ConfettiButton.astro</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;button data-confetti-button>Celebrate!&#x3C;/button></span></span>
+<span class="line"><span>&#x3C;script>  // Import npm modules.  import confetti from 'canvas-confetti';</span></span>
+<span class="line"><span>  // Find our component DOM on the page.  const buttons = document.querySelectorAll('[data-confetti-button]');</span></span>
+<span class="line"><span>  // Add event listeners to fire confetti when a button is clicked.  buttons.forEach((button) => {    button.addEventListener('click', () => confetti());  });&#x3C;/script></span></span>
+<span class="line"><span></span></span></code></pre>
+<p>By default, Astro processes and bundles <code>&#x3C;script></code> tags, adding support for importing npm modules, writing TypeScript, and more.</p>
+<h2 id="using-script-in-astro">Using <code>&#x3C;script></code> in Astro</h2>
+<p><a href="#using-script-in-astro">Section titled Using &#x26;lt;script&#x26;gt; in Astro</a>
+In <code>.astro</code> files, you can add client-side JavaScript by adding one (or more) <code>&#x3C;script></code> tags.</p>
+<p>In this example, adding the <code>&#x3C;Hello /></code> component to a page will log a message to the browser console.</p>
+<p>src/components/Hello.astro</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;h1>Welcome, world!&#x3C;/h1></span></span>
+<span class="line"><span>&#x3C;script>  console.log('Welcome, browser console!');&#x3C;/script></span></span>
+<span class="line"><span></span></span></code></pre>
+<h3 id="script-processing">Script processing</h3>
+<p><a href="#script-processing">Section titled Script processing</a>
+By default, <code>&#x3C;script></code> tags are processed by Astro.</p>
+<ul>
+<li>Any imports will be bundled, allowing you to import local files or Node modules.</li>
+<li>The processed script will be injected into your page’s <code>&#x3C;head></code> with <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules"><code>type="module"</code></a>.</li>
+<li>TypeScript is fully supported, including importing TypeScript files.</li>
+<li>If your component is used several times on a page, the script will only be included once.</li>
+</ul>
+<p>src/components/Example.astro</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;script>  // Processed! Bundled! TypeScript-supported!  // Importing local scripts and Node modules works.&#x3C;/script></span></span>
+<span class="line"><span></span></span></code></pre>
+<p>The <code>type="module"</code> attribute makes the browser treat the script as a JavaScript module. This has several performance benefits:</p>
+<ul>
+<li>Rendering is not blocked. The browser continues to process the rest of the HTML while the module script and its dependencies load.</li>
+<li>The browser waits for HTML to be processed before executing module scripts. You do not need to listen for the “load” event.</li>
+<li><code>async</code> and <code>defer</code> attributes are unnecessary. Module scripts are always deferred.</li>
+</ul>
+<p>Note</p>
+<p>The <code>async</code> attribute is valuable for normal scripts because it prevents them from blocking rendering. However, module scripts already have this behavior. Adding <code>async</code> to a module script will cause it to execute before the page has fully loaded. This is probably not what you want.</p>
+<h3 id="opting-out-of-processing">Opting out of processing</h3>
+<p><a href="#opting-out-of-processing">Section titled Opting out of processing</a>
+To prevent Astro from processing a script, add the <code>is:inline</code> directive.</p>
+<p>src/components/InlineScript.astro</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;script is:inline>  // Will be rendered into the HTML exactly as written!  // Local imports are not resolved and will not work.  // If in a component, repeats each time the component is used.&#x3C;/script></span></span>
+<span class="line"><span></span></span></code></pre>
+<p>Note</p>
+<p>Astro will not process your script tags in some situations. In particular, adding <code>type="module"</code> or any attribute other than <code>src</code> to a <code>&#x3C;script></code> tag will cause Astro to treat the tag as if it had an <code>is:inline</code> directive. The same will be true when the script is written in a JSX expression.</p>
+<p>See our <a href="/en/reference/directives-reference/#script--style-directives">directives reference</a> page for more information about the directives available on <code>&#x3C;script></code> tags.</p>
+<h3 id="include-javascript-files-on-your-page">Include JavaScript files on your page</h3>
+<p><a href="#include-javascript-files-on-your-page">Section titled Include JavaScript files on your page</a>
+You may want to write your scripts as separate <code>.js</code>/<code>.ts</code> files or need to reference an external script on another server. You can do this by referencing these in a <code>&#x3C;script></code> tag’s <code>src</code> attribute.</p>
+<h4 id="import-local-scripts">Import local scripts</h4>
+<p><a href="#import-local-scripts">Section titled Import local scripts</a>
+<strong>When to use this:</strong> when your script lives inside of <code>src/</code>.</p>
+<p>Astro will build, optimize, and add these scripts to the page for you, following its <a href="#script-processing">script processing rules</a>.</p>
+<p>src/components/LocalScripts.astro</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;!-- relative path to script at `src/scripts/local.js` -->&#x3C;script src="../scripts/local.js">&#x3C;/script></span></span>
+<span class="line"><span>&#x3C;!-- also works for local TypeScript files -->&#x3C;script src="./script-with-types.ts">&#x3C;/script></span></span>
+<span class="line"><span></span></span></code></pre>
+<h4 id="load-external-scripts">Load external scripts</h4>
+<p><a href="#load-external-scripts">Section titled Load external scripts</a>
+<strong>When to use this:</strong> when your JavaScript file lives inside of <code>public/</code> or on a CDN.</p>
+<p>To load scripts outside of your project’s <code>src/</code> folder, include the <code>is:inline</code> directive. This approach skips the JavaScript processing, bundling, and optimizations that are provided by Astro when you import scripts as described above.</p>
+<p>src/components/ExternalScripts.astro</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;!-- absolute path to a script at `public/my-script.js` -->&#x3C;script is:inline src="/my-script.js">&#x3C;/script></span></span>
+<span class="line"><span>&#x3C;!-- full URL to a script on a remote server -->&#x3C;script is:inline src="https://my-analytics.com/script.js">&#x3C;/script></span></span>
+<span class="line"><span></span></span></code></pre>
+<h2 id="common-script-patterns">Common script patterns</h2>
+<p><a href="#common-script-patterns">Section titled Common script patterns</a></p>
+<h3 id="handle-onclick-and-other-events">Handle <code>onclick</code> and other events</h3>
+<p><a href="#handle-onclick-and-other-events">Section titled Handle onclick and other events</a>
+Some UI frameworks use custom syntax for event handling like <code>onClick={...}</code> (React/Preact) or <code>@click="..."</code> (Vue). Astro follows standard HTML more closely and does not use custom syntax for events.</p>
+<p>Instead, you can use <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener"><code>addEventListener</code></a> in a <code>&#x3C;script></code> tag to handle user interactions.</p>
+<p>src/components/AlertButton.astro</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;button class="alert">Click me!&#x3C;/button></span></span>
+<span class="line"><span>&#x3C;script>  // Find all buttons with the `alert` class on the page.  const buttons = document.querySelectorAll('button.alert');</span></span>
+<span class="line"><span>  // Handle clicks on each button.  buttons.forEach((button) => {    button.addEventListener('click', () => {      alert('Button was clicked!');    });  });&#x3C;/script></span></span>
+<span class="line"><span></span></span></code></pre>
+<p>Note</p>
+<p>If you have multiple <code>&#x3C;AlertButton /></code> components on a page, Astro will not run the script multiple times. Scripts are bundled and only included once per page. Using <code>querySelectorAll</code> ensures that this script attaches the event listener to every button with the <code>alert</code> class found on the page.</p>
+<h3 id="web-components-with-custom-elements">Web components with custom elements</h3>
+<p><a href="#web-components-with-custom-elements">Section titled Web components with custom elements</a>
+You can create your own HTML elements with custom behavior using the Web Components standard. Defining a <a href="https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements">custom element</a> in a <code>.astro</code> component allows you to build interactive components without needing a UI framework library.</p>
+<p>In this example, we define a new <code>&#x3C;astro-heart></code> HTML element that tracks how many times you click the heart button and updates the <code>&#x3C;span></code> with the latest count.</p>
+<p>src/components/AstroHeart.astro</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;!-- Wrap the component elements in our custom element “astro-heart”. -->&#x3C;astro-heart>  &#x3C;button aria-label="Heart">💜&#x3C;/button> × &#x3C;span>0&#x3C;/span>&#x3C;/astro-heart></span></span>
+<span class="line"><span>&#x3C;script>  // Define the behaviour for our new type of HTML element.  class AstroHeart extends HTMLElement {    connectedCallback() {      let count = 0;</span></span>
+<span class="line"><span>      const heartButton = this.querySelector('button');      const countSpan = this.querySelector('span');</span></span>
+<span class="line"><span>      // Each time the button is clicked, update the count.      heartButton.addEventListener('click', () => {        count++;        countSpan.textContent = count.toString();      });    }  }</span></span>
+<span class="line"><span>  // Tell the browser to use our AstroHeart class for &#x3C;astro-heart> elements.  customElements.define('astro-heart', AstroHeart);&#x3C;/script></span></span>
+<span class="line"><span></span></span></code></pre>
+<p>There are two advantages to using a custom element here:</p>
+<ol>
+<li>Instead of searching the whole page using <code>document.querySelector()</code>, you can use <code>this.querySelector()</code>, which only searches within the current custom element instance. This makes it easier to work with only the children of one component instance at a time.</li>
+<li>Although a <code>&#x3C;script></code> only runs once, the browser will run our custom element’s <code>constructor()</code> method each time it finds <code>&#x3C;astro-heart></code> on the page. This means you can safely write code for one component at a time, even if you intend to use this component multiple times on a page.</li>
+</ol>
+<p>You can learn more about custom elements in <a href="https://web.dev/custom-elements-v1/">web.dev’s Reusable Web Components guide</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements">MDN’s introduction to custom elements</a>.</p>
+<h3 id="pass-frontmatter-variables-to-scripts">Pass frontmatter variables to scripts</h3>
+<p><a href="#pass-frontmatter-variables-to-scripts">Section titled Pass frontmatter variables to scripts</a>
+In Astro components, the code in <a href="/en/basics/astro-components/#the-component-script">the frontmatter</a> between the <code>---</code> fences runs on the server and is not available in the browser. To send variables from the server to the client, we need a way to store our variables and then read them when JavaScript runs in the browser.</p>
+<p>One way to do this is to use <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes"><code>data-*</code> attributes</a> to store the value of variables in your HTML output. Scripts, including custom elements, can then read these attributes using an element’s <code>dataset</code> property once your HTML loads in the browser.</p>
+<p>In this example component, a <code>message</code> prop is stored in a <code>data-message</code> attribute, so the custom element can read <code>this.dataset.message</code> and get the value of the prop in the browser.</p>
+<p>src/components/AstroGreet.astro</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>---const { message = 'Welcome, world!' } = Astro.props;---</span></span>
+<span class="line"><span>&#x3C;!-- Store the message prop as a data attribute. -->&#x3C;astro-greet data-message={message}>  &#x3C;button>Say hi!&#x3C;/button>&#x3C;/astro-greet></span></span>
+<span class="line"><span>&#x3C;script>  class AstroGreet extends HTMLElement {    connectedCallback() {      // Read the message from the data attribute.      const message = this.dataset.message;      const button = this.querySelector('button');      button.addEventListener('click', () => {        alert(message);      });    }  }</span></span>
+<span class="line"><span>  customElements.define('astro-greet', AstroGreet);&#x3C;/script></span></span>
+<span class="line"><span></span></span></code></pre>
+<p>Now we can use our component multiple times and be greeted by a different message for each one.</p>
+<p>src/pages/example.astro</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>---import AstroGreet from '../components/AstroGreet.astro';---</span></span>
+<span class="line"><span>&#x3C;!-- Use the default message: “Welcome, world!” -->&#x3C;AstroGreet /></span></span>
+<span class="line"><span>&#x3C;!-- Use custom messages passed as a props. -->&#x3C;AstroGreet message="Lovely day to build components!" />&#x3C;AstroGreet message="Glad you made it! 👋" /></span></span>
+<span class="line"><span></span></span></code></pre>
+<p>Did you know?</p>
+<p>This is actually what Astro does behind the scenes when you pass props to a component written using a UI framework like React! For components with a <code>client:*</code> directive, Astro creates an <code>&#x3C;astro-island></code> custom element with a <code>props</code> attribute that stores your server-side props in the HTML output.</p>
+<h3 id="combining-scripts-and-ui-frameworks">Combining scripts and UI Frameworks</h3>
+<p><a href="#combining-scripts-and-ui-frameworks">Section titled Combining scripts and UI Frameworks</a>
+Elements rendered by a UI framework may not be available yet when a <code>&#x3C;script></code> tag executes. If your script also needs to handle <a href="/en/guides/framework-components/">UI framework components</a>, using a custom element is recommended.</p>
+<p>Learn</p> </div> <div class="prose-a:no-underline flex gap-2"> <span class="badge badge-outline badge-md"> <a href="/tags/documentation/1/">documentation</a> </span><span class="badge badge-outline badge-md"> <a href="/tags/Javascript/1/">Javascript</a> </span><span class="badge badge-outline badge-md"> <a href="/tags/Sass/1/">Sass</a> </span> </div> <div class="mt-4 flex justify-between"> <small>Publish on <span class="font-weight-bold">2024-01-05</span>，Update on <span class="font-weight-bold">2025-01-09</span></small> </div> </article> <div class="mt-12"> <div class="grid grid-cols-1 gap-4 md:grid-cols-3"> <div class="card mb-4 overflow-hidden rounded-xl border  transition-transform duration-500 hover:-translate-y-1 hover:scale-105"> <a href="/posts/manage-your-content-guides-markdown-content/"> <picture> <source srcset="/_astro/photo-1472377723522-4768db9c41ce_cr2OL.avif 392w, /_astro/photo-1472377723522-4768db9c41ce_ZY6gfW.avif 700w, /_astro/photo-1472377723522-4768db9c41ce_1nCPx9.avif 980w, /_astro/photo-1472377723522-4768db9c41ce_Z1EwWzk.avif 1960w" type="image/avif" sizes="(max-width: 360px) 392px, 
+           (max-width: 720px) 700px, 
+           (max-width: 1600px) 980px, 
+           1960px"> <img src="/_astro/photo-1472377723522-4768db9c41ce_Z1EwWzk.avif" srcset="/_astro/photo-1472377723522-4768db9c41ce_cr2OL.avif 392w, /_astro/photo-1472377723522-4768db9c41ce_ZY6gfW.avif 700w, /_astro/photo-1472377723522-4768db9c41ce_1nCPx9.avif 980w, /_astro/photo-1472377723522-4768db9c41ce_Z1EwWzk.avif 1960w" alt="white and brown concrete house near trees at daytime" sizes="(max-width: 360px) 392px, 
+           (max-width: 720px) 700px, 
+           (max-width: 1600px) 980px, 
+           1960px" class="mx-auto w-full max-w-full object-cover" width="1960" height="1102" loading="lazy" decoding="async"> </picture> <div class="card-body"> <div class="flex items-center gap-1 text-xs"> <span class="badge badge-outline">astro-build</span><span class="badge badge-outline">Go</span><span class="badge badge-outline">Css</span> </div> <p class="text-xs"><span class="font-weight-bold">2024-02-21</span></p> <h2 class="card-title">Markdown in Astro</h2> </div> </a> </div><div class="card mb-4 overflow-hidden rounded-xl border  transition-transform duration-500 hover:-translate-y-1 hover:scale-105"> <a href="/posts/welcome-world-guides-deploy/"> <picture> <source srcset="/_astro/photo-1480074568708-e7b720bb3f09_Z2vlXMC.avif 392w, /_astro/photo-1480074568708-e7b720bb3f09_1nhPUA.avif 700w, /_astro/photo-1480074568708-e7b720bb3f09_Z1kab5f.avif 980w, /_astro/photo-1480074568708-e7b720bb3f09_vUEOm.avif 1960w" type="image/avif" sizes="(max-width: 360px) 392px, 
+           (max-width: 720px) 700px, 
+           (max-width: 1600px) 980px, 
+           1960px"> <img src="/_astro/photo-1480074568708-e7b720bb3f09_vUEOm.avif" srcset="/_astro/photo-1480074568708-e7b720bb3f09_Z2vlXMC.avif 392w, /_astro/photo-1480074568708-e7b720bb3f09_1nhPUA.avif 700w, /_astro/photo-1480074568708-e7b720bb3f09_Z1kab5f.avif 980w, /_astro/photo-1480074568708-e7b720bb3f09_vUEOm.avif 1960w" alt="white house under maple trees" sizes="(max-width: 360px) 392px, 
+           (max-width: 720px) 700px, 
+           (max-width: 1600px) 980px, 
+           1960px" class="mx-auto w-full max-w-full object-cover" width="1960" height="1102" loading="lazy" decoding="async"> </picture> <div class="card-body"> <div class="flex items-center gap-1 text-xs"> <span class="badge badge-outline">guide</span><span class="badge badge-outline">CSharp</span><span class="badge badge-outline">Sass</span> </div> <p class="text-xs"><span class="font-weight-bold">2024-02-16</span></p> <h2 class="card-title">Deploy your Astro Site</h2> </div> </a> </div><div class="card mb-4 overflow-hidden rounded-xl border  transition-transform duration-500 hover:-translate-y-1 hover:scale-105"> <a href="/posts/core-concepts-concepts-islands/"> <picture> <source srcset="/_astro/photo-1483366774565-c783b9f70e2c_jGYEQ.avif 392w, /_astro/photo-1483366774565-c783b9f70e2c_ZQPjpR.avif 700w, /_astro/photo-1483366774565-c783b9f70e2c_1uSMne.avif 980w, /_astro/photo-1483366774565-c783b9f70e2c_21yqnd.avif 1960w" type="image/avif" sizes="(max-width: 360px) 392px, 
+           (max-width: 720px) 700px, 
+           (max-width: 1600px) 980px, 
+           1960px"> <img src="/_astro/photo-1483366774565-c783b9f70e2c_21yqnd.avif" srcset="/_astro/photo-1483366774565-c783b9f70e2c_jGYEQ.avif 392w, /_astro/photo-1483366774565-c783b9f70e2c_ZQPjpR.avif 700w, /_astro/photo-1483366774565-c783b9f70e2c_1uSMne.avif 980w, /_astro/photo-1483366774565-c783b9f70e2c_21yqnd.avif 1960w" alt="worm's-eye view photography of concrete building" sizes="(max-width: 360px) 392px, 
+           (max-width: 720px) 700px, 
+           (max-width: 1600px) 980px, 
+           1960px" class="mx-auto w-full max-w-full object-cover" width="1960" height="1102" loading="lazy" decoding="async"> </picture> <div class="card-body"> <div class="flex items-center gap-1 text-xs"> <span class="badge badge-outline">tutorial</span><span class="badge badge-outline">CSharp</span><span class="badge badge-outline">Less</span> </div> <p class="text-xs"><span class="font-weight-bold">2024-02-12</span></p> <h2 class="card-title">Astro Islands</h2> </div> </a> </div> </div> </div> </main>  </main> <footer class="mx-auto mt-auto w-full max-w-[85rem] py-10"> <nav class="mx-auto w-full max-w-[85rem] px-4" aria-label="Footer"> <div class="flex flex-col items-center sm:flex-row sm:justify-between"> <div id="navbar-alignment" class="internal-links sm:order-2"> <div class="mt-2 flex flex-row gap-5 sm:mt-0 sm:flex-row sm:items-center sm:ps-5"> <a href="/posts/core-concepts-concepts-why-astro/" class="inline-flex gap-x-2 text-sm"> Astro </a><a href="/posts/assets-guides-styling/" class="inline-flex gap-x-2 text-sm"> Styling </a><a href="/tags/" class="inline-flex gap-x-2 text-sm"> Tags </a> </div> </div> <div class="mt-2 flex flex-wrap gap-2 sm:order-3 sm:mb-0 sm:gap-0"> <button type="button" class="relative inline-flex h-12 w-12 items-center gap-x-2 px-4 py-3 disabled:pointer-events-none disabled:opacity-50"> <a href="/rss.xml" class="absolute inset-0 z-10" aria-label="RSS"></a> <i class="i-tabler-rss icon-base"></i> </button><button type="button" class="relative inline-flex h-12 w-12 items-center gap-x-2 px-4 py-3 disabled:pointer-events-none disabled:opacity-50"> <a href="https://twitter.com/astrodotbuild" class="absolute inset-0 z-10" aria-label="Twitter"></a> <i class="i-tabler-brand-twitter icon-base"></i> </button><button type="button" class="relative inline-flex h-12 w-12 items-center gap-x-2 px-4 py-3 disabled:pointer-events-none disabled:opacity-50"> <a href="https://github.com/isooosi" class="absolute inset-0 z-10" aria-label="GitHub"></a> <i class="i-tabler-brand-github icon-base"></i> </button> </div> <div class="mt-2 sm:order-1 sm:mb-0"> <a class="flex-none text-sm" href="/" aria-label="Brand">AstroMelody &copy; 2025</a> </div> </div> </nav> </footer> </body></html>

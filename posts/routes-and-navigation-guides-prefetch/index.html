@@ -1,0 +1,173 @@
+<!DOCTYPE html><html lang="en"> <head><!-- Global Metadata --><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="generator" content="Astro v4.16.7"><!-- Canonical URL --><link rel="canonical" href="https://10ta.github.io/posts/routes-and-navigation-guides-prefetch/"><!-- Sitemap --><link rel="sitemap" href="/sitemap-index.xml"><!-- Primary Meta Tags --><title>Prefetch</title><meta name="title" content="Prefetch"><meta name="description" content="Prefetch links for snappier navigation between pages."><!-- Open Graph / Facebook --><meta property="og:type" content="website"><meta property="og:url" content="https://10ta.github.io/posts/routes-and-navigation-guides-prefetch/"><meta property="og:title" content="Prefetch"><meta property="og:description" content="Prefetch links for snappier navigation between pages."><meta property="og:image" content="https://10ta.github.io/blog-placeholder-1.avif"><!-- Twitter --><meta property="twitter:card" content="summary_large_image"><meta property="twitter:url" content="https://10ta.github.io/posts/routes-and-navigation-guides-prefetch/"><meta property="twitter:title" content="Prefetch"><meta property="twitter:description" content="Prefetch links for snappier navigation between pages."><meta property="twitter:image" content="https://10ta.github.io/blog-placeholder-1.avif"><link rel="stylesheet" href="/_astro/_page_.Bdwf1GY7.css"><script type="module" src="/_astro/hoisted.CPfS8Ggc.js"></script>
+<script type="module" src="/_astro/page.DTIbhfSr.js"></script>
+<script>!(function(w,p,f,c){if(!window.crossOriginIsolated && !navigator.serviceWorker) return;c=w[p]=Object.assign(w[p]||{},{"lib":"/~partytown/","debug":false});c[f]=(c[f]||[]).concat(["dataLayer.push"])})(window,'partytown','forward');/* Partytown 0.10.2 - MIT builder.io */
+const t={preserveBehavior:!1},e=e=>{if("string"==typeof e)return[e,t];const[n,r=t]=e;return[n,{...t,...r}]},n=Object.freeze((t=>{const e=new Set;let n=[];do{Object.getOwnPropertyNames(n).forEach((t=>{"function"==typeof n[t]&&e.add(t)}))}while((n=Object.getPrototypeOf(n))!==Object.prototype);return Array.from(e)})());!function(t,r,o,i,a,s,c,d,l,p,u=t,f){function h(){f||(f=1,"/"==(c=(s.lib||"/~partytown/")+(s.debug?"debug/":""))[0]&&(l=r.querySelectorAll('script[type="text/partytown"]'),i!=t?i.dispatchEvent(new CustomEvent("pt1",{detail:t})):(d=setTimeout(v,1e4),r.addEventListener("pt0",w),a?y(1):o.serviceWorker?o.serviceWorker.register(c+(s.swPath||"partytown-sw.js"),{scope:c}).then((function(t){t.active?y():t.installing&&t.installing.addEventListener("statechange",(function(t){"activated"==t.target.state&&y()}))}),console.error):v())))}function y(e){p=r.createElement(e?"script":"iframe"),t._pttab=Date.now(),e||(p.style.display="block",p.style.width="0",p.style.height="0",p.style.border="0",p.style.visibility="hidden",p.setAttribute("aria-hidden",!0)),p.src=c+"partytown-"+(e?"atomics.js?v=0.10.2":"sandbox-sw.html?"+t._pttab),r.querySelector(s.sandboxParent||"body").appendChild(p)}function v(n,o){for(w(),i==t&&(s.forward||[]).map((function(n){const[r]=e(n);delete t[r.split(".")[0]]})),n=0;n<l.length;n++)(o=r.createElement("script")).innerHTML=l[n].innerHTML,o.nonce=s.nonce,r.head.appendChild(o);p&&p.parentNode.removeChild(p)}function w(){clearTimeout(d)}s=t.partytown||{},i==t&&(s.forward||[]).map((function(r){const[o,{preserveBehavior:i}]=e(r);u=t,o.split(".").map((function(e,r,o){var a;u=u[o[r]]=r+1<o.length?u[o[r]]||(a=o[r+1],n.includes(a)?[]:{}):(()=>{let e=null;if(i){const{methodOrProperty:n,thisObject:r}=((t,e)=>{let n=t;for(let t=0;t<e.length-1;t+=1)n=n[e[t]];return{thisObject:n,methodOrProperty:e.length>0?n[e[e.length-1]]:void 0}})(t,o);"function"==typeof n&&(e=(...t)=>n.apply(r,...t))}return function(){let n;return e&&(n=e(arguments)),(t._ptf=t._ptf||[]).push(o,arguments),n}})()}))})),"complete"==r.readyState?h():(t.addEventListener("DOMContentLoaded",h),t.addEventListener("load",h))}(window,document,navigator,top,window.crossOriginIsolated);;(e=>{e.addEventListener("astro:before-swap",e=>{let r=document.body.querySelector("iframe[src*='/~partytown/']");if(r)e.newDocument.body.append(r)})})(document);</script></head> <body class="flex flex-col min-h-screen mx-auto max-w-6xl px-4 dark:prose-invert sm:px-6 lg:px-8"> <header class="z-50 flex w-full flex-wrap py-7 md:flex-nowrap md:justify-start"> <nav class="relative mx-auto flex w-full max-w-7xl basis-full flex-wrap items-center px-4" aria-label="Global"> <div class=""> <a class="flex-none text-xl font-semibold" href="/" aria-label="Astroverse"> AstroMelody </a> </div> <div class="ms-auto flex items-center gap-x-2 py-1"> <a class="inline-flex items-center gap-x-2 rounded-xl border border-transparent px-3 py-2 text-sm font-medium disabled:pointer-events-none disabled:opacity-50" href="/search/" href="/search/"> <i class="icon-base i-tabler-search"></i> </a> <div class="dropdown dropdown-end"> <div tabindex="0" role="button" class="flex size-[38px] items-center justify-center rounded-xl text-sm font-semibold"> <i class="icon-base i-tabler-category-2"></i> </div> <ul tabindex="0" class="menu dropdown-content z-[1] w-52 rounded-box bg-base-100 p-2 shadow"> <li> <a href="/category/One/1/" class="px-4 py-3 font-medium"> One </a> </li><li> <a href="/category/Two/1/" class="px-4 py-3 font-medium"> Two </a> </li><li> <a href="/category/Three/1/" class="px-4 py-3 font-medium"> Three </a> </li> </ul> </div> <label class="swap swap-rotate rounded-xl px-3 py-2 text-sm"> <!-- this hidden checkbox controls the state --> <input type="checkbox" class="theme-controller" data-unchecked-value="corporate" value="halloween"> <!-- sun icon --> <i class="icon-base swap-off i-tabler-sun-filled"></i> <!-- moon icon --> <i class="icon-base swap-on i-tabler-moon-filled"></i> </label> </div> </nav> </header> <!-- Save theme to localStorage --> <script>
+  const lightTheme =  document.querySelector('.theme-controller')?.getAttribute('data-unchecked-value');
+  // ☝️ This script prevent the FART effect.
+  if (localStorage.getItem("theme") === null) {
+    document.documentElement.setAttribute("data-theme", lightTheme);
+  } else
+    document.documentElement.setAttribute(
+      "data-theme",
+      localStorage.getItem("theme"),
+    );
+  // "theme" LocalStorage value is set by the package to remember user preference.
+  // The value is checked and applyed before rendering anything.
+</script>  <!-- 内容区域，确保其动态调整高度 --> <main class="flex-grow">  <main> <article class="prose mx-auto dark:prose-invert"> <div class="prose-h1 text-center"> <h1>Prefetch</h1> </div> <div> <picture> <source srcset="/_astro/photo-1414438992182-69e404046f80_ZV2v1D.avif 392w, /_astro/photo-1414438992182-69e404046f80_Z27zO7m.avif 700w, /_astro/photo-1414438992182-69e404046f80_f9hFJ.avif 980w, /_astro/photo-1414438992182-69e404046f80_Z1na9tu.avif 1960w" type="image/avif" sizes="(max-width: 360px) 392px, 
+           (max-width: 720px) 700px, 
+           (max-width: 1600px) 980px, 
+           1960px"> <img src="/_astro/photo-1414438992182-69e404046f80_Z1na9tu.avif" srcset="/_astro/photo-1414438992182-69e404046f80_ZV2v1D.avif 392w, /_astro/photo-1414438992182-69e404046f80_Z27zO7m.avif 700w, /_astro/photo-1414438992182-69e404046f80_f9hFJ.avif 980w, /_astro/photo-1414438992182-69e404046f80_Z1na9tu.avif 1960w" alt="Leaning Tower of Pisa, Italy" sizes="(max-width: 360px) 392px, 
+           (max-width: 720px) 700px, 
+           (max-width: 1600px) 980px, 
+           1960px" class="mx-auto w-full max-w-full object-cover" width="1960" height="1102" loading="lazy" decoding="async"> </picture> </div> <div> <p>Page load times play a big role in the usability and overall enjoyment of a site. Astro’s <strong>opt-in prefetching</strong> brings the benefits of near-instant page navigations to your multi-page application (MPA) as your visitors interact with the site.</p>
+<h2 id="enable-prefetching">Enable prefetching</h2>
+<p><a href="#enable-prefetching">Section titled Enable prefetching</a>
+You can enable prefetching with the <code>prefetch</code> config:</p>
+<p>astro.config.mjs</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>import { defineConfig } from 'astro/config';</span></span>
+<span class="line"><span>export default defineConfig({  prefetch: true});</span></span>
+<span class="line"><span></span></span></code></pre>
+<p>A prefetch script will be added to all pages of your site. You can then add the <code>data-astro-prefetch</code> attribute to any <code>&#x3C;a /></code> links on your site to opt-in to prefetching. When you hover over the link, the script will fetch the page in the background.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;a href="/about" data-astro-prefetch></span></span>
+<span class="line"><span></span></span></code></pre>
+<p>Note that prefetching only works for links within your site, and not external links.</p>
+<h2 id="prefetch-configuration">Prefetch configuration</h2>
+<p><a href="#prefetch-configuration">Section titled Prefetch configuration</a>
+The <code>prefetch</code> config also accepts an option object to further customize prefetching.</p>
+<h3 id="prefetch-strategies">Prefetch strategies</h3>
+<p><a href="#prefetch-strategies">Section titled Prefetch strategies</a>
+Astro supports 4 prefetch strategies for various use cases:</p>
+<ul>
+<li><code>hover</code> (default): Prefetch when you hover over or focus on the link.</li>
+<li><code>tap</code>: Prefetch just before you click on the link.</li>
+<li><code>viewport</code>: Prefetch as the links enter the viewport.</li>
+<li><code>load</code>: Prefetch all links on the page after the page is loaded.</li>
+</ul>
+<p>You can specify a strategy for an individual link by passing it to the <code>data-astro-prefetch</code> attribute:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;a href="/about" data-astro-prefetch="tap">About&#x3C;/a></span></span>
+<span class="line"><span></span></span></code></pre>
+<p>Each strategy is fine-tuned to only prefetch when needed and save your users’ bandwidth. For example:</p>
+<ul>
+<li>If a visitor is using <a href="https://developer.mozilla.org/en-US/docs/Web/API/NetworkInformation/saveData">data saver mode</a> or has a <a href="https://developer.mozilla.org/en-US/docs/Web/API/NetworkInformation/effectiveType">slow connection</a>, prefetch will fallback to the <code>tap</code> strategy.</li>
+<li>Quickly hovering or scrolling over links will not prefetch them.</li>
+</ul>
+<h3 id="default-prefetch-strategy">Default prefetch strategy</h3>
+<p><a href="#default-prefetch-strategy">Section titled Default prefetch strategy</a>
+The default prefetch strategy when adding the <code>data-astro-prefetch</code> attribute is <code>hover</code>. To change it, you can configure <a href="/en/reference/configuration-reference/#prefetchdefaultstrategy"><code>prefetch.defaultStrategy</code></a> in your <code>astro.config.mjs</code> file:</p>
+<p>astro.config.mjs</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>import { defineConfig } from 'astro/config';</span></span>
+<span class="line"><span>export default defineConfig({  prefetch: {    defaultStrategy: 'viewport'  }});</span></span>
+<span class="line"><span></span></span></code></pre>
+<h3 id="prefetch-all-links-by-default">Prefetch all links by default</h3>
+<p><a href="#prefetch-all-links-by-default">Section titled Prefetch all links by default</a>
+If you want to prefetch all links, including those without the <code>data-astro-prefetch</code> attribute, you can set <a href="/en/reference/configuration-reference/#prefetchprefetchall"><code>prefetch.prefetchAll</code></a> to <code>true</code>:</p>
+<p>astro.config.mjs</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>import { defineConfig } from 'astro/config';</span></span>
+<span class="line"><span>export default defineConfig({  prefetch: {    prefetchAll: true  }});</span></span>
+<span class="line"><span></span></span></code></pre>
+<p>You can then opt-out of prefetching for individual links by setting <code>data-astro-prefetch="false"</code>:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;a href="/about" data-astro-prefetch="false">About&#x3C;/a></span></span>
+<span class="line"><span></span></span></code></pre>
+<p>The default prefetch strategy for all links can be changed with <code>prefetch.defaultStrategy</code> as shown in the <a href="#default-prefetch-strategy">Default prefetch strategy section</a>.</p>
+<h2 id="prefetch-programmatically">Prefetch programmatically</h2>
+<p><a href="#prefetch-programmatically">Section titled Prefetch programmatically</a>
+As some navigation might not always appear as <code>&#x3C;a /></code> links, you can also prefetch programmatically with the <code>prefetch()</code> API from the <code>astro:prefetch</code> module:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;button id="btn">Click me&#x3C;/button></span></span>
+<span class="line"><span>&#x3C;script>  import { prefetch } from 'astro:prefetch';</span></span>
+<span class="line"><span>  const btn = document.getElementById('btn');  btn.addEventListener('click', () => {    prefetch('/about');  });&#x3C;/script></span></span>
+<span class="line"><span></span></span></code></pre>
+<p>The <code>prefetch()</code> API includes the same <a href="https://developer.mozilla.org/en-US/docs/Web/API/NetworkInformation/saveData">data saver mode</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/API/NetworkInformation/effectiveType">slow connection</a> detection so that it only prefetches when needed.</p>
+<p>To ignore slow connection detection, you can use the <code>ignoreSlowConnection</code> option:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>// Prefetch even on data saver mode or slow connectionprefetch('/about', { ignoreSlowConnection: true });</span></span>
+<span class="line"><span></span></span></code></pre>
+<p>Make sure to only import <code>prefetch()</code> in client-side scripts as it relies on browser APIs.</p>
+<h2 id="using-with-view-transitions">Using with View Transitions</h2>
+<p><a href="#using-with-view-transitions">Section titled Using with View Transitions</a>
+When you use <a href="/en/guides/view-transitions/">View Transitions</a> on a page, prefetching will also be enabled by default. It sets a default configuration of <code>{ prefetchAll: true }</code> which enables <a href="#prefetch-all-links-by-default">prefetching for all links</a> on the page.</p>
+<p>You can customize the prefetch configuration in <code>astro.config.mjs</code> to override the default. For example:</p>
+<p>astro.config.mjs</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>import { defineConfig } from 'astro/config';</span></span>
+<span class="line"><span>export default defineConfig({  // Disable prefetch completely  prefetch: false});</span></span>
+<span class="line"><span></span></span></code></pre>
+<p>astro.config.mjs</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>import { defineConfig } from 'astro/config';</span></span>
+<span class="line"><span>export default defineConfig({  // Keep prefetch, but only prefetch for links with `data-astro-prefetch`  prefetch: {    prefetchAll: false  }});</span></span>
+<span class="line"><span></span></span></code></pre>
+<h2 id="browser-support">Browser support</h2>
+<p><a href="#browser-support">Section titled Browser support</a>
+Astro’s prefetching uses <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/rel/prefetch"><code>&#x3C;link rel="prefetch"></code></a> if supported by the browser, and falls back to the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API"><code>fetch()</code> API</a> otherwise.</p>
+<p>The most common browsers support Astro’s prefetching with subtle differences:</p>
+<h3 id="chrome">Chrome</h3>
+<p><a href="#chrome">Section titled Chrome</a>
+Chrome supports <code>&#x3C;link rel="prefetch"></code>. Prefetching works as intended.</p>
+<h3 id="firefox">Firefox</h3>
+<p><a href="#firefox">Section titled Firefox</a>
+Firefox supports <code>&#x3C;link rel="prefetch"></code> but may display errors or fail entirely:</p>
+<ul>
+<li>Without an explicit cache header (e.g. <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control"><code>Cache-Control</code></a> or <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Expires"><code>Expires</code></a>), prefetching will error with <code>NS_BINDING_ABORTED</code>.</li>
+<li>Even in the event of an error, if the response has a proper <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/ETag"><code>ETag</code></a> header, it will be re-used on navigation.</li>
+<li>Otherwise, if it errors with no other cache headers, the prefetch will not work.</li>
+</ul>
+<h3 id="safari">Safari</h3>
+<p><a href="#safari">Section titled Safari</a>
+Safari does not support <code>&#x3C;link rel="prefetch"></code> and will fall back to the <code>fetch()</code> API which requires cache headers (e.g. <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control"><code>Cache-Control</code></a>, <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Expires"><code>Expires</code></a>, and <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/ETag"><code>ETag</code></a>) to be set. Otherwise, the prefetch will not work.</p>
+<p><strong>Edge case:</strong> <code>ETag</code> headers do not work in private windows.</p>
+<h3 id="recommendations">Recommendations</h3>
+<p><a href="#recommendations">Section titled Recommendations</a>
+To best support all browsers, make sure your pages have the proper cache headers.</p>
+<p>For static or prerendered pages, the <code>ETag</code> header is often automatically set by the deployment platform and is expected to work out of the box.</p>
+<p>For dynamic and server-side rendered pages, set the appropriate cache headers yourself based on the page content. Visit the <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Caching">MDN documentation on HTTP caching</a> for more information.</p>
+<h2 id="migrating-from-astrojsprefetch">Migrating from <code>@astrojs/prefetch</code></h2>
+<p><a href="#migrating-from-astrojsprefetch">Section titled Migrating from @astrojs/prefetch</a>
+The <code>@astrojs/prefetch</code> integration was deprecated in v3.5.0 and will eventually be removed entirely. Use the following instructions to migrate to Astro’s built-in prefetching which replaces this integration.</p>
+<ol>
+<li>Remove the <code>@astrojs/prefetch</code> integration and enable the <code>prefetch</code> config in <code>astro.config.mjs</code>:</li>
+</ol>
+<p>astro.config.mjs</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>import { defineConfig } from 'astro/config';import prefetch from '@astrojs/prefetch';</span></span>
+<span class="line"><span>export default defineConfig({  integrations: [prefetch()],  prefetch: true});</span></span>
+<span class="line"><span></span></span></code></pre>
+<ol start="2">
+<li>
+<p>Convert from <code>@astrojs/prefetch</code>’s configuration options:</p>
+<ul>
+<li>
+<p>The deprecated integration used the <code>selector</code> config option to specify which links should be prefetched upon entering the viewport.</p>
+</li>
+</ul>
+<p>Add <code>data-astro-prefetch="viewport"</code> to these individual links instead.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;a href="/about" data-astro-prefetch="viewport"></span></span>
+<span class="line"><span></span></span></code></pre>
+<ul>
+<li>
+<p>The deprecated integration used the <code>intentSelector</code> config option to specify which links should be prefetched when they were hovered over or focused.</p>
+</li>
+</ul>
+<p>Add <code>data-astro-prefetch</code> or <code>data-astro-prefetch="hover"</code> to these individual links instead:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;!-- You can omit the value if `defaultStrategy` is set to `hover` (default) -->&#x3C;a href="/about" data-astro-prefetch></span></span>
+<span class="line"><span>&#x3C;!-- Otherwise, you can explicitly define the prefetch strategy -->&#x3C;a href="/about" data-astro-prefetch="hover"></span></span>
+<span class="line"><span></span></span></code></pre>
+<ul>
+<li>The <code>throttles</code> option from <code>@astrojs/prefetch</code> is no longer needed as the new prefetch feature will automatically schedule and prefetch optimally.</li>
+</ul>
+</li>
+</ol>
+<p>Learn</p> </div> <div class="prose-a:no-underline flex gap-2"> <span class="badge badge-outline badge-md"> <a href="/tags/astro-build/1/">astro-build</a> </span><span class="badge badge-outline badge-md"> <a href="/tags/PHP/1/">PHP</a> </span><span class="badge badge-outline badge-md"> <a href="/tags/Less/1/">Less</a> </span> </div> <div class="mt-4 flex justify-between"> <small>Publish on <span class="font-weight-bold">2024-01-15</span>，Update on <span class="font-weight-bold">2025-01-09</span></small> </div> </article> <div class="mt-12"> <div class="grid grid-cols-1 gap-4 md:grid-cols-3"> <div class="card mb-4 overflow-hidden rounded-xl border  transition-transform duration-500 hover:-translate-y-1 hover:scale-105"> <a href="/posts/welcome-world-getting-started/"> <picture> <source srcset="/_astro/photo-1555883006-0f5a0915a80f_PusRg.avif 392w, /_astro/photo-1555883006-0f5a0915a80f_Zl2Pds.avif 700w, /_astro/photo-1555883006-0f5a0915a80f_21GgzD.avif 980w, /_astro/photo-1555883006-0f5a0915a80f_13KP0J.avif 1960w" type="image/avif" sizes="(max-width: 360px) 392px, 
+           (max-width: 720px) 700px, 
+           (max-width: 1600px) 980px, 
+           1960px"> <img src="/_astro/photo-1555883006-0f5a0915a80f_13KP0J.avif" srcset="/_astro/photo-1555883006-0f5a0915a80f_PusRg.avif 392w, /_astro/photo-1555883006-0f5a0915a80f_Zl2Pds.avif 700w, /_astro/photo-1555883006-0f5a0915a80f_21GgzD.avif 980w, /_astro/photo-1555883006-0f5a0915a80f_13KP0J.avif 1960w" alt="view of white metal tower through cherry blossom tree" sizes="(max-width: 360px) 392px, 
+           (max-width: 720px) 700px, 
+           (max-width: 1600px) 980px, 
+           1960px" class="mx-auto w-full max-w-full object-cover" width="1960" height="1102" loading="lazy" decoding="async"> </picture> <div class="card-body"> <div class="flex items-center gap-1 text-xs"> <span class="badge badge-outline">basics</span><span class="badge badge-outline">Javascript</span><span class="badge badge-outline">Less</span> </div> <p class="text-xs"><span class="font-weight-bold">2024-03-01</span></p> <h2 class="card-title">Getting Started</h2> </div> </a> </div><div class="card mb-4 overflow-hidden rounded-xl border  transition-transform duration-500 hover:-translate-y-1 hover:scale-105"> <a href="/posts/astro-api-reference-reference-api-reference/"> <picture> <source srcset="/_astro/photo-1514539079130-25950c84af65_ZG1oHX.avif 392w, /_astro/photo-1514539079130-25950c84af65_Z1RyHNG.avif 700w, /_astro/photo-1514539079130-25950c84af65_uanYp.avif 980w, /_astro/photo-1514539079130-25950c84af65_1abTbp.avif 1960w" type="image/avif" sizes="(max-width: 360px) 392px, 
+           (max-width: 720px) 700px, 
+           (max-width: 1600px) 980px, 
+           1960px"> <img src="/_astro/photo-1514539079130-25950c84af65_1abTbp.avif" srcset="/_astro/photo-1514539079130-25950c84af65_ZG1oHX.avif 392w, /_astro/photo-1514539079130-25950c84af65_Z1RyHNG.avif 700w, /_astro/photo-1514539079130-25950c84af65_uanYp.avif 980w, /_astro/photo-1514539079130-25950c84af65_1abTbp.avif 1960w" alt="closeup photo of castle with mist" sizes="(max-width: 360px) 392px, 
+           (max-width: 720px) 700px, 
+           (max-width: 1600px) 980px, 
+           1960px" class="mx-auto w-full max-w-full object-cover" width="1960" height="1102" loading="lazy" decoding="async"> </picture> <div class="card-body"> <div class="flex items-center gap-1 text-xs"> <span class="badge badge-outline">astro</span><span class="badge badge-outline">Go</span><span class="badge badge-outline">Sass</span> </div> <p class="text-xs"><span class="font-weight-bold">2024-02-25</span></p> <h2 class="card-title">Astro Runtime API</h2> </div> </a> </div><div class="card mb-4 overflow-hidden rounded-xl border  transition-transform duration-500 hover:-translate-y-1 hover:scale-105"> <a href="/posts/routes-and-navigation-guides-internationalization/"> <picture> <source srcset="/_astro/photo-1463130456064-77fda7f96d6b_ZAMhtG.avif 392w, /_astro/photo-1463130456064-77fda7f96d6b_Z1MkAzp.avif 700w, /_astro/photo-1463130456064-77fda7f96d6b_zovdG.avif 980w, /_astro/photo-1463130456064-77fda7f96d6b_Z1fOymS.avif 1960w" type="image/avif" sizes="(max-width: 360px) 392px, 
+           (max-width: 720px) 700px, 
+           (max-width: 1600px) 980px, 
+           1960px"> <img src="/_astro/photo-1463130456064-77fda7f96d6b_Z1fOymS.avif" srcset="/_astro/photo-1463130456064-77fda7f96d6b_ZAMhtG.avif 392w, /_astro/photo-1463130456064-77fda7f96d6b_Z1MkAzp.avif 700w, /_astro/photo-1463130456064-77fda7f96d6b_zovdG.avif 980w, /_astro/photo-1463130456064-77fda7f96d6b_Z1fOymS.avif 1960w" alt="white concrete building wall" sizes="(max-width: 360px) 392px, 
+           (max-width: 720px) 700px, 
+           (max-width: 1600px) 980px, 
+           1960px" class="mx-auto w-full max-w-full object-cover" width="1960" height="1102" loading="lazy" decoding="async"> </picture> <div class="card-body"> <div class="flex items-center gap-1 text-xs"> <span class="badge badge-outline">basics</span><span class="badge badge-outline">PHP</span><span class="badge badge-outline">Css</span> </div> <p class="text-xs"><span class="font-weight-bold">2024-02-23</span></p> <h2 class="card-title">Internationalization (i18n) Routing</h2> </div> </a> </div> </div> </div> </main>  </main> <footer class="mx-auto mt-auto w-full max-w-[85rem] py-10"> <nav class="mx-auto w-full max-w-[85rem] px-4" aria-label="Footer"> <div class="flex flex-col items-center sm:flex-row sm:justify-between"> <div id="navbar-alignment" class="internal-links sm:order-2"> <div class="mt-2 flex flex-row gap-5 sm:mt-0 sm:flex-row sm:items-center sm:ps-5"> <a href="/posts/core-concepts-concepts-why-astro/" class="inline-flex gap-x-2 text-sm"> Astro </a><a href="/posts/assets-guides-styling/" class="inline-flex gap-x-2 text-sm"> Styling </a><a href="/tags/" class="inline-flex gap-x-2 text-sm"> Tags </a> </div> </div> <div class="mt-2 flex flex-wrap gap-2 sm:order-3 sm:mb-0 sm:gap-0"> <button type="button" class="relative inline-flex h-12 w-12 items-center gap-x-2 px-4 py-3 disabled:pointer-events-none disabled:opacity-50"> <a href="/rss.xml" class="absolute inset-0 z-10" aria-label="RSS"></a> <i class="i-tabler-rss icon-base"></i> </button><button type="button" class="relative inline-flex h-12 w-12 items-center gap-x-2 px-4 py-3 disabled:pointer-events-none disabled:opacity-50"> <a href="https://twitter.com/astrodotbuild" class="absolute inset-0 z-10" aria-label="Twitter"></a> <i class="i-tabler-brand-twitter icon-base"></i> </button><button type="button" class="relative inline-flex h-12 w-12 items-center gap-x-2 px-4 py-3 disabled:pointer-events-none disabled:opacity-50"> <a href="https://github.com/isooosi" class="absolute inset-0 z-10" aria-label="GitHub"></a> <i class="i-tabler-brand-github icon-base"></i> </button> </div> <div class="mt-2 sm:order-1 sm:mb-0"> <a class="flex-none text-sm" href="/" aria-label="Brand">AstroMelody &copy; 2025</a> </div> </div> </nav> </footer> </body></html>

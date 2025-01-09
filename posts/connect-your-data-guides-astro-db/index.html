@@ -1,0 +1,459 @@
+<!DOCTYPE html><html lang="en"> <head><!-- Global Metadata --><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="generator" content="Astro v4.16.7"><!-- Canonical URL --><link rel="canonical" href="https://10ta.github.io/posts/connect-your-data-guides-astro-db/"><!-- Sitemap --><link rel="sitemap" href="/sitemap-index.xml"><!-- Primary Meta Tags --><title>Astro DB</title><meta name="title" content="Astro DB"><meta name="description" content="Learn how to use Astro DB, a fully-managed SQL database designed exclusively for Astro."><!-- Open Graph / Facebook --><meta property="og:type" content="website"><meta property="og:url" content="https://10ta.github.io/posts/connect-your-data-guides-astro-db/"><meta property="og:title" content="Astro DB"><meta property="og:description" content="Learn how to use Astro DB, a fully-managed SQL database designed exclusively for Astro."><meta property="og:image" content="https://10ta.github.io/blog-placeholder-1.avif"><!-- Twitter --><meta property="twitter:card" content="summary_large_image"><meta property="twitter:url" content="https://10ta.github.io/posts/connect-your-data-guides-astro-db/"><meta property="twitter:title" content="Astro DB"><meta property="twitter:description" content="Learn how to use Astro DB, a fully-managed SQL database designed exclusively for Astro."><meta property="twitter:image" content="https://10ta.github.io/blog-placeholder-1.avif"><link rel="stylesheet" href="/_astro/_page_.Bdwf1GY7.css"><script type="module" src="/_astro/hoisted.CPfS8Ggc.js"></script>
+<script type="module" src="/_astro/page.DTIbhfSr.js"></script>
+<script>!(function(w,p,f,c){if(!window.crossOriginIsolated && !navigator.serviceWorker) return;c=w[p]=Object.assign(w[p]||{},{"lib":"/~partytown/","debug":false});c[f]=(c[f]||[]).concat(["dataLayer.push"])})(window,'partytown','forward');/* Partytown 0.10.2 - MIT builder.io */
+const t={preserveBehavior:!1},e=e=>{if("string"==typeof e)return[e,t];const[n,r=t]=e;return[n,{...t,...r}]},n=Object.freeze((t=>{const e=new Set;let n=[];do{Object.getOwnPropertyNames(n).forEach((t=>{"function"==typeof n[t]&&e.add(t)}))}while((n=Object.getPrototypeOf(n))!==Object.prototype);return Array.from(e)})());!function(t,r,o,i,a,s,c,d,l,p,u=t,f){function h(){f||(f=1,"/"==(c=(s.lib||"/~partytown/")+(s.debug?"debug/":""))[0]&&(l=r.querySelectorAll('script[type="text/partytown"]'),i!=t?i.dispatchEvent(new CustomEvent("pt1",{detail:t})):(d=setTimeout(v,1e4),r.addEventListener("pt0",w),a?y(1):o.serviceWorker?o.serviceWorker.register(c+(s.swPath||"partytown-sw.js"),{scope:c}).then((function(t){t.active?y():t.installing&&t.installing.addEventListener("statechange",(function(t){"activated"==t.target.state&&y()}))}),console.error):v())))}function y(e){p=r.createElement(e?"script":"iframe"),t._pttab=Date.now(),e||(p.style.display="block",p.style.width="0",p.style.height="0",p.style.border="0",p.style.visibility="hidden",p.setAttribute("aria-hidden",!0)),p.src=c+"partytown-"+(e?"atomics.js?v=0.10.2":"sandbox-sw.html?"+t._pttab),r.querySelector(s.sandboxParent||"body").appendChild(p)}function v(n,o){for(w(),i==t&&(s.forward||[]).map((function(n){const[r]=e(n);delete t[r.split(".")[0]]})),n=0;n<l.length;n++)(o=r.createElement("script")).innerHTML=l[n].innerHTML,o.nonce=s.nonce,r.head.appendChild(o);p&&p.parentNode.removeChild(p)}function w(){clearTimeout(d)}s=t.partytown||{},i==t&&(s.forward||[]).map((function(r){const[o,{preserveBehavior:i}]=e(r);u=t,o.split(".").map((function(e,r,o){var a;u=u[o[r]]=r+1<o.length?u[o[r]]||(a=o[r+1],n.includes(a)?[]:{}):(()=>{let e=null;if(i){const{methodOrProperty:n,thisObject:r}=((t,e)=>{let n=t;for(let t=0;t<e.length-1;t+=1)n=n[e[t]];return{thisObject:n,methodOrProperty:e.length>0?n[e[e.length-1]]:void 0}})(t,o);"function"==typeof n&&(e=(...t)=>n.apply(r,...t))}return function(){let n;return e&&(n=e(arguments)),(t._ptf=t._ptf||[]).push(o,arguments),n}})()}))})),"complete"==r.readyState?h():(t.addEventListener("DOMContentLoaded",h),t.addEventListener("load",h))}(window,document,navigator,top,window.crossOriginIsolated);;(e=>{e.addEventListener("astro:before-swap",e=>{let r=document.body.querySelector("iframe[src*='/~partytown/']");if(r)e.newDocument.body.append(r)})})(document);</script></head> <body class="flex flex-col min-h-screen mx-auto max-w-6xl px-4 dark:prose-invert sm:px-6 lg:px-8"> <header class="z-50 flex w-full flex-wrap py-7 md:flex-nowrap md:justify-start"> <nav class="relative mx-auto flex w-full max-w-7xl basis-full flex-wrap items-center px-4" aria-label="Global"> <div class=""> <a class="flex-none text-xl font-semibold" href="/" aria-label="Astroverse"> AstroMelody </a> </div> <div class="ms-auto flex items-center gap-x-2 py-1"> <a class="inline-flex items-center gap-x-2 rounded-xl border border-transparent px-3 py-2 text-sm font-medium disabled:pointer-events-none disabled:opacity-50" href="/search/" href="/search/"> <i class="icon-base i-tabler-search"></i> </a> <div class="dropdown dropdown-end"> <div tabindex="0" role="button" class="flex size-[38px] items-center justify-center rounded-xl text-sm font-semibold"> <i class="icon-base i-tabler-category-2"></i> </div> <ul tabindex="0" class="menu dropdown-content z-[1] w-52 rounded-box bg-base-100 p-2 shadow"> <li> <a href="/category/One/1/" class="px-4 py-3 font-medium"> One </a> </li><li> <a href="/category/Two/1/" class="px-4 py-3 font-medium"> Two </a> </li><li> <a href="/category/Three/1/" class="px-4 py-3 font-medium"> Three </a> </li> </ul> </div> <label class="swap swap-rotate rounded-xl px-3 py-2 text-sm"> <!-- this hidden checkbox controls the state --> <input type="checkbox" class="theme-controller" data-unchecked-value="corporate" value="halloween"> <!-- sun icon --> <i class="icon-base swap-off i-tabler-sun-filled"></i> <!-- moon icon --> <i class="icon-base swap-on i-tabler-moon-filled"></i> </label> </div> </nav> </header> <!-- Save theme to localStorage --> <script>
+  const lightTheme =  document.querySelector('.theme-controller')?.getAttribute('data-unchecked-value');
+  // ☝️ This script prevent the FART effect.
+  if (localStorage.getItem("theme") === null) {
+    document.documentElement.setAttribute("data-theme", lightTheme);
+  } else
+    document.documentElement.setAttribute(
+      "data-theme",
+      localStorage.getItem("theme"),
+    );
+  // "theme" LocalStorage value is set by the package to remember user preference.
+  // The value is checked and applyed before rendering anything.
+</script>  <!-- 内容区域，确保其动态调整高度 --> <main class="flex-grow">  <main> <article class="prose mx-auto dark:prose-invert"> <div class="prose-h1 text-center"> <h1>Astro DB</h1> </div> <div> <picture> <source srcset="/_astro/photo-1443641723753-250ff9bb3c83_1k4Hzr.avif 392w, /_astro/photo-1443641723753-250ff9bb3c83_8wotI.avif 700w, /_astro/photo-1443641723753-250ff9bb3c83_2vgvhO.avif 980w, /_astro/photo-1443641723753-250ff9bb3c83_Z2nhg62.avif 1960w" type="image/avif" sizes="(max-width: 360px) 392px, 
+           (max-width: 720px) 700px, 
+           (max-width: 1600px) 980px, 
+           1960px"> <img src="/_astro/photo-1443641723753-250ff9bb3c83_Z2nhg62.avif" srcset="/_astro/photo-1443641723753-250ff9bb3c83_1k4Hzr.avif 392w, /_astro/photo-1443641723753-250ff9bb3c83_8wotI.avif 700w, /_astro/photo-1443641723753-250ff9bb3c83_2vgvhO.avif 980w, /_astro/photo-1443641723753-250ff9bb3c83_Z2nhg62.avif 1960w" alt="black concrete building during daytime" sizes="(max-width: 360px) 392px, 
+           (max-width: 720px) 700px, 
+           (max-width: 1600px) 980px, 
+           1960px" class="mx-auto w-full max-w-full object-cover" width="1960" height="1102" loading="lazy" decoding="async"> </picture> </div> <div> <p>Astro DB is a fully-managed SQL database designed for the Astro ecosystem. Develop locally in Astro and deploy to any libSQL-compatible database.</p>
+<p>Astro DB is a complete solution to configuring, developing, and querying your data. A local database is created in <code>.astro/content.db</code> whenever you run <code>astro dev</code> to manage your data without the need for Docker or a network connection.</p>
+<h2 id="installation">Installation</h2>
+<p><a href="#installation">Section titled Installation</a>
+Install the <a href="/en/guides/integrations-guide/db/"><code>@astrojs/db</code> integration</a> using the built-in <code>astro add</code> command:</p>
+<ul>
+<li><a href="#tab-panel-139">npm</a></li>
+<li><a href="#tab-panel-140">pnpm</a></li>
+<li><a href="#tab-panel-141">Yarn</a></li>
+</ul>
+<p>Terminal window</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>npx astro add db</span></span>
+<span class="line"><span></span></span></code></pre>
+<p>Terminal window</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>pnpm astro add db</span></span>
+<span class="line"><span></span></span></code></pre>
+<p>Terminal window</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>yarn astro add db</span></span>
+<span class="line"><span></span></span></code></pre>
+<h2 id="define-your-database">Define your database</h2>
+<p><a href="#define-your-database">Section titled Define your database</a>
+Installing <code>@astrojs/db</code> with the <code>astro add</code> command will automatically create a <code>db/config.ts</code> file in your project where you will define your database tables:</p>
+<p>db/config.ts</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>import { defineDb } from 'astro:db';</span></span>
+<span class="line"><span>export default defineDb({  tables: { },})</span></span>
+<span class="line"><span></span></span></code></pre>
+<h3 id="tables">Tables</h3>
+<p><a href="#tables">Section titled Tables</a>
+Data in Astro DB is stored using SQL tables. Tables structure your data into rows and columns, where columns enforce the type of each row value.</p>
+<p>Define your tables in your <code>db/config.ts</code> file by providing the structure of the data in your existing libSQL database, or the data you will collect in a new database. This will allow Astro to generate a TypeScript interface to query that table from your project. The result is full TypeScript support when you access your data with property autocompletion and type-checking.</p>
+<p>To configure a database table, import and use the <code>defineTable()</code> and <code>column</code> utilities from <code>astro:db</code>. Then, define a name (case-sensitive) for your table and the type of data in each column.</p>
+<p>This example configures a <code>Comment</code> table with required text columns for <code>author</code> and <code>body</code>. Then, makes it available to your project through the <code>defineDb()</code> export.</p>
+<p>db/config.ts</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>import { defineDb, defineTable, column } from 'astro:db';</span></span>
+<span class="line"><span>const Comment = defineTable({  columns: {    author: column.text(),    body: column.text(),  }})</span></span>
+<span class="line"><span>export default defineDb({  tables: { Comment },})</span></span>
+<span class="line"><span></span></span></code></pre>
+<p>See the <a href="/en/guides/integrations-guide/db/#table-configuration-reference">table configuration reference</a> for a complete reference of table options.</p>
+<h3 id="columns">Columns</h3>
+<p><a href="#columns">Section titled Columns</a>
+Astro DB supports the following column types:</p>
+<p>db/config.ts</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>import { defineTable, column } from 'astro:db';</span></span>
+<span class="line"><span>const Comment = defineTable({  columns: {    // A string of text.    author: column.text(),    // A whole integer value.    likes: column.number(),    // A true or false value.    flagged: column.boolean(),    // Date/time values queried as JavaScript Date objects.    published: column.date(),    // An untyped JSON object.    metadata: column.json(),  }});</span></span>
+<span class="line"><span></span></span></code></pre>
+<p>See the <a href="/en/guides/integrations-guide/db/#table-configuration-reference">table columns reference</a> for more details.</p>
+<h3 id="table-references">Table References</h3>
+<p><a href="#table-references">Section titled Table References</a>
+Relationships between tables are a common pattern in database design. For example, a <code>Blog</code> table may be closely related to other tables of <code>Comment</code>, <code>Author</code>, and <code>Category</code>.</p>
+<p>You can define these relations between tables and save them into your database schema using <strong>reference columns</strong>. To establish a relationship, you will need:</p>
+<ul>
+<li>An <strong>identifier column</strong> on the referenced table. This is usually an <code>id</code> column with the <code>primaryKey</code> property.</li>
+<li>A column on the base table to <strong>store the referenced <code>id</code></strong>. This uses the <code>references</code> property to establish a relationship.</li>
+</ul>
+<p>This example shows a <code>Comment</code> table’s <code>authorId</code> column referencing an <code>Author</code> table’s <code>id</code> column.</p>
+<p>db/config.ts</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>const Author = defineTable({  columns: {    id: column.number({ primaryKey: true }),    name: column.text(),  }});</span></span>
+<span class="line"><span>const Comment = defineTable({  columns: {    authorId: column.number({ references: () => Author.columns.id }),    body: column.text(),  }});</span></span>
+<span class="line"><span></span></span></code></pre>
+<h2 id="seed-your-database-for-development">Seed your database for development</h2>
+<p><a href="#seed-your-database-for-development">Section titled Seed your database for development</a>
+In development, Astro will use your DB config to generate local types according to your schemas. These will be generated fresh from your seed file each time the dev server is started, and will allow you to query and work with the shape of your data with type safety and autocompletion.</p>
+<p>You will not have access to production data during development unless you <a href="#connecting-to-remote-databases">connect to a remote database</a> during development. This protects your data while allowing you to test and develop with a working database with type-safety.</p>
+<p>To seed development data for testing and debugging into your Astro project, create a <code>db/seed.ts</code> file. Import both the <code>db</code> object and your tables defined in <code>astro:db</code>. <code>insert</code> some initial data into each table. This development data should match the form of both your database schema and production data.</p>
+<p>The following example defines two rows of development data for a <code>Comment</code> table, and an <code>Author</code> table:</p>
+<p>db/seed.ts</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>import { db, Comment, Author } from 'astro:db';</span></span>
+<span class="line"><span>export default async function() {  await db.insert(Author).values([    { id: 1, name: "Kasim" },    { id: 2, name: "Mina" },  ]);</span></span>
+<span class="line"><span>  await db.insert(Comment).values([    { authorId: 1, body: 'Hope you like Astro DB!' },    { authorId: 2, body: 'Enjoy!'},  ])}</span></span>
+<span class="line"><span></span></span></code></pre>
+<p>Your development server will automatically restart your database whenever this file changes, regenerating your types and seeding this development data from <code>seed.ts</code> fresh each time.</p>
+<h2 id="connect-a-libsql-database-for-production">Connect a libSQL database for production</h2>
+<p><a href="#connect-a-libsql-database-for-production">Section titled Connect a libSQL database for production</a>
+Astro DB can connect to any local libSQL database or to any server that exposes the libSQL remote protocol, whether managed or self-hosted.</p>
+<p>To connect Astro DB to a libSQL database, set the following environment variables obtained from your database provider:</p>
+<ul>
+<li><code>ASTRO_DB_REMOTE_URL</code>: the connection URL to the location of your local or remote libSQL DB. This may include <a href="#remote-url-configuration-options">URL configuration options</a> such as sync and encryption as paramaters.</li>
+<li><code>ASTRO_DB_APP_TOKEN</code>: the auth token to your libSQL server. This is required for remote databases, and not needed for <a href="#url-scheme-and-host">local DBs like files or in-memory</a> databases</li>
+</ul>
+<p>Depending on your service, you may have access to a CLI or web UI to retrieve these values. The following section will demonstrate connecting to Turso and setting these values as an example, but you are free to use any provider.</p>
+<h3 id="getting-started-with-turso">Getting started with Turso</h3>
+<p><a href="#getting-started-with-turso">Section titled Getting started with Turso</a>
+Turso is the company behind <a href="https://github.com/tursodatabase/libsql">libSQL</a>, the open-source fork of SQLite that powers Astro DB. They provide a fully managed libSQL database platform and are fully compatible with Astro.</p>
+<p>The steps below will guide you through the process of installing the Turso CLI, logging in (or signing up), creating a new database, getting the required environmental variables, and pushing the schema to the remote database.</p>
+<ol>
+<li>Install the <a href="https://docs.turso.tech/cli/installation">Turso CLI</a>.</li>
+<li><a href="https://docs.turso.tech/cli/authentication">Login or signup</a> to Turso.</li>
+<li>Create a new database. In this example the database name is <code>andromeda</code>.</li>
+</ol>
+<p>Terminal window</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>turso db create andromeda</span></span>
+<span class="line"><span></span></span></code></pre>
+<ol start="4">
+<li>Run the <code>show</code> command to see information about the newly created database:</li>
+</ol>
+<p>Terminal window</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>turso db show andromeda</span></span>
+<span class="line"><span></span></span></code></pre>
+<p>Copy the <code>URL</code> value and set it as the value for <code>ASTRO_DB_REMOTE_URL</code>.</p>
+<p>.env</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>ASTRO_DB_REMOTE_URL=libsql://andromeda-houston.turso.io</span></span>
+<span class="line"><span></span></span></code></pre>
+<ol start="5">
+<li>Create a new token to authenticate requests to the database:</li>
+</ol>
+<p>Terminal window</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>turso db tokens create andromeda</span></span>
+<span class="line"><span></span></span></code></pre>
+<p>Copy the output of the command and set it as the value for <code>ASTRO_DB_APP_TOKEN</code>.</p>
+<p>.env</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>ASTRO_DB_REMOTE_URL=libsql://andromeda-houston.turso.ioASTRO_DB_APP_TOKEN=eyJhbGciOiJF...3ahJpTkKDw</span></span>
+<span class="line"><span></span></span></code></pre>
+<ol start="6">
+<li>Push your DB schema and metadata to the new Turso database.</li>
+</ol>
+<p>Terminal window</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>astro db push --remote</span></span>
+<span class="line"><span></span></span></code></pre>
+<ol start="7">
+<li>Congratulations, now you have a database connected! Give yourself a break. 👾</li>
+</ol>
+<p>Terminal window</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>turso relax</span></span>
+<span class="line"><span></span></span></code></pre>
+<p>To explore more features of Turso, check out the <a href="https://docs.turso.tech">Turso docs</a>.</p>
+<h3 id="connecting-to-remote-databases">Connecting to remote databases</h3>
+<p><a href="#connecting-to-remote-databases">Section titled Connecting to remote databases</a>
+Astro DB allows you to connect to both local and remote databases. By default, Astro uses a local database file for <code>dev</code> and <code>build</code> commands, recreating tables and inserting development seed data each time.</p>
+<p>To connect to a hosted remote database, use the <code>--remote</code> flag. This flag enables both readable and writable access to your remote database, allowing you to <a href="#insert">accept and persist user data</a> in production environments.</p>
+<p>Note</p>
+<p>While remote connections are generally possible with any deployment platform using static or server rendering mode, there are currently some limitations. Non-Node runtimes like Cloudflare and Deno don’t currently support DB on server-rendered routes when using libSQL. Support for these platforms is planned for future implementation.</p>
+<p>Configure your build command to use the <code>--remote</code> flag:</p>
+<p>package.json</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>{  "scripts": {    "build": "astro build --remote"  }}</span></span>
+<span class="line"><span></span></span></code></pre>
+<p>You can also use the flag directly in the command line:</p>
+<p>Terminal window</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span># Build with a remote connectionastro build --remote</span></span>
+<span class="line"><span># Develop with a remote connectionastro dev --remote</span></span>
+<span class="line"><span></span></span></code></pre>
+<p>Caution</p>
+<p>Be careful when using <code>--remote</code> in development. This connects to your live production database, and all changes (inserts, updates, deletions) will be persisted.</p>
+<p>The <code>--remote</code> flag uses the connection to the remote DB both locally during the build and on the server. Ensure you set the necessary environment variables in both your local development environment and your deployment platform.</p>
+<p>When deploying your Astro DB project, make sure your deployment platform’s build command is set to <code>npm run build</code> (or the equivalent for your package manager) to utilize the <code>--remote</code> flag configured in your <code>package.json</code>.</p>
+<h3 id="remote-url-configuration-options">Remote URL configuration options</h3>
+<p><a href="#remote-url-configuration-options">Section titled Remote URL configuration options</a>
+The <code>ASTRO_DB_REMOTE_URL</code> environment variable configures the location of your database as well as other options like sync and encryption.</p>
+<h4 id="url-scheme-and-host">URL scheme and host</h4>
+<p><a href="#url-scheme-and-host">Section titled URL scheme and host</a>
+libSQL supports both HTTP and WebSockets as the transport protocol for a remote server. It also supports using a local file or an in-memory DB. Those can be configured using the following URL schemes in the connection URL:</p>
+<ul>
+<li><code>memory:</code> will use an in-memory DB. The host must be empty in this case.</li>
+<li><code>file:</code> will use a local file. The host is the path to the file (<code>file:path/to/file.db</code>).</li>
+<li><code>libsql:</code> will use a remote server through the protocol preferred by the library (this might be different across versions). The host is the address of the server (<code>libsql://your.server.io</code>).</li>
+<li><code>http:</code> will use a remote server through HTTP. <code>https:</code> can be used to enable a secure connection. The host is the same as for <code>libsql:</code>.</li>
+<li><code>ws:</code> will use a remote server through WebSockets. <code>wss:</code> can be used to enable a secure connection. The host is the same as for <code>libsql:</code>.</li>
+</ul>
+<p>Details of the libSQL connection (e.g. encryption key, replication, sync interval) can be configured as query parameters in the remote connection URL.</p>
+<p>For example, to have an encrypted local file work as an embedded replica to a libSQL server, you can set the following environment variables:</p>
+<p>.env</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>ASTRO_DB_REMOTE_URL=file://local-copy.db?encryptionKey=your-encryption-key&#x26;syncInterval=60&#x26;syncUrl=libsql%3A%2F%2Fyour.server.ioASTRO_DB_APP_TOKEN=token-to-your-remote-url</span></span>
+<span class="line"><span></span></span></code></pre>
+<p>Caution</p>
+<p>Using a database file is an advanced feature, and care should be taken when deploying to prevent overriding your database and losing your production data.</p>
+<p>Additionally, this method will not work in serverless deployments, as the file system is not persisted in those environments.</p>
+<h4 id="encryptionkey"><code>encryptionKey</code></h4>
+<p><a href="#encryptionkey">Section titled encryptionKey</a>
+libSQL has native support for encrypted databases. Passing this search parameter will enable encryption using the given key:</p>
+<p>.env</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>ASTRO_DB_REMOTE_URL=file:path/to/file.db?encryptionKey=your-encryption-key</span></span>
+<span class="line"><span></span></span></code></pre>
+<h4 id="syncurl"><code>syncUrl</code></h4>
+<p><a href="#syncurl">Section titled syncUrl</a>
+Embedded replicas are a feature of libSQL clients that creates a full synchronized copy of your database on a local file or in memory for ultra-fast reads. Writes are sent to a remote database defined on the <code>syncUrl</code> and synchronized with the local copy.</p>
+<p>Use this property to pass a separate connection URL to turn the database into an embedded replica of another database. This should only be used with the schemes <code>file:</code> and <code>memory:</code>. The parameter must be URL encoded.</p>
+<p>For example, to have an in-memory embedded replica of a database on <code>libsql://your.server.io</code>, you can set the connection URL as such:</p>
+<p>.env</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>ASTRO_DB_REMOTE_URL=memory:?syncUrl=libsql%3A%2F%2Fyour.server.io</span></span>
+<span class="line"><span></span></span></code></pre>
+<h4 id="syncinterval"><code>syncInterval</code></h4>
+<p><a href="#syncinterval">Section titled syncInterval</a>
+Interval between embedded replica synchronizations in seconds. By default it only synchronizes on startup and after writes.</p>
+<p>This property is only used when <code>syncUrl</code> is also set. For example, to set an in-memory embedded replica to synchronize every minute set the following environment variable:</p>
+<p>.env</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>ASTRO_DB_REMOTE_URL=memory:?syncUrl=libsql%3A%2F%2Fyour.server.io&#x26;syncInterval=60</span></span>
+<span class="line"><span></span></span></code></pre>
+<h2 id="query-your-database">Query your database</h2>
+<p><a href="#query-your-database">Section titled Query your database</a>
+You can query your database from any <a href="/en/basics/astro-pages/#astro-pages">Astro page</a>, <a href="/en/guides/endpoints/">endpoint</a>, or <a href="/en/guides/actions/">action</a> in your project using the provided <code>db</code> ORM and query builder.</p>
+<h3 id="drizzle-orm">Drizzle ORM</h3>
+<p><a href="#drizzle-orm">Section titled Drizzle ORM</a></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>import { db } from 'astro:db';</span></span>
+<span class="line"><span></span></span></code></pre>
+<p>Astro DB includes a built-in <a href="https://orm.drizzle.team/">Drizzle ORM</a> client. There is no setup or manual configuration required to use the client. The Astro DB <code>db</code> client is automatically configured to communicate with your database (local or remote) when you run Astro. It uses your exact database schema definition for type-safe SQL queries with TypeScript errors when you reference a column or table that doesn’t exist.</p>
+<h3 id="select">Select</h3>
+<p><a href="#select">Section titled Select</a>
+The following example selects all rows of a <code>Comment</code> table. This returns the complete array of seeded development data from <code>db/seed.ts</code> which is then available for use in your page template:</p>
+<p>src/pages/index.astro</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>---import { db, Comment } from 'astro:db';</span></span>
+<span class="line"><span>const comments = await db.select().from(Comment);---</span></span>
+<span class="line"><span>&#x3C;h2>Comments&#x3C;/h2></span></span>
+<span class="line"><span>{  comments.map(({ author, body }) => (    &#x3C;article>      &#x3C;p>Author: {author}&#x3C;/p>      &#x3C;p>{body}&#x3C;/p>    &#x3C;/article>  ))}</span></span>
+<span class="line"><span></span></span></code></pre>
+<p>See the <a href="https://orm.drizzle.team/docs/select">Drizzle <code>select()</code> API reference</a> for a complete overview.</p>
+<h3 id="insert">Insert</h3>
+<p><a href="#insert">Section titled Insert</a>
+To accept user input, such as handling form requests and inserting data into your remotely hosted database, configure your Astro project for <a href="/en/basics/rendering-modes/#on-demand-rendered">on-demand rendering</a> and <a href="/en/guides/server-side-rendering/#official-adapters">add an SSR adapter</a> for your deployment environment.</p>
+<p>This example inserts a row into a <code>Comment</code> table based on a parsed form POST request:</p>
+<p>src/pages/index.astro</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>---import { db, Comment } from 'astro:db';</span></span>
+<span class="line"><span>if (Astro.request.method === 'POST') {  // Parse form data  const formData = await Astro.request.formData();  const author = formData.get('author');  const body = formData.get('body');  if (typeof author === 'string' &#x26;&#x26; typeof body === 'string') {    // Insert form data into the Comment table    await db.insert(Comment).values({ author, body });  }}</span></span>
+<span class="line"><span>// Render the new list of comments on each requestconst comments = await db.select().from(Comment);---</span></span>
+<span class="line"><span>&#x3C;form method="POST" style="display: grid">  &#x3C;label for="author">Author&#x3C;/label>  &#x3C;input id="author" name="author" /></span></span>
+<span class="line"><span>  &#x3C;label for="body">Body&#x3C;/label>  &#x3C;textarea id="body" name="body">&#x3C;/textarea></span></span>
+<span class="line"><span>  &#x3C;button type="submit">Submit&#x3C;/button>&#x3C;/form></span></span>
+<span class="line"><span>&#x3C;!-- Render `comments` --></span></span>
+<span class="line"><span></span></span></code></pre>
+<p>You can also use <a href="/en/guides/actions/">Astro actions</a> to insert data into an Astro DB table. The following example inserts a row into a <code>Comment</code> table using an action:</p>
+<p>src/actions/index.ts</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>import { db, Comment } from 'astro:db';import { defineAction } from 'astro:actions';import { z } from 'astro:schema';</span></span>
+<span class="line"><span>export const server = {  addComment: defineAction({    // Actions include type safety with Zod, removing the need    // to check if typeof {value} === 'string' in your pages    input: z.object({      author: z.string(),      body: z.string(),    }),    handler: async (input) => {      const updatedComments = await db        .insert(Comment)        .values(input)        .returning(); // Return the updated comments      return updatedComments;    },  }),};</span></span>
+<span class="line"><span></span></span></code></pre>
+<p>See the <a href="https://orm.drizzle.team/docs/insert">Drizzle <code>insert()</code> API reference</a> for a complete overview.</p>
+<h3 id="delete">Delete</h3>
+<p><a href="#delete">Section titled Delete</a>
+You can also query your database from an API endpoint. This example deletes a row from a <code>Comment</code> table by the <code>id</code> parameter:</p>
+<p>src/pages/api/comments/[id].ts</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>import type { APIRoute } from "astro";import { db, Comment, eq } from 'astro:db';</span></span>
+<span class="line"><span>export const DELETE: APIRoute = async (ctx) => {  await db.delete(Comment).where(eq(Comment.id, ctx.params.id ));  return new Response(null, { status: 204 });}</span></span>
+<span class="line"><span></span></span></code></pre>
+<p>See the <a href="https://orm.drizzle.team/docs/delete">Drizzle <code>delete()</code> API reference</a> for a complete overview.</p>
+<h3 id="filtering">Filtering</h3>
+<p><a href="#filtering">Section titled Filtering</a>
+To query for table results by a specific property, use <a href="https://orm.drizzle.team/docs/select#partial-select">Drizzle options for partial selects</a>. For example, add <a href="https://orm.drizzle.team/docs/select#filtering">a <code>.where()</code> call</a> to your <code>select()</code> query and pass the comparison you want to make.</p>
+<p>The following example queries for all rows in a <code>Comment</code> table that contain the phrase “Astro DB.” Use <a href="https://orm.drizzle.team/docs/operators#like">the <code>like()</code> operator</a> to check if a phrase is present within the <code>body</code>:</p>
+<p>src/pages/index.astro</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>---import { db, Comment, like } from 'astro:db';</span></span>
+<span class="line"><span>const comments = await db.select().from(Comment).where(    like(Comment.body, '%Astro DB%'));---</span></span>
+<span class="line"><span></span></span></code></pre>
+<h3 id="drizzle-utilities">Drizzle utilities</h3>
+<p><a href="#drizzle-utilities">Section titled Drizzle utilities</a>
+All Drizzle utilities for building queries are exposed from the <code>astro:db</code> module. This includes:</p>
+<ul>
+<li><a href="https://orm.drizzle.team/docs/operators">Filter operators</a> like <code>eq()</code> and <code>gt()</code></li>
+<li><a href="https://orm.drizzle.team/docs/select#aggregations-helpers">Aggregation helpers</a> like <code>count()</code></li>
+<li><a href="https://orm.drizzle.team/docs/sql">The <code>sql</code> helper</a> for writing raw SQL queries</li>
+</ul>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>import { eq, gt, count, sql } from 'astro:db';</span></span>
+<span class="line"><span></span></span></code></pre>
+<h3 id="relationships">Relationships</h3>
+<p><a href="#relationships">Section titled Relationships</a>
+You can query related data from multiple tables using a SQL join. To create a join query, extend your <code>db.select()</code> statement with a join operator. Each function accepts a table to join with and a condition to match rows between the two tables.</p>
+<p>This example uses an <code>innerJoin()</code> function to join <code>Comment</code> authors with their related <code>Author</code> information based on the <code>authorId</code> column. This returns an array of objects with each <code>Author</code> and <code>Comment</code> row as top-level properties:</p>
+<p>src/pages/index.astro</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>---import { db, eq, Comment, Author } from 'astro:db';</span></span>
+<span class="line"><span>const comments = await db.select()  .from(Comment)  .innerJoin(Author, eq(Comment.authorId, Author.id));---</span></span>
+<span class="line"><span>&#x3C;h2>Comments&#x3C;/h2></span></span>
+<span class="line"><span>{  comments.map(({ Author, Comment }) => (    &#x3C;article>      &#x3C;p>Author: {Author.name}&#x3C;/p>      &#x3C;p>{Comment.body}&#x3C;/p>    &#x3C;/article>  ))}</span></span>
+<span class="line"><span></span></span></code></pre>
+<p>See the <a href="https://orm.drizzle.team/docs/joins#join-types">Drizzle join reference</a> for all available join operators and config options.</p>
+<h3 id="batch-transactions">Batch Transactions</h3>
+<p><a href="#batch-transactions">Section titled Batch Transactions</a>
+All remote database queries are made as a network request. You may need to “batch” queries together into a single transaction when making a large number of queries, or to have automatic rollbacks if any query fails.</p>
+<p>This example seeds multiple rows in a single request using the <code>db.batch()</code> method:</p>
+<p>db/seed.ts</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>import { db, Author, Comment } from 'astro:db';</span></span>
+<span class="line"><span>export default async function () {  const queries = [];  // Seed 100 sample comments into your remote database  // with a single network request.  for (let i = 0; i &#x3C; 100; i++) {    queries.push(db.insert(Comment).values({ body: `Test comment ${i}` }));  }  await db.batch(queries);}</span></span>
+<span class="line"><span></span></span></code></pre>
+<p>See the <a href="https://orm.drizzle.team/docs/batch-api">Drizzle <code>db.batch()</code></a> docs for more details.</p>
+<h2 id="pushing-changes-to-your-database">Pushing changes to your database</h2>
+<p><a href="#pushing-changes-to-your-database">Section titled Pushing changes to your database</a>
+You can push changes made during development to your database.</p>
+<h3 id="pushing-table-schemas">Pushing table schemas</h3>
+<p><a href="#pushing-table-schemas">Section titled Pushing table schemas</a>
+Your table schema may change over time as your project grows. You can safely test configuration changes locally and push to your remote database when you deploy.</p>
+<p>You can push your local schema changes to your remote database via the CLI using the <code>astro db push --remote</code> command:</p>
+<ul>
+<li><a href="#tab-panel-142">npm</a></li>
+<li><a href="#tab-panel-143">pnpm</a></li>
+<li><a href="#tab-panel-144">Yarn</a></li>
+</ul>
+<p>Terminal window</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>npm run astro db push --remote</span></span>
+<span class="line"><span></span></span></code></pre>
+<p>Terminal window</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>pnpm astro db push --remote</span></span>
+<span class="line"><span></span></span></code></pre>
+<p>Terminal window</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>yarn astro db push --remote</span></span>
+<span class="line"><span></span></span></code></pre>
+<p>This command will verify that your local changes can be made without data loss and, if necessary, suggest how to safely make changes to your schema in order to resolve conflicts.</p>
+<h4 id="pushing-breaking-schema-changes">Pushing breaking schema changes</h4>
+<p><a href="#pushing-breaking-schema-changes">Section titled Pushing breaking schema changes</a>
+Caution</p>
+<p><strong>This will destroy your database</strong>. Only perform this command if you do not need your production data.</p>
+<p>If you must change your table schema in a way that is incompatible with your existing data hosted on your remote database, you will need to reset your production database.</p>
+<p>To push a table schema update that includes a breaking change, add the <code>--force-reset</code> flag to reset all production data:</p>
+<ul>
+<li><a href="#tab-panel-145">npm</a></li>
+<li><a href="#tab-panel-146">pnpm</a></li>
+<li><a href="#tab-panel-147">Yarn</a></li>
+</ul>
+<p>Terminal window</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>npm run astro db push --remote --force-reset</span></span>
+<span class="line"><span></span></span></code></pre>
+<p>Terminal window</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>pnpm astro db push --remote --force-reset</span></span>
+<span class="line"><span></span></span></code></pre>
+<p>Terminal window</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>yarn astro db push --remote --force-reset</span></span>
+<span class="line"><span></span></span></code></pre>
+<h3 id="renaming-tables">Renaming tables</h3>
+<p><a href="#renaming-tables">Section titled Renaming tables</a>
+It is possible to rename a table after pushing your schema to your remote database.</p>
+<p>If you <strong>do not have any important production data</strong>, then you can <a href="#pushing-breaking-schema-changes">reset your database</a> using the <code>--force-reset</code> flag. This flag will drop all of the tables in the database and create new ones so that it matches your current schema exactly.</p>
+<p>To rename a table while preserving your production data, you must perform a series of non-breaking changes to push your local schema to your remote database safely.</p>
+<p>The following example renames a table from <code>Comment</code> to <code>Feedback</code>:</p>
+<ol>
+<li>In your database config file, add the <code>deprecated: true</code> property to the table you want to rename:</li>
+</ol>
+<p>db/config.ts</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>const Comment = defineTable({  deprecated: true,  columns: {    author: column.text(),    body: column.text(),  }});</span></span>
+<span class="line"><span></span></span></code></pre>
+<ol start="2">
+<li>Add a new table schema (matching the existing table’s properties exactly) with the new name:</li>
+</ol>
+<p>db/config.ts</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>const Comment = defineTable({  deprecated: true,  columns: {    author: column.text(),    body: column.text(),  }});const Feedback = defineTable({  columns: {    author: column.text(),    body: column.text(),  }});</span></span>
+<span class="line"><span></span></span></code></pre>
+<ol start="3">
+<li><a href="#pushing-table-schemas">Push to your remote database</a> with <code>astro db push --remote</code>. This will add the new table and mark the old as deprecated.</li>
+<li>Update any of your local project code to use the new table instead of the old table. You might need to migrate data to the new table as well.</li>
+<li>Once you are confident that the old table is no longer used in your project, you can remove the schema from your <code>config.ts</code>:</li>
+</ol>
+<p>db/config.ts</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>const Comment = defineTable({  deprecated: true,  columns: {    author: column.text(),    body: column.text(),  }});</span></span>
+<span class="line"><span>const Feedback = defineTable({  columns: {    author: column.text(),    body: column.text(),  }});</span></span>
+<span class="line"><span></span></span></code></pre>
+<ol start="6">
+<li>Push to your remote database again with <code>astro db push --remote</code>. The old table will be dropped, leaving only the new, renamed table.</li>
+</ol>
+<h3 id="pushing-table-data">Pushing table data</h3>
+<p><a href="#pushing-table-data">Section titled Pushing table data</a>
+You may need to push data to your remote database for seeding or data migrations. You can author a <code>.ts</code> file with the <code>astro:db</code> module to write type-safe queries. Then, execute the file against your remote database using the command <code>astro db execute &#x3C;file-path> --remote</code>:</p>
+<p>The following Comments can be seeded using the command <code>astro db execute db/seed.ts --remote</code>:</p>
+<p>db/seed.ts</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>import { Comment } from 'astro:db';</span></span>
+<span class="line"><span>export default async function () {  await db.insert(Comment).values([    { authorId: 1, body: 'Hope you like Astro DB!' },    { authorId: 2, body: 'Enjoy!' },  ])}</span></span>
+<span class="line"><span></span></span></code></pre>
+<p>See the <a href="/en/guides/integrations-guide/db/#astro-db-cli-reference">CLI reference</a> for a complete list of commands.</p>
+<h2 id="building-astro-db-integrations">Building Astro DB integrations</h2>
+<p><a href="#building-astro-db-integrations">Section titled Building Astro DB integrations</a>
+<a href="/en/reference/integrations-reference/">Astro integrations</a> can extend user projects with additional Astro DB tables and seed data.</p>
+<p>Use the <code>extendDb()</code> method in the <code>astro:db:setup</code> hook to register additional Astro DB config and seed files.
+The <code>defineDbIntegration()</code> helper provides TypeScript support and auto-complete for the <code>astro:db:setup</code> hook.</p>
+<p>my-integration/index.ts</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>import { defineDbIntegration } from '@astrojs/db/utils';</span></span>
+<span class="line"><span>export default function MyIntegration() {  return defineDbIntegration({    name: 'my-astro-db-powered-integration',    hooks: {      'astro:db:setup': ({ extendDb }) => {        extendDb({          configEntrypoint: '@astronaut/my-package/config',          seedEntrypoint: '@astronaut/my-package/seed',        });      },      // Other integration hooks...    },  });}</span></span>
+<span class="line"><span></span></span></code></pre>
+<p>Integration <a href="#define-your-database">config</a> and <a href="#seed-your-database-for-development">seed</a> files follow the same format as their user-defined equivalents.</p>
+<h3 id="type-safe-operations-in-integrations">Type safe operations in integrations</h3>
+<p><a href="#type-safe-operations-in-integrations">Section titled Type safe operations in integrations</a>
+While working on integrations, you may not be able to benefit from Astro’s generated table types exported from <code>astro:db</code>.
+For full type safety, use the <code>asDrizzleTable()</code> utility to create a table reference object you can use for database operations.</p>
+<p>For example, given an integration setting up the following <code>Pets</code> database table:</p>
+<p>my-integration/config.ts</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>import { defineDb, defineTable, column } from 'astro:db';</span></span>
+<span class="line"><span>export const Pets = defineTable({  columns: {    name: column.text(),    species: column.text(),  },});</span></span>
+<span class="line"><span>export default defineDb({ tables: { Pets } });</span></span>
+<span class="line"><span></span></span></code></pre>
+<p>The seed file can import <code>Pets</code> and use <code>asDrizzleTable()</code> to insert rows into your table with type checking:</p>
+<p>my-integration/seed.ts</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>import { asDrizzleTable } from '@astrojs/db/utils';import { db } from 'astro:db';import { Pets } from './config';</span></span>
+<span class="line"><span>export default async function() {  const typeSafePets = asDrizzleTable('Pets', Pets);</span></span>
+<span class="line"><span>  await db.insert(typeSafePets).values([    { name: 'Palomita', species: 'cat' },    { name: 'Pan', species: 'dog' },  ]);}</span></span>
+<span class="line"><span></span></span></code></pre>
+<p>The value returned by <code>asDrizzleTable('Pets', Pets)</code> is equivalent to <code>import { Pets } from 'astro:db'</code>, but is available even when Astro’s type generation can’t run.
+You can use it in any integration code that needs to query or insert into the database.</p>
+<h2 id="migrate-from-astro-studio-to-turso">Migrate from Astro Studio to Turso</h2>
+<p><a href="#migrate-from-astro-studio-to-turso">Section titled Migrate from Astro Studio to Turso</a></p>
+<ol>
+<li>In the <a href="https://studio.astro.build/">Studio dashboard</a>, navigate to the project you wish to migrate. In the settings tab, use the “Export Database” button to download a dump of your database.</li>
+<li>Follow the official instructions to <a href="https://docs.turso.tech/cli/installation">install the Turso CLI</a> and <a href="https://docs.turso.tech/cli/authentication">sign up or log in</a> to your Turso account.</li>
+<li>Create a new database on Turso using the <code>turso db create</code> command.</li>
+</ol>
+<p>Terminal window</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>turso db create [database-name]</span></span>
+<span class="line"><span></span></span></code></pre>
+<ol start="4">
+<li>Fetch the database URL using the Turso CLI, and use it as the environment variable <code>ASTRO_DB_REMOTE_URL</code>.</li>
+</ol>
+<p>Terminal window</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>turso db show [database-name]</span></span>
+<span class="line"><span></span></span></code></pre>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>ASTRO_DB_REMOTE_URL=[your-database-url]</span></span>
+<span class="line"><span></span></span></code></pre>
+<ol start="5">
+<li>Create a token to access your database, and use it as the environment variable <code>ASTRO_DB_APP_TOKEN</code>.</li>
+</ol>
+<p>Terminal window</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>turso db tokens create [database-name]</span></span>
+<span class="line"><span></span></span></code></pre>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>ASTRO_DB_APP_TOKEN=[your-app-token]</span></span>
+<span class="line"><span></span></span></code></pre>
+<ol start="6">
+<li>Push your DB schema and metadata to the new Turso database.</li>
+</ol>
+<p>Terminal window</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>astro db push --remote</span></span>
+<span class="line"><span></span></span></code></pre>
+<ol start="7">
+<li>Import the database dump from step 1 into your new Turso DB.</li>
+</ol>
+<p>Terminal window</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>turso db shell [database-name] &#x3C; ./path/to/dump.sql</span></span>
+<span class="line"><span></span></span></code></pre>
+<ol start="8">
+<li>Once you have confirmed your project connects to the new database, you can safely delete the project from Astro Studio.</li>
+</ol>
+<p>Learn</p> </div> <div class="prose-a:no-underline flex gap-2"> <span class="badge badge-outline badge-md"> <a href="/tags/guide/1/">guide</a> </span><span class="badge badge-outline badge-md"> <a href="/tags/Python/1/">Python</a> </span><span class="badge badge-outline badge-md"> <a href="/tags/Css/1/">Css</a> </span> </div> <div class="mt-4 flex justify-between"> <small>Publish on <span class="font-weight-bold">2024-02-29</span>，Update on <span class="font-weight-bold">2025-01-09</span></small> </div> </article> <div class="mt-12"> <div class="grid grid-cols-1 gap-4 md:grid-cols-3"> <div class="card mb-4 overflow-hidden rounded-xl border  transition-transform duration-500 hover:-translate-y-1 hover:scale-105"> <a href="/posts/learn-the-basics-basics-astro-pages/"> <picture> <source srcset="/_astro/photo-1463130456064-77fda7f96d6b_ZAMhtG.avif 392w, /_astro/photo-1463130456064-77fda7f96d6b_Z1MkAzp.avif 700w, /_astro/photo-1463130456064-77fda7f96d6b_zovdG.avif 980w, /_astro/photo-1463130456064-77fda7f96d6b_Z1fOymS.avif 1960w" type="image/avif" sizes="(max-width: 360px) 392px, 
+           (max-width: 720px) 700px, 
+           (max-width: 1600px) 980px, 
+           1960px"> <img src="/_astro/photo-1463130456064-77fda7f96d6b_Z1fOymS.avif" srcset="/_astro/photo-1463130456064-77fda7f96d6b_ZAMhtG.avif 392w, /_astro/photo-1463130456064-77fda7f96d6b_Z1MkAzp.avif 700w, /_astro/photo-1463130456064-77fda7f96d6b_zovdG.avif 980w, /_astro/photo-1463130456064-77fda7f96d6b_Z1fOymS.avif 1960w" alt="white concrete building wall" sizes="(max-width: 360px) 392px, 
+           (max-width: 720px) 700px, 
+           (max-width: 1600px) 980px, 
+           1960px" class="mx-auto w-full max-w-full object-cover" width="1960" height="1102" loading="lazy" decoding="async"> </picture> <div class="card-body"> <div class="flex items-center gap-1 text-xs"> <span class="badge badge-outline">documentation</span><span class="badge badge-outline">Python</span><span class="badge badge-outline">Less</span> </div> <p class="text-xs"><span class="font-weight-bold">2024-03-04</span></p> <h2 class="card-title">Pages</h2> </div> </a> </div><div class="card mb-4 overflow-hidden rounded-xl border  transition-transform duration-500 hover:-translate-y-1 hover:scale-105"> <a href="/posts/welcome-world-tutorial-0-introduction/"> <picture> <source srcset="/_astro/photo-1483366774565-c783b9f70e2c_jGYEQ.avif 392w, /_astro/photo-1483366774565-c783b9f70e2c_ZQPjpR.avif 700w, /_astro/photo-1483366774565-c783b9f70e2c_1uSMne.avif 980w, /_astro/photo-1483366774565-c783b9f70e2c_21yqnd.avif 1960w" type="image/avif" sizes="(max-width: 360px) 392px, 
+           (max-width: 720px) 700px, 
+           (max-width: 1600px) 980px, 
+           1960px"> <img src="/_astro/photo-1483366774565-c783b9f70e2c_21yqnd.avif" srcset="/_astro/photo-1483366774565-c783b9f70e2c_jGYEQ.avif 392w, /_astro/photo-1483366774565-c783b9f70e2c_ZQPjpR.avif 700w, /_astro/photo-1483366774565-c783b9f70e2c_1uSMne.avif 980w, /_astro/photo-1483366774565-c783b9f70e2c_21yqnd.avif 1960w" alt="worm's-eye view photography of concrete building" sizes="(max-width: 360px) 392px, 
+           (max-width: 720px) 700px, 
+           (max-width: 1600px) 980px, 
+           1960px" class="mx-auto w-full max-w-full object-cover" width="1960" height="1102" loading="lazy" decoding="async"> </picture> <div class="card-body"> <div class="flex items-center gap-1 text-xs"> <span class="badge badge-outline">astro-build</span><span class="badge badge-outline">Python</span><span class="badge badge-outline">Sass</span> </div> <p class="text-xs"><span class="font-weight-bold">2024-03-03</span></p> <h2 class="card-title">Build your first Astro Blog</h2> </div> </a> </div><div class="card mb-4 overflow-hidden rounded-xl border  transition-transform duration-500 hover:-translate-y-1 hover:scale-105"> <a href="/posts/routes-and-navigation-guides-view-transitions/"> <picture> <source srcset="/_astro/photo-1472377723522-4768db9c41ce_cr2OL.avif 392w, /_astro/photo-1472377723522-4768db9c41ce_ZY6gfW.avif 700w, /_astro/photo-1472377723522-4768db9c41ce_1nCPx9.avif 980w, /_astro/photo-1472377723522-4768db9c41ce_Z1EwWzk.avif 1960w" type="image/avif" sizes="(max-width: 360px) 392px, 
+           (max-width: 720px) 700px, 
+           (max-width: 1600px) 980px, 
+           1960px"> <img src="/_astro/photo-1472377723522-4768db9c41ce_Z1EwWzk.avif" srcset="/_astro/photo-1472377723522-4768db9c41ce_cr2OL.avif 392w, /_astro/photo-1472377723522-4768db9c41ce_ZY6gfW.avif 700w, /_astro/photo-1472377723522-4768db9c41ce_1nCPx9.avif 980w, /_astro/photo-1472377723522-4768db9c41ce_Z1EwWzk.avif 1960w" alt="white and brown concrete house near trees at daytime" sizes="(max-width: 360px) 392px, 
+           (max-width: 720px) 700px, 
+           (max-width: 1600px) 980px, 
+           1960px" class="mx-auto w-full max-w-full object-cover" width="1960" height="1102" loading="lazy" decoding="async"> </picture> <div class="card-body"> <div class="flex items-center gap-1 text-xs"> <span class="badge badge-outline">astro</span><span class="badge badge-outline">Python</span><span class="badge badge-outline">Less</span> </div> <p class="text-xs"><span class="font-weight-bold">2024-03-02</span></p> <h2 class="card-title">View Transitions</h2> </div> </a> </div> </div> </div> </main>  </main> <footer class="mx-auto mt-auto w-full max-w-[85rem] py-10"> <nav class="mx-auto w-full max-w-[85rem] px-4" aria-label="Footer"> <div class="flex flex-col items-center sm:flex-row sm:justify-between"> <div id="navbar-alignment" class="internal-links sm:order-2"> <div class="mt-2 flex flex-row gap-5 sm:mt-0 sm:flex-row sm:items-center sm:ps-5"> <a href="/posts/core-concepts-concepts-why-astro/" class="inline-flex gap-x-2 text-sm"> Astro </a><a href="/posts/assets-guides-styling/" class="inline-flex gap-x-2 text-sm"> Styling </a><a href="/tags/" class="inline-flex gap-x-2 text-sm"> Tags </a> </div> </div> <div class="mt-2 flex flex-wrap gap-2 sm:order-3 sm:mb-0 sm:gap-0"> <button type="button" class="relative inline-flex h-12 w-12 items-center gap-x-2 px-4 py-3 disabled:pointer-events-none disabled:opacity-50"> <a href="/rss.xml" class="absolute inset-0 z-10" aria-label="RSS"></a> <i class="i-tabler-rss icon-base"></i> </button><button type="button" class="relative inline-flex h-12 w-12 items-center gap-x-2 px-4 py-3 disabled:pointer-events-none disabled:opacity-50"> <a href="https://twitter.com/astrodotbuild" class="absolute inset-0 z-10" aria-label="Twitter"></a> <i class="i-tabler-brand-twitter icon-base"></i> </button><button type="button" class="relative inline-flex h-12 w-12 items-center gap-x-2 px-4 py-3 disabled:pointer-events-none disabled:opacity-50"> <a href="https://github.com/isooosi" class="absolute inset-0 z-10" aria-label="GitHub"></a> <i class="i-tabler-brand-github icon-base"></i> </button> </div> <div class="mt-2 sm:order-1 sm:mb-0"> <a class="flex-none text-sm" href="/" aria-label="Brand">AstroMelody &copy; 2025</a> </div> </div> </nav> </footer> </body></html>

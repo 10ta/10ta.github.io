@@ -1,0 +1,298 @@
+<!DOCTYPE html><html lang="en"> <head><!-- Global Metadata --><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="generator" content="Astro v4.16.7"><!-- Canonical URL --><link rel="canonical" href="https://10ta.github.io/posts/astro-api-reference-reference-modules-astro-transitions/"><!-- Sitemap --><link rel="sitemap" href="/sitemap-index.xml"><!-- Primary Meta Tags --><title>View Transitions API Reference</title><meta name="title" content="View Transitions API Reference"><meta name="description" content=""><!-- Open Graph / Facebook --><meta property="og:type" content="website"><meta property="og:url" content="https://10ta.github.io/posts/astro-api-reference-reference-modules-astro-transitions/"><meta property="og:title" content="View Transitions API Reference"><meta property="og:description" content=""><meta property="og:image" content="https://10ta.github.io/blog-placeholder-1.avif"><!-- Twitter --><meta property="twitter:card" content="summary_large_image"><meta property="twitter:url" content="https://10ta.github.io/posts/astro-api-reference-reference-modules-astro-transitions/"><meta property="twitter:title" content="View Transitions API Reference"><meta property="twitter:description" content=""><meta property="twitter:image" content="https://10ta.github.io/blog-placeholder-1.avif"><link rel="stylesheet" href="/_astro/_page_.Bdwf1GY7.css"><script type="module" src="/_astro/hoisted.CPfS8Ggc.js"></script>
+<script type="module" src="/_astro/page.DTIbhfSr.js"></script>
+<script>!(function(w,p,f,c){if(!window.crossOriginIsolated && !navigator.serviceWorker) return;c=w[p]=Object.assign(w[p]||{},{"lib":"/~partytown/","debug":false});c[f]=(c[f]||[]).concat(["dataLayer.push"])})(window,'partytown','forward');/* Partytown 0.10.2 - MIT builder.io */
+const t={preserveBehavior:!1},e=e=>{if("string"==typeof e)return[e,t];const[n,r=t]=e;return[n,{...t,...r}]},n=Object.freeze((t=>{const e=new Set;let n=[];do{Object.getOwnPropertyNames(n).forEach((t=>{"function"==typeof n[t]&&e.add(t)}))}while((n=Object.getPrototypeOf(n))!==Object.prototype);return Array.from(e)})());!function(t,r,o,i,a,s,c,d,l,p,u=t,f){function h(){f||(f=1,"/"==(c=(s.lib||"/~partytown/")+(s.debug?"debug/":""))[0]&&(l=r.querySelectorAll('script[type="text/partytown"]'),i!=t?i.dispatchEvent(new CustomEvent("pt1",{detail:t})):(d=setTimeout(v,1e4),r.addEventListener("pt0",w),a?y(1):o.serviceWorker?o.serviceWorker.register(c+(s.swPath||"partytown-sw.js"),{scope:c}).then((function(t){t.active?y():t.installing&&t.installing.addEventListener("statechange",(function(t){"activated"==t.target.state&&y()}))}),console.error):v())))}function y(e){p=r.createElement(e?"script":"iframe"),t._pttab=Date.now(),e||(p.style.display="block",p.style.width="0",p.style.height="0",p.style.border="0",p.style.visibility="hidden",p.setAttribute("aria-hidden",!0)),p.src=c+"partytown-"+(e?"atomics.js?v=0.10.2":"sandbox-sw.html?"+t._pttab),r.querySelector(s.sandboxParent||"body").appendChild(p)}function v(n,o){for(w(),i==t&&(s.forward||[]).map((function(n){const[r]=e(n);delete t[r.split(".")[0]]})),n=0;n<l.length;n++)(o=r.createElement("script")).innerHTML=l[n].innerHTML,o.nonce=s.nonce,r.head.appendChild(o);p&&p.parentNode.removeChild(p)}function w(){clearTimeout(d)}s=t.partytown||{},i==t&&(s.forward||[]).map((function(r){const[o,{preserveBehavior:i}]=e(r);u=t,o.split(".").map((function(e,r,o){var a;u=u[o[r]]=r+1<o.length?u[o[r]]||(a=o[r+1],n.includes(a)?[]:{}):(()=>{let e=null;if(i){const{methodOrProperty:n,thisObject:r}=((t,e)=>{let n=t;for(let t=0;t<e.length-1;t+=1)n=n[e[t]];return{thisObject:n,methodOrProperty:e.length>0?n[e[e.length-1]]:void 0}})(t,o);"function"==typeof n&&(e=(...t)=>n.apply(r,...t))}return function(){let n;return e&&(n=e(arguments)),(t._ptf=t._ptf||[]).push(o,arguments),n}})()}))})),"complete"==r.readyState?h():(t.addEventListener("DOMContentLoaded",h),t.addEventListener("load",h))}(window,document,navigator,top,window.crossOriginIsolated);;(e=>{e.addEventListener("astro:before-swap",e=>{let r=document.body.querySelector("iframe[src*='/~partytown/']");if(r)e.newDocument.body.append(r)})})(document);</script></head> <body class="flex flex-col min-h-screen mx-auto max-w-6xl px-4 dark:prose-invert sm:px-6 lg:px-8"> <header class="z-50 flex w-full flex-wrap py-7 md:flex-nowrap md:justify-start"> <nav class="relative mx-auto flex w-full max-w-7xl basis-full flex-wrap items-center px-4" aria-label="Global"> <div class=""> <a class="flex-none text-xl font-semibold" href="/" aria-label="Astroverse"> AstroMelody </a> </div> <div class="ms-auto flex items-center gap-x-2 py-1"> <a class="inline-flex items-center gap-x-2 rounded-xl border border-transparent px-3 py-2 text-sm font-medium disabled:pointer-events-none disabled:opacity-50" href="/search/" href="/search/"> <i class="icon-base i-tabler-search"></i> </a> <div class="dropdown dropdown-end"> <div tabindex="0" role="button" class="flex size-[38px] items-center justify-center rounded-xl text-sm font-semibold"> <i class="icon-base i-tabler-category-2"></i> </div> <ul tabindex="0" class="menu dropdown-content z-[1] w-52 rounded-box bg-base-100 p-2 shadow"> <li> <a href="/category/One/1/" class="px-4 py-3 font-medium"> One </a> </li><li> <a href="/category/Two/1/" class="px-4 py-3 font-medium"> Two </a> </li><li> <a href="/category/Three/1/" class="px-4 py-3 font-medium"> Three </a> </li> </ul> </div> <label class="swap swap-rotate rounded-xl px-3 py-2 text-sm"> <!-- this hidden checkbox controls the state --> <input type="checkbox" class="theme-controller" data-unchecked-value="corporate" value="halloween"> <!-- sun icon --> <i class="icon-base swap-off i-tabler-sun-filled"></i> <!-- moon icon --> <i class="icon-base swap-on i-tabler-moon-filled"></i> </label> </div> </nav> </header> <!-- Save theme to localStorage --> <script>
+  const lightTheme =  document.querySelector('.theme-controller')?.getAttribute('data-unchecked-value');
+  // ☝️ This script prevent the FART effect.
+  if (localStorage.getItem("theme") === null) {
+    document.documentElement.setAttribute("data-theme", lightTheme);
+  } else
+    document.documentElement.setAttribute(
+      "data-theme",
+      localStorage.getItem("theme"),
+    );
+  // "theme" LocalStorage value is set by the package to remember user preference.
+  // The value is checked and applyed before rendering anything.
+</script>  <!-- 内容区域，确保其动态调整高度 --> <main class="flex-grow">  <main> <article class="prose mx-auto dark:prose-invert"> <div class="prose-h1 text-center"> <h1>View Transitions API Reference</h1> </div> <div> <picture> <source srcset="/_astro/photo-1483366774565-c783b9f70e2c_jGYEQ.avif 392w, /_astro/photo-1483366774565-c783b9f70e2c_ZQPjpR.avif 700w, /_astro/photo-1483366774565-c783b9f70e2c_1uSMne.avif 980w, /_astro/photo-1483366774565-c783b9f70e2c_21yqnd.avif 1960w" type="image/avif" sizes="(max-width: 360px) 392px, 
+           (max-width: 720px) 700px, 
+           (max-width: 1600px) 980px, 
+           1960px"> <img src="/_astro/photo-1483366774565-c783b9f70e2c_21yqnd.avif" srcset="/_astro/photo-1483366774565-c783b9f70e2c_jGYEQ.avif 392w, /_astro/photo-1483366774565-c783b9f70e2c_ZQPjpR.avif 700w, /_astro/photo-1483366774565-c783b9f70e2c_1uSMne.avif 980w, /_astro/photo-1483366774565-c783b9f70e2c_21yqnd.avif 1960w" alt="worm's-eye view photography of concrete building" sizes="(max-width: 360px) 392px, 
+           (max-width: 720px) 700px, 
+           (max-width: 1600px) 980px, 
+           1960px" class="mx-auto w-full max-w-full object-cover" width="1960" height="1102" loading="lazy" decoding="async"> </picture> </div> <div> <p><strong>Added in:</strong>
+<code>astro@3.0.0</code></p>
+<p>These modules provide functions to control and interact with the View Transitions API and client-side router.</p>
+<p>For features and usage examples, <a href="/en/guides/view-transitions/">see our View Transitions guide</a>.</p>
+<h2 id="imports-from-astrotransitions">Imports from <code>astro:transitions</code></h2>
+<p><a href="#imports-from-astrotransitions">Section titled Imports from astro:transitions</a></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>import { ViewTransitions, fade, slide } from 'astro:transitions';</span></span>
+<span class="line"><span></span></span></code></pre>
+<h3 id="viewtransitions"><code>&#x3C;ViewTransitions /></code></h3>
+<p><a href="#viewtransitions-">Section titled &#x26;lt;ViewTransitions /&#x26;gt;</a></p>
+<p><strong>Added in:</strong>
+<code>astro@3.0.0</code></p>
+<p>Opt in to using view transitions on individual pages by importing and adding the <code>&#x3C;ViewTransitions /></code> routing component to <code>&#x3C;head></code> on every desired page.</p>
+<p>src/pages/index.astro</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>---import { ViewTransitions } from 'astro:transitions';---&#x3C;html lang="en">  &#x3C;head>    &#x3C;title>My Homepage&#x3C;/title>    &#x3C;ViewTransitions />  &#x3C;/head>  &#x3C;body>    &#x3C;h1>Welcome to my website!&#x3C;/h1>  &#x3C;/body>&#x3C;/html></span></span>
+<span class="line"><span></span></span></code></pre>
+<p>See more about how to <a href="/en/guides/view-transitions/#router-control">control the router</a> and <a href="/en/guides/view-transitions/#transition-directives">add transition directives</a> to page elements and components.</p>
+<h3 id="fade"><code>fade</code></h3>
+<p><a href="#fade">Section titled fade</a>
+<strong>Type:</strong> <code>(opts: { duration?: string | number }) => TransitionDirectionalAnimations</code></p>
+<p><strong>Added in:</strong>
+<code>astro@3.0.0</code></p>
+<p>Utility function to support customizing the duration of the built-in <code>fade</code> animation.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>---import { fade } from 'astro:transitions';---</span></span>
+<span class="line"><span>&#x3C;!-- Fade transition with the default duration -->&#x3C;div transition:animate="fade" /></span></span>
+<span class="line"><span>&#x3C;!-- Fade transition with a duration of 400 milliseconds -->&#x3C;div transition:animate={fade({ duration: '0.4s' })} /></span></span>
+<span class="line"><span></span></span></code></pre>
+<h3 id="slide"><code>slide</code></h3>
+<p><a href="#slide">Section titled slide</a>
+<strong>Type:</strong> <code>(opts: { duration?: string | number }) => TransitionDirectionalAnimations</code></p>
+<p><strong>Added in:</strong>
+<code>astro@3.0.0</code></p>
+<p>Utility function to support customizing the duration of the built-in <code>slide</code> animation.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>---import { slide } from 'astro:transitions';---</span></span>
+<span class="line"><span>&#x3C;!-- Slide transition with the default duration -->&#x3C;div transition:animate="slide" /></span></span>
+<span class="line"><span>&#x3C;!-- Slide transition with a duration of 400 milliseconds -->&#x3C;div transition:animate={slide({ duration: '0.4s' })} /></span></span>
+<span class="line"><span></span></span></code></pre>
+<h2 id="imports-from-astrotransitionsclient">Imports from <code>astro:transitions/client</code></h2>
+<p><a href="#imports-from-astrotransitionsclient">Section titled Imports from astro:transitions/client</a></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;script>  import {    navigate,    supportsViewTransitions,    transitionEnabledOnThisPage,    getFallback,    swapFunctions,  } from 'astro:transitions/client';&#x3C;/script></span></span>
+<span class="line"><span></span></span></code></pre>
+<h3 id="navigate"><code>navigate()</code></h3>
+<p><a href="#navigate">Section titled navigate()</a>
+<strong>Type:</strong> <code>(href: string, options?: Options) => void</code></p>
+<p><strong>Added in:</strong>
+<code>astro@3.2.0</code></p>
+<p>A function that executes a navigation to the given <code>href</code> using the View Transitions API.</p>
+<p>This function signature is based on the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigation/navigate"><code>navigate</code> function from the browser Navigation API</a>. Although based on the Navigation API, this function is implemented on top of the <a href="https://developer.mozilla.org/en-US/docs/Web/API/History_API">History API</a> to allow for navigation without reloading the page.</p>
+<h4 id="history-option"><code>history</code> option</h4>
+<p><a href="#history-option">Section titled history option</a>
+<strong>Type:</strong> <code>'auto' | 'push' | 'replace'</code></p>
+<p><strong>Default:</strong> <code>'auto'</code></p>
+<p><strong>Added in:</strong>
+<code>astro@3.2.0</code></p>
+<p>Defines how this navigation should be added to the browser history.</p>
+<ul>
+<li><code>'push'</code>: the router will use <code>history.pushState</code> to create a new entry in the browser history.</li>
+<li><code>'replace'</code>: the router will use <code>history.replaceState</code> to update the URL without adding a new entry into navigation.</li>
+<li><code>'auto'</code> (default): the router will attempt <code>history.pushState</code>, but if the URL cannot be transitioned to, the current URL will remain with no changes to the browser history.</li>
+</ul>
+<p>This option follows the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigation/navigate#history"><code>history</code> option</a> from the browser Navigation API but simplified for the cases that can happen on an Astro project.</p>
+<h4 id="formdata-option"><code>formData</code> option</h4>
+<p><a href="#formdata-option">Section titled formData option</a>
+<strong>Type:</strong> <code>FormData</code></p>
+<p><strong>Added in:</strong>
+<code>astro@3.5.0</code></p>
+<p>A <code>FormData</code> object for <code>POST</code> requests.</p>
+<p>When this option is provided, the requests to the navigation target page will be sent as a <code>POST</code> request with the form data object as the content.</p>
+<p>Submitting an HTML form with view transitions enabled will use this method instead of the default navigation with page reload. Calling this method allows triggering the same behavior programmatically.</p>
+<h4 id="info-option"><code>info</code> option</h4>
+<p><a href="#info-option">Section titled info option</a>
+<strong>Type:</strong> <code>any</code></p>
+<p><strong>Added in:</strong>
+<code>astro@3.6.0</code></p>
+<p>Arbitrary data to be included in the <code>astro:before-preparation</code> and <code>astro:before-swap</code> events caused by this navigation.</p>
+<p>This option mimics the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigation/navigate#info"><code>info</code> option</a> from the browser Navigation API.</p>
+<h4 id="state-option"><code>state</code> option</h4>
+<p><a href="#state-option">Section titled state option</a>
+<strong>Type:</strong> <code>any</code></p>
+<p><strong>Added in:</strong>
+<code>astro@3.6.0</code></p>
+<p>Arbitrary data to be associated with the <code>NavitationHistoryEntry</code> object created by this navigation. This data can then be retrieved using the <a href="https://developer.mozilla.org/en-US/docs/Web/API/NavigationHistoryEntry/getState"><code>history.getState</code> function</a> from the History API.</p>
+<p>This option mimics the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigation/navigate#state"><code>state</code> option</a> from the browser Navigation API.</p>
+<h4 id="sourceelement-option"><code>sourceElement</code> option</h4>
+<p><a href="#sourceelement-option">Section titled sourceElement option</a>
+<strong>Type:</strong> <code>Element</code></p>
+<p><strong>Added in:</strong>
+<code>astro@3.6.0</code></p>
+<p>The element that triggered this navigation, if any. This element will be available in the following events:</p>
+<ul>
+<li><code>astro:before-preparation</code></li>
+<li><code>astro:before-swap</code></li>
+</ul>
+<h3 id="supportsviewtransitions"><code>supportsViewTransitions</code></h3>
+<p><a href="#supportsviewtransitions">Section titled supportsViewTransitions</a>
+<strong>Type:</strong> <code>boolean</code></p>
+<p><strong>Added in:</strong>
+<code>astro@3.2.0</code></p>
+<p>Whether or not view transitions are supported and enabled in the current browser.</p>
+<h3 id="transitionenabledonthispage"><code>transitionEnabledOnThisPage</code></h3>
+<p><a href="#transitionenabledonthispage">Section titled transitionEnabledOnThisPage</a>
+<strong>Type:</strong> <code>boolean</code></p>
+<p><strong>Added in:</strong>
+<code>astro@3.2.0</code></p>
+<p>Whether or not the current page has view transitions enabled for client-side navigation. This can be used to make components that behave differently when they are used on pages with view transitions.</p>
+<h3 id="getfallback"><code>getFallback()</code></h3>
+<p><a href="#getfallback">Section titled getFallback()</a>
+<strong>Type:</strong> <code>() => 'none' | 'animate' | 'swap'</code></p>
+<p><strong>Added in:</strong>
+<code>astro@3.6.0</code></p>
+<p>Returns the fallback strategy to use in browsers that do not support view transitions.</p>
+<p>See the guide on <a href="/en/guides/view-transitions/#fallback-control">Fallback control</a> for how to choose and configure the fallback behavior.</p>
+<h3 id="swapfunctions"><code>swapFunctions</code></h3>
+<p><a href="#swapfunctions">Section titled swapFunctions</a></p>
+<p><strong>Added in:</strong>
+<code>astro@4.15.0</code></p>
+<p>An object containing the utility functions used to build Astro’s default swap function.
+These can be useful when <a href="/en/guides/view-transitions/#building-a-custom-swap-function">building a custom swap function</a>.</p>
+<p><code>swapFunctions</code> provides the following methods:</p>
+<h4 id="deselectscripts"><code>deselectScripts()</code></h4>
+<p><a href="#deselectscripts">Section titled deselectScripts()</a>
+<strong>Type:</strong> <code>(newDocument: Document) => void</code></p>
+<p>Marks scripts in the new document that should not be executed. Those scripts are already in the current document and are not flagged for re-execution using <a href="/en/guides/view-transitions/#data-astro-rerun"><code>data-astro-rerun</code></a>.</p>
+<h4 id="swaprootattributes"><code>swapRootAttributes()</code></h4>
+<p><a href="#swaprootattributes">Section titled swapRootAttributes()</a>
+<strong>Type:</strong> <code>(newDocument: Document) => void</code></p>
+<p>Swaps the attributes between the document roots, like the <code>lang</code> attribute. This also includes Astro-injected internal attributes like <code>data-astro-transition</code>, which makes the transition direction available to Astro-generated CSS rules.</p>
+<p>When making a custom swap function, it is important to call this function so as not to break the view transition’s animations.</p>
+<h4 id="swapheadelements"><code>swapHeadElements()</code></h4>
+<p><a href="#swapheadelements">Section titled swapHeadElements()</a>
+<strong>Type:</strong> <code>(newDocument: Document) => void</code></p>
+<p>Removes every element from the current document’s <code>&#x3C;head></code> that is not persisted to the new document. Then appends all new elements from the new document’s <code>&#x3C;head></code> to the current document’s <code>&#x3C;head></code>.</p>
+<h4 id="savefocus"><code>saveFocus()</code></h4>
+<p><a href="#savefocus">Section titled saveFocus()</a>
+<strong>Type:</strong> <code>() => () => void</code></p>
+<p>Stores the element in focus on the current page and returns a function that when called, if the focused element was persisted, returns the focus to it.</p>
+<h4 id="swapbodyelement"><code>swapBodyElement()</code></h4>
+<p><a href="#swapbodyelement">Section titled swapBodyElement()</a>
+<strong>Type:</strong> <code>(newBody: Element, oldBody: Element) => void</code></p>
+<p>Replaces the old body with the new body. Then, goes through every element in the old body that should be persisted and have a matching element in the new body and swaps the old element back in place.</p>
+<h2 id="lifecycle-events">Lifecycle events</h2>
+<p><a href="#lifecycle-events">Section titled Lifecycle events</a></p>
+<h3 id="astrobefore-preparation-event"><code>astro:before-preparation</code> event</h3>
+<p><a href="#astrobefore-preparation-event">Section titled astro:before-preparation event</a>
+An event dispatched at the beginning of a navigation using View Transitions. This event happens before any request is made and any browser state is changed.</p>
+<p>This event has the attributes:</p>
+<ul>
+<li><a href="#info"><code>info</code></a></li>
+<li><a href="#sourceelement"><code>sourceElement</code></a></li>
+<li><a href="#navigationtype"><code>navigationType</code></a></li>
+<li><a href="#direction"><code>direction</code></a></li>
+<li><a href="#from"><code>from</code></a></li>
+<li><a href="#to"><code>to</code></a></li>
+<li><a href="#formdata"><code>formData</code></a></li>
+<li><a href="#loader"><code>loader()</code></a></li>
+</ul>
+<p>Read more about how to use this event on the <a href="/en/guides/view-transitions/#astrobefore-preparation">View Transitions guide</a>.</p>
+<h3 id="astroafter-preparation-event"><code>astro:after-preparation</code> event</h3>
+<p><a href="#astroafter-preparation-event">Section titled astro:after-preparation event</a>
+An event dispatched after the next page in a navigation using View Transitions is loaded.</p>
+<p>This event has no attributes.</p>
+<p>Read more about how to use this event on the <a href="/en/guides/view-transitions/#astroafter-preparation">View Transitions guide</a>.</p>
+<h3 id="astrobefore-swap-event"><code>astro:before-swap</code> event</h3>
+<p><a href="#astrobefore-swap-event">Section titled astro:before-swap event</a>
+An event dispatched after the next page is parsed, prepared, and linked into a document in preparation for the transition but before any content is swapped between the documents.</p>
+<p>This event can’t be canceled. Calling <code>preventDefault()</code> is a no-op.</p>
+<p>This event has the attributes:</p>
+<ul>
+<li><a href="#info"><code>info</code></a></li>
+<li><a href="#sourceelement"><code>sourceElement</code></a></li>
+<li><a href="#navigationtype"><code>navigationType</code></a></li>
+<li><a href="#direction"><code>direction</code></a></li>
+<li><a href="#from"><code>from</code></a></li>
+<li><a href="#to"><code>to</code></a></li>
+<li><a href="#viewtransition"><code>viewTransition</code></a></li>
+<li><a href="#swap"><code>swap()</code></a></li>
+</ul>
+<p>Read more about how to use this event on the <a href="/en/guides/view-transitions/#astrobefore-swap">View Transitions guide</a>.</p>
+<h3 id="astroafter-swap-event"><code>astro:after-swap</code> event</h3>
+<p><a href="#astroafter-swap-event">Section titled astro:after-swap event</a>
+An event dispatched after the contents of the page have been swapped but before the view transition ends.</p>
+<p>The history entry and scroll position have already been updated when this event is triggered.</p>
+<h3 id="astropage-load-event"><code>astro:page-load</code> event</h3>
+<p><a href="#astropage-load-event">Section titled astro:page-load event</a>
+An event dispatched after a page completes loading, whether from a navigation using view transitions or native to the browser.</p>
+<p>When view transitions is enabled on the page, code that would normally execute on <code>DOMContentLoaded</code> should be changed to execute on this event.</p>
+<h3 id="lifecycle-events-attributes">Lifecycle events attributes</h3>
+<p><a href="#lifecycle-events-attributes">Section titled Lifecycle events attributes</a></p>
+<p><strong>Added in:</strong>
+<code>astro@3.6.0</code></p>
+<h4 id="info"><code>info</code></h4>
+<p><a href="#info">Section titled info</a>
+<strong>Type:</strong> <code>URL</code></p>
+<p>Arbitrary data defined during navigation.</p>
+<p>This is the literal value passed on the <a href="#info-option"><code>info</code> option</a> of the <a href="#navigate"><code>navigate()</code> function</a>.</p>
+<h4 id="sourceelement"><code>sourceElement</code></h4>
+<p><a href="#sourceelement">Section titled sourceElement</a>
+<strong>Type:</strong> <code>Element | undefined</code></p>
+<p>The element that triggered the navigation. This can be, for example, an <code>&#x3C;a></code> element that was clicked.</p>
+<p>When using the <a href="#navigate"><code>navigate()</code> function</a>, this will be the element specified in the call.</p>
+<h4 id="newdocument"><code>newDocument</code></h4>
+<p><a href="#newdocument">Section titled newDocument</a>
+<strong>Type:</strong> <code>Document</code></p>
+<p>The document for the next page in the navigation. The contents of this document will be swapped in place of the contents of the current document.</p>
+<h4 id="navigationtype"><code>navigationType</code></h4>
+<p><a href="#navigationtype">Section titled navigationType</a>
+<strong>Type:</strong> <code>'push' | 'replace' | 'traverse'</code></p>
+<p>Which kind of history navigation is happening.</p>
+<ul>
+<li><code>push</code>: a new <code>NavigationHistoryEntry</code> is being created for the new page.</li>
+<li><code>replace</code>: the current <code>NavigationHistoryEntry</code> is being replaced with an entry for the new page.</li>
+<li><code>traverse</code>: no <code>NavigationHistoryEntry</code> is created. The position in the history is changing.
+The direction of the traversal is given on the <a href="#direction"><code>direction</code> attribute</a></li>
+</ul>
+<h4 id="direction"><code>direction</code></h4>
+<p><a href="#direction">Section titled direction</a>
+<strong>Type:</strong> <code>Direction</code></p>
+<p>The direction of the transition.</p>
+<ul>
+<li><code>forward</code>: navigating to the next page in the history or to a new page.</li>
+<li><code>back</code>: navigating to the previous page in the history.</li>
+<li>Anything else some other listener might have set.</li>
+</ul>
+<h4 id="from"><code>from</code></h4>
+<p><a href="#from">Section titled from</a>
+<strong>Type:</strong> <code>URL</code></p>
+<p>The URL of the page initiating the navigation.</p>
+<h4 id="to"><code>to</code></h4>
+<p><a href="#to">Section titled to</a>
+<strong>Type:</strong> <code>URL</code></p>
+<p>The URL of the page being navigated to. This property can be modified, the value at the end of the lifecycle will be used in the <code>NavigationHistoryEntry</code> for the next page.</p>
+<h4 id="formdata"><code>formData</code></h4>
+<p><a href="#formdata">Section titled formData</a>
+<strong>Type:</strong> <code>FormData | undefined</code></p>
+<p>A <code>FormData</code> object for <code>POST</code> requests.</p>
+<p>When this attribute is set, a <code>POST</code> request will be sent to the <a href="#to"><code>to</code> URL</a> with the given form data object as the content instead of the normal <code>GET</code> request.</p>
+<p>When submitting an HTML form with view transitions enabled, this field is automatically set to the data in the form. When using the <a href="#navigate"><code>navigate()</code> function</a>, this value is the same as given in the options.</p>
+<h4 id="loader"><code>loader()</code></h4>
+<p><a href="#loader">Section titled loader()</a>
+<strong>Type:</strong> <code>() => Promise&#x3C;void></code></p>
+<p>Implementation of the following phase in the navigation (loading the next page). This implementation can be overridden to add extra behavior.</p>
+<h4 id="viewtransition"><code>viewTransition</code></h4>
+<p><a href="#viewtransition">Section titled viewTransition</a>
+<strong>Type:</strong> <a href="https://developer.mozilla.org/en-US/docs/Web/API/ViewTransition"><code>ViewTransition</code></a></p>
+<p>The view transition object used in this navigation. On browsers that do not support the <a href="https://developer.mozilla.org/en-US/docs/Web/API/View_Transitions_API">View Transitions API</a>, this is an object implementing the same API for convenience but without the DOM integration.</p>
+<h4 id="swap"><code>swap()</code></h4>
+<p><a href="#swap">Section titled swap()</a>
+<strong>Type:</strong> <code>() => void</code></p>
+<p>Implementation of the document swap logic.</p>
+<p>Read more about <a href="/en/guides/view-transitions/#building-a-custom-swap-function">building a custom swap function</a> in the View Transitions guide.</p>
+<p>By default, this implementation will call the following functions in order:</p>
+<ol>
+<li><a href="#deselectscripts"><code>deselectScripts()</code></a></li>
+<li><a href="#swaprootattributes"><code>swapRootAttributes()</code></a></li>
+<li><a href="#swapheadelements"><code>swapHeadElements()</code></a></li>
+<li><a href="#savefocus"><code>saveFocus()</code></a></li>
+<li><a href="#swapbodyelement"><code>swapBodyElement()</code></a></li>
+</ol>
+<p>Reference</p> </div> <div class="prose-a:no-underline flex gap-2"> <span class="badge badge-outline badge-md"> <a href="/tags/guide/1/">guide</a> </span><span class="badge badge-outline badge-md"> <a href="/tags/Python/1/">Python</a> </span><span class="badge badge-outline badge-md"> <a href="/tags/Stylus/1/">Stylus</a> </span> </div> <div class="mt-4 flex justify-between"> <small>Publish on <span class="font-weight-bold">2024-02-22</span>，Update on <span class="font-weight-bold">2025-01-09</span></small> </div> </article> <div class="mt-12"> <div class="grid grid-cols-1 gap-4 md:grid-cols-3"> <div class="card mb-4 overflow-hidden rounded-xl border  transition-transform duration-500 hover:-translate-y-1 hover:scale-105"> <a href="/posts/learn-the-basics-basics-astro-pages/"> <picture> <source srcset="/_astro/photo-1463130456064-77fda7f96d6b_ZAMhtG.avif 392w, /_astro/photo-1463130456064-77fda7f96d6b_Z1MkAzp.avif 700w, /_astro/photo-1463130456064-77fda7f96d6b_zovdG.avif 980w, /_astro/photo-1463130456064-77fda7f96d6b_Z1fOymS.avif 1960w" type="image/avif" sizes="(max-width: 360px) 392px, 
+           (max-width: 720px) 700px, 
+           (max-width: 1600px) 980px, 
+           1960px"> <img src="/_astro/photo-1463130456064-77fda7f96d6b_Z1fOymS.avif" srcset="/_astro/photo-1463130456064-77fda7f96d6b_ZAMhtG.avif 392w, /_astro/photo-1463130456064-77fda7f96d6b_Z1MkAzp.avif 700w, /_astro/photo-1463130456064-77fda7f96d6b_zovdG.avif 980w, /_astro/photo-1463130456064-77fda7f96d6b_Z1fOymS.avif 1960w" alt="white concrete building wall" sizes="(max-width: 360px) 392px, 
+           (max-width: 720px) 700px, 
+           (max-width: 1600px) 980px, 
+           1960px" class="mx-auto w-full max-w-full object-cover" width="1960" height="1102" loading="lazy" decoding="async"> </picture> <div class="card-body"> <div class="flex items-center gap-1 text-xs"> <span class="badge badge-outline">documentation</span><span class="badge badge-outline">Python</span><span class="badge badge-outline">Less</span> </div> <p class="text-xs"><span class="font-weight-bold">2024-03-04</span></p> <h2 class="card-title">Pages</h2> </div> </a> </div><div class="card mb-4 overflow-hidden rounded-xl border  transition-transform duration-500 hover:-translate-y-1 hover:scale-105"> <a href="/posts/welcome-world-tutorial-0-introduction/"> <picture> <source srcset="/_astro/photo-1483366774565-c783b9f70e2c_jGYEQ.avif 392w, /_astro/photo-1483366774565-c783b9f70e2c_ZQPjpR.avif 700w, /_astro/photo-1483366774565-c783b9f70e2c_1uSMne.avif 980w, /_astro/photo-1483366774565-c783b9f70e2c_21yqnd.avif 1960w" type="image/avif" sizes="(max-width: 360px) 392px, 
+           (max-width: 720px) 700px, 
+           (max-width: 1600px) 980px, 
+           1960px"> <img src="/_astro/photo-1483366774565-c783b9f70e2c_21yqnd.avif" srcset="/_astro/photo-1483366774565-c783b9f70e2c_jGYEQ.avif 392w, /_astro/photo-1483366774565-c783b9f70e2c_ZQPjpR.avif 700w, /_astro/photo-1483366774565-c783b9f70e2c_1uSMne.avif 980w, /_astro/photo-1483366774565-c783b9f70e2c_21yqnd.avif 1960w" alt="worm's-eye view photography of concrete building" sizes="(max-width: 360px) 392px, 
+           (max-width: 720px) 700px, 
+           (max-width: 1600px) 980px, 
+           1960px" class="mx-auto w-full max-w-full object-cover" width="1960" height="1102" loading="lazy" decoding="async"> </picture> <div class="card-body"> <div class="flex items-center gap-1 text-xs"> <span class="badge badge-outline">astro-build</span><span class="badge badge-outline">Python</span><span class="badge badge-outline">Sass</span> </div> <p class="text-xs"><span class="font-weight-bold">2024-03-03</span></p> <h2 class="card-title">Build your first Astro Blog</h2> </div> </a> </div><div class="card mb-4 overflow-hidden rounded-xl border  transition-transform duration-500 hover:-translate-y-1 hover:scale-105"> <a href="/posts/routes-and-navigation-guides-view-transitions/"> <picture> <source srcset="/_astro/photo-1472377723522-4768db9c41ce_cr2OL.avif 392w, /_astro/photo-1472377723522-4768db9c41ce_ZY6gfW.avif 700w, /_astro/photo-1472377723522-4768db9c41ce_1nCPx9.avif 980w, /_astro/photo-1472377723522-4768db9c41ce_Z1EwWzk.avif 1960w" type="image/avif" sizes="(max-width: 360px) 392px, 
+           (max-width: 720px) 700px, 
+           (max-width: 1600px) 980px, 
+           1960px"> <img src="/_astro/photo-1472377723522-4768db9c41ce_Z1EwWzk.avif" srcset="/_astro/photo-1472377723522-4768db9c41ce_cr2OL.avif 392w, /_astro/photo-1472377723522-4768db9c41ce_ZY6gfW.avif 700w, /_astro/photo-1472377723522-4768db9c41ce_1nCPx9.avif 980w, /_astro/photo-1472377723522-4768db9c41ce_Z1EwWzk.avif 1960w" alt="white and brown concrete house near trees at daytime" sizes="(max-width: 360px) 392px, 
+           (max-width: 720px) 700px, 
+           (max-width: 1600px) 980px, 
+           1960px" class="mx-auto w-full max-w-full object-cover" width="1960" height="1102" loading="lazy" decoding="async"> </picture> <div class="card-body"> <div class="flex items-center gap-1 text-xs"> <span class="badge badge-outline">astro</span><span class="badge badge-outline">Python</span><span class="badge badge-outline">Less</span> </div> <p class="text-xs"><span class="font-weight-bold">2024-03-02</span></p> <h2 class="card-title">View Transitions</h2> </div> </a> </div> </div> </div> </main>  </main> <footer class="mx-auto mt-auto w-full max-w-[85rem] py-10"> <nav class="mx-auto w-full max-w-[85rem] px-4" aria-label="Footer"> <div class="flex flex-col items-center sm:flex-row sm:justify-between"> <div id="navbar-alignment" class="internal-links sm:order-2"> <div class="mt-2 flex flex-row gap-5 sm:mt-0 sm:flex-row sm:items-center sm:ps-5"> <a href="/posts/core-concepts-concepts-why-astro/" class="inline-flex gap-x-2 text-sm"> Astro </a><a href="/posts/assets-guides-styling/" class="inline-flex gap-x-2 text-sm"> Styling </a><a href="/tags/" class="inline-flex gap-x-2 text-sm"> Tags </a> </div> </div> <div class="mt-2 flex flex-wrap gap-2 sm:order-3 sm:mb-0 sm:gap-0"> <button type="button" class="relative inline-flex h-12 w-12 items-center gap-x-2 px-4 py-3 disabled:pointer-events-none disabled:opacity-50"> <a href="/rss.xml" class="absolute inset-0 z-10" aria-label="RSS"></a> <i class="i-tabler-rss icon-base"></i> </button><button type="button" class="relative inline-flex h-12 w-12 items-center gap-x-2 px-4 py-3 disabled:pointer-events-none disabled:opacity-50"> <a href="https://twitter.com/astrodotbuild" class="absolute inset-0 z-10" aria-label="Twitter"></a> <i class="i-tabler-brand-twitter icon-base"></i> </button><button type="button" class="relative inline-flex h-12 w-12 items-center gap-x-2 px-4 py-3 disabled:pointer-events-none disabled:opacity-50"> <a href="https://github.com/isooosi" class="absolute inset-0 z-10" aria-label="GitHub"></a> <i class="i-tabler-brand-github icon-base"></i> </button> </div> <div class="mt-2 sm:order-1 sm:mb-0"> <a class="flex-none text-sm" href="/" aria-label="Brand">AstroMelody &copy; 2025</a> </div> </div> </nav> </footer> </body></html>

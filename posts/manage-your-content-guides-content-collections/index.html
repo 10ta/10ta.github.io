@@ -1,0 +1,337 @@
+<!DOCTYPE html><html lang="en"> <head><!-- Global Metadata --><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="generator" content="Astro v4.16.7"><!-- Canonical URL --><link rel="canonical" href="https://10ta.github.io/posts/manage-your-content-guides-content-collections/"><!-- Sitemap --><link rel="sitemap" href="/sitemap-index.xml"><!-- Primary Meta Tags --><title>Content Collections</title><meta name="title" content="Content Collections"><meta name="description" content="Content collections help organize your Markdown and type-check your frontmatter with schemas."><!-- Open Graph / Facebook --><meta property="og:type" content="website"><meta property="og:url" content="https://10ta.github.io/posts/manage-your-content-guides-content-collections/"><meta property="og:title" content="Content Collections"><meta property="og:description" content="Content collections help organize your Markdown and type-check your frontmatter with schemas."><meta property="og:image" content="https://10ta.github.io/blog-placeholder-1.avif"><!-- Twitter --><meta property="twitter:card" content="summary_large_image"><meta property="twitter:url" content="https://10ta.github.io/posts/manage-your-content-guides-content-collections/"><meta property="twitter:title" content="Content Collections"><meta property="twitter:description" content="Content collections help organize your Markdown and type-check your frontmatter with schemas."><meta property="twitter:image" content="https://10ta.github.io/blog-placeholder-1.avif"><link rel="stylesheet" href="/_astro/_page_.Bdwf1GY7.css"><script type="module" src="/_astro/hoisted.CPfS8Ggc.js"></script>
+<script type="module" src="/_astro/page.DTIbhfSr.js"></script>
+<script>!(function(w,p,f,c){if(!window.crossOriginIsolated && !navigator.serviceWorker) return;c=w[p]=Object.assign(w[p]||{},{"lib":"/~partytown/","debug":false});c[f]=(c[f]||[]).concat(["dataLayer.push"])})(window,'partytown','forward');/* Partytown 0.10.2 - MIT builder.io */
+const t={preserveBehavior:!1},e=e=>{if("string"==typeof e)return[e,t];const[n,r=t]=e;return[n,{...t,...r}]},n=Object.freeze((t=>{const e=new Set;let n=[];do{Object.getOwnPropertyNames(n).forEach((t=>{"function"==typeof n[t]&&e.add(t)}))}while((n=Object.getPrototypeOf(n))!==Object.prototype);return Array.from(e)})());!function(t,r,o,i,a,s,c,d,l,p,u=t,f){function h(){f||(f=1,"/"==(c=(s.lib||"/~partytown/")+(s.debug?"debug/":""))[0]&&(l=r.querySelectorAll('script[type="text/partytown"]'),i!=t?i.dispatchEvent(new CustomEvent("pt1",{detail:t})):(d=setTimeout(v,1e4),r.addEventListener("pt0",w),a?y(1):o.serviceWorker?o.serviceWorker.register(c+(s.swPath||"partytown-sw.js"),{scope:c}).then((function(t){t.active?y():t.installing&&t.installing.addEventListener("statechange",(function(t){"activated"==t.target.state&&y()}))}),console.error):v())))}function y(e){p=r.createElement(e?"script":"iframe"),t._pttab=Date.now(),e||(p.style.display="block",p.style.width="0",p.style.height="0",p.style.border="0",p.style.visibility="hidden",p.setAttribute("aria-hidden",!0)),p.src=c+"partytown-"+(e?"atomics.js?v=0.10.2":"sandbox-sw.html?"+t._pttab),r.querySelector(s.sandboxParent||"body").appendChild(p)}function v(n,o){for(w(),i==t&&(s.forward||[]).map((function(n){const[r]=e(n);delete t[r.split(".")[0]]})),n=0;n<l.length;n++)(o=r.createElement("script")).innerHTML=l[n].innerHTML,o.nonce=s.nonce,r.head.appendChild(o);p&&p.parentNode.removeChild(p)}function w(){clearTimeout(d)}s=t.partytown||{},i==t&&(s.forward||[]).map((function(r){const[o,{preserveBehavior:i}]=e(r);u=t,o.split(".").map((function(e,r,o){var a;u=u[o[r]]=r+1<o.length?u[o[r]]||(a=o[r+1],n.includes(a)?[]:{}):(()=>{let e=null;if(i){const{methodOrProperty:n,thisObject:r}=((t,e)=>{let n=t;for(let t=0;t<e.length-1;t+=1)n=n[e[t]];return{thisObject:n,methodOrProperty:e.length>0?n[e[e.length-1]]:void 0}})(t,o);"function"==typeof n&&(e=(...t)=>n.apply(r,...t))}return function(){let n;return e&&(n=e(arguments)),(t._ptf=t._ptf||[]).push(o,arguments),n}})()}))})),"complete"==r.readyState?h():(t.addEventListener("DOMContentLoaded",h),t.addEventListener("load",h))}(window,document,navigator,top,window.crossOriginIsolated);;(e=>{e.addEventListener("astro:before-swap",e=>{let r=document.body.querySelector("iframe[src*='/~partytown/']");if(r)e.newDocument.body.append(r)})})(document);</script></head> <body class="flex flex-col min-h-screen mx-auto max-w-6xl px-4 dark:prose-invert sm:px-6 lg:px-8"> <header class="z-50 flex w-full flex-wrap py-7 md:flex-nowrap md:justify-start"> <nav class="relative mx-auto flex w-full max-w-7xl basis-full flex-wrap items-center px-4" aria-label="Global"> <div class=""> <a class="flex-none text-xl font-semibold" href="/" aria-label="Astroverse"> AstroMelody </a> </div> <div class="ms-auto flex items-center gap-x-2 py-1"> <a class="inline-flex items-center gap-x-2 rounded-xl border border-transparent px-3 py-2 text-sm font-medium disabled:pointer-events-none disabled:opacity-50" href="/search/" href="/search/"> <i class="icon-base i-tabler-search"></i> </a> <div class="dropdown dropdown-end"> <div tabindex="0" role="button" class="flex size-[38px] items-center justify-center rounded-xl text-sm font-semibold"> <i class="icon-base i-tabler-category-2"></i> </div> <ul tabindex="0" class="menu dropdown-content z-[1] w-52 rounded-box bg-base-100 p-2 shadow"> <li> <a href="/category/One/1/" class="px-4 py-3 font-medium"> One </a> </li><li> <a href="/category/Two/1/" class="px-4 py-3 font-medium"> Two </a> </li><li> <a href="/category/Three/1/" class="px-4 py-3 font-medium"> Three </a> </li> </ul> </div> <label class="swap swap-rotate rounded-xl px-3 py-2 text-sm"> <!-- this hidden checkbox controls the state --> <input type="checkbox" class="theme-controller" data-unchecked-value="corporate" value="halloween"> <!-- sun icon --> <i class="icon-base swap-off i-tabler-sun-filled"></i> <!-- moon icon --> <i class="icon-base swap-on i-tabler-moon-filled"></i> </label> </div> </nav> </header> <!-- Save theme to localStorage --> <script>
+  const lightTheme =  document.querySelector('.theme-controller')?.getAttribute('data-unchecked-value');
+  // ☝️ This script prevent the FART effect.
+  if (localStorage.getItem("theme") === null) {
+    document.documentElement.setAttribute("data-theme", lightTheme);
+  } else
+    document.documentElement.setAttribute(
+      "data-theme",
+      localStorage.getItem("theme"),
+    );
+  // "theme" LocalStorage value is set by the package to remember user preference.
+  // The value is checked and applyed before rendering anything.
+</script>  <!-- 内容区域，确保其动态调整高度 --> <main class="flex-grow">  <main> <article class="prose mx-auto dark:prose-invert"> <div class="prose-h1 text-center"> <h1>Content Collections</h1> </div> <div> <picture> <source srcset="/_astro/photo-1480074568708-e7b720bb3f09_Z2vlXMC.avif 392w, /_astro/photo-1480074568708-e7b720bb3f09_1nhPUA.avif 700w, /_astro/photo-1480074568708-e7b720bb3f09_Z1kab5f.avif 980w, /_astro/photo-1480074568708-e7b720bb3f09_vUEOm.avif 1960w" type="image/avif" sizes="(max-width: 360px) 392px, 
+           (max-width: 720px) 700px, 
+           (max-width: 1600px) 980px, 
+           1960px"> <img src="/_astro/photo-1480074568708-e7b720bb3f09_vUEOm.avif" srcset="/_astro/photo-1480074568708-e7b720bb3f09_Z2vlXMC.avif 392w, /_astro/photo-1480074568708-e7b720bb3f09_1nhPUA.avif 700w, /_astro/photo-1480074568708-e7b720bb3f09_Z1kab5f.avif 980w, /_astro/photo-1480074568708-e7b720bb3f09_vUEOm.avif 1960w" alt="white house under maple trees" sizes="(max-width: 360px) 392px, 
+           (max-width: 720px) 700px, 
+           (max-width: 1600px) 980px, 
+           1960px" class="mx-auto w-full max-w-full object-cover" width="1960" height="1102" loading="lazy" decoding="async"> </picture> </div> <div> <p><strong>Added in:</strong>
+<code>astro@2.0.0</code></p>
+<p><strong>Content collections</strong> are the best way to manage and author content in any Astro project. Collections help to organize your documents, validate your frontmatter, and provide automatic TypeScript type-safety for all of your content.</p>
+<h2 id="what-are-content-collections">What are Content Collections?</h2>
+<p><a href="#what-are-content-collections">Section titled What are Content Collections?</a>
+A <strong>content collection</strong> is any top-level directory inside the reserved <code>src/content</code> project directory, such as <code>src/content/newsletter</code> and <code>src/content/authors</code>. Only content collections are allowed inside the <code>src/content</code> directory. This directory cannot be used for anything else.</p>
+<p>A <strong>collection entry</strong> is any piece of content stored inside of your content collection directory. Entries can use content authoring formats including Markdown (<code>.md</code>) and MDX (<code>.mdx</code> using the <a href="/en/guides/integrations-guide/mdx/">MDX integration</a>) or as one of two supported data formats: YAML (<code>.yaml</code>) and JSON (<code>.json</code>). We recommend using a consistent naming scheme (lower-case, dashes instead of spaces) for your files to make it easier to find and organize your content, but this is not required. You can also <a href="/en/guides/routing/#excluding-pages">exclude entries from being built</a> by prefixing the filename with an underscore (_).</p>
+<ul>
+<li>
+<p>Directorysrc/content/</p>
+<ul>
+<li>
+<p>Directory<strong>newsletter/</strong>  the “newsletter” collection</p>
+<ul>
+<li>week-1.md a collection entry</li>
+<li>week-2.md a collection entry</li>
+<li>week-3.md a collection entry</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>Once you have a collection, you can start <a href="#querying-collections">querying your content</a> using Astro’s built-in content APIs.</p>
+<h3 id="the-astro-directory">The “.astro” Directory</h3>
+<p><a href="#the-astro-directory">Section titled The “.astro” Directory</a>
+Astro stores important metadata for content collections in an <code>.astro</code> directory in your project. No action is needed on your part to maintain or update this directory. You are encouraged to ignore it entirely while working in your project.</p>
+<p>The <code>.astro</code> directory will be updated for you automatically anytime you run the <a href="/en/reference/cli-reference/#astro-dev"><code>astro dev</code></a>, <a href="/en/reference/cli-reference/#astro-build"><code>astro build</code></a> commands. You can run <a href="/en/reference/cli-reference/#astro-sync"><code>astro sync</code></a> at any time to update the <code>.astro</code> directory manually.</p>
+<p>Tip</p>
+<p>If you’re using Git for version control, we recommend ignoring the <code>.astro</code> directory by adding <code>.astro</code> to your <code>.gitignore</code>. This tells Git to ignore this directory and any files inside of it.</p>
+<h3 id="organizing-with-multiple-collections">Organizing with multiple collections</h3>
+<p><a href="#organizing-with-multiple-collections">Section titled Organizing with multiple collections</a>
+If two files represent different kinds of content (e.g. a blog post and an author profile), they most likely belong in different collections. This is important because many features (frontmatter validation, automatic TypeScript type-safety) require that all entries in a collection share a similar structure.</p>
+<p>If you find yourself working with different types of content, you should create multiple collections to represent each type. You can create as many different collections in your project as you’d like.</p>
+<ul>
+<li>
+<p>Directorysrc/content/</p>
+<ul>
+<li>Directory<strong>newsletter/</strong>
+<ul>
+<li>week-1.md</li>
+<li>week-2.md</li>
+</ul>
+</li>
+<li>Directory<strong>blog/</strong>
+<ul>
+<li>post-1.md</li>
+<li>post-2.md</li>
+</ul>
+</li>
+<li>Directory<strong>authors/</strong>
+<ul>
+<li>grace-hopper.json</li>
+<li>alan-turing.json</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="organizing-with-subdirectories">Organizing with subdirectories</h3>
+<p><a href="#organizing-with-subdirectories">Section titled Organizing with subdirectories</a>
+A content collection is always a top-level folder inside of the <code>src/content/</code> directory. You cannot nest one collection inside of another. However, you can use subdirectories to organize your content within a collection.</p>
+<p>For example, you can use the following directory structure to organize i18n translations within a single <code>docs</code> collection. When you query this collection, you’ll be able to filter the result by language using the file path.</p>
+<ul>
+<li>
+<p>Directorysrc/content/</p>
+<ul>
+<li>
+<p>Directorydocs/ this collection uses subdirectories to organize by language</p>
+<ul>
+<li>Directory<strong>en/</strong>
+<ul>
+<li>…</li>
+</ul>
+</li>
+<li>Directory<strong>es/</strong>
+<ul>
+<li>…</li>
+</ul>
+</li>
+<li>Directory<strong>de/</strong>
+<ul>
+<li>…</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="defining-collections">Defining Collections</h2>
+<p><a href="#defining-collections">Section titled Defining Collections</a>
+Note</p>
+<p>The <code>src/content/config.ts</code> file is optional. However, choosing not to define your collections will disable some of their best features like frontmatter schema validation or automatic TypeScript typings.</p>
+<p>To get the most out of your content collections, create a <code>src/content/config.ts</code> file in your project (<code>.js</code> and <code>.mjs</code> extensions are also supported.) This is a special file that Astro will automatically load and use to configure your content collections.</p>
+<p>src/content/config.ts</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>// 1. Import utilities from `astro:content`import { defineCollection } from 'astro:content';// 2. Define your collection(s)const blogCollection = defineCollection({ /* ... */ });// 3. Export a single `collections` object to register your collection(s)//    This key should match your collection directory name in "src/content"export const collections = {  'blog': blogCollection,};</span></span>
+<span class="line"><span></span></span></code></pre>
+<h3 id="setting-up-typescript">Setting up TypeScript</h3>
+<p><a href="#setting-up-typescript">Section titled Setting up TypeScript</a>
+If you <strong>do not</strong> already extend Astro’s <code>strict</code> or <code>strictest</code> recommended TypeScript settings in your <code>tsconfig.json</code> file, you may need to update your <code>tsconfig.json</code> to enable <code>strictNullChecks</code>.</p>
+<p>tsconfig.json</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>{  // Note: No change needed if you use "astro/tsconfigs/strict" or "astro/tsconfigs/strictest"  "extends": "astro/tsconfigs/base",  "compilerOptions": {    "strictNullChecks": true  }}</span></span>
+<span class="line"><span></span></span></code></pre>
+<p>If you use <code>.js</code> or <code>.mjs</code> files in an Astro project, you can enable IntelliSense and type checking in your editor by enabling <code>allowJs</code> in your <code>tsconfig.json</code>:</p>
+<p>tsconfig.json</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>{  // Note: No change needed if you use "astro/tsconfigs/strict" or "astro/tsconfigs/strictest"  "extends": "astro/tsconfigs/base",  "compilerOptions": {    "strictNullChecks": true,    "allowJs": true  }}</span></span>
+<span class="line"><span></span></span></code></pre>
+<h3 id="defining-a-collection-schema">Defining a collection schema</h3>
+<p><a href="#defining-a-collection-schema">Section titled Defining a collection schema</a>
+Schemas enforce consistent frontmatter or entry data within a collection. A schema <strong>guarantees</strong> that this data exists in a predictable form when you need to reference or query it. If any file violates its collection schema, Astro will provide a helpful error to let you know.</p>
+<p>Schemas also power Astro’s automatic TypeScript typings for your content. When you define a schema for your collection, Astro will automatically generate and apply a TypeScript interface to it. The result is full TypeScript support when you query your collection, including property autocompletion and type-checking.</p>
+<p>To define your first collection, create a <code>src/content/config.ts</code> file if one does not already exist (<code>.js</code> and <code>.mjs</code> extensions are also supported.) This file should:</p>
+<ol>
+<li><strong>Import the proper utilities</strong> from <code>astro:content</code>.</li>
+<li><strong>Define each collection that you’d like to validate.</strong> This includes a <code>type</code> (introduced in Astro v2.5.0) specifying whether the collection contains content authoring formats like Markdown (<code>type: 'content'</code>) or data formats like JSON or YAML (<code>type: 'data'</code>). It also includes a <code>schema</code> that defines the shape of your frontmatter or entry data.</li>
+<li><strong>Export a single <code>collections</code> object</strong> to register your collections.</li>
+</ol>
+<p>src/content/config.ts</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>// 1. Import utilities from `astro:content`import { z, defineCollection } from 'astro:content';</span></span>
+<span class="line"><span>// 2. Define a `type` and `schema` for each collectionconst blogCollection = defineCollection({  type: 'content', // v2.5.0 and later  schema: z.object({    title: z.string(),    tags: z.array(z.string()),    image: z.string().optional(),  }),});</span></span>
+<span class="line"><span>// 3. Export a single `collections` object to register your collection(s)export const collections = {  'blog': blogCollection,};</span></span>
+<span class="line"><span></span></span></code></pre>
+<h3 id="defining-multiple-collections">Defining multiple collections</h3>
+<p><a href="#defining-multiple-collections">Section titled Defining multiple collections</a>
+You can use <code>defineCollection()</code> as many times as you want to create multiple schemas. All collections must be exported from inside the single <code>collections</code> object.</p>
+<p>src/content/config.ts</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>const blogCollection = defineCollection({  type: 'content',  schema: z.object({ /* ... */ })});const newsletter = defineCollection({  type: 'content',  schema: z.object({ /* ... */ })});const authors = defineCollection({  type: 'data',  schema: z.object({ /* ... */ })});</span></span>
+<span class="line"><span>export const collections = {  'blog': blogCollection,  'newsletter': newsletter,  'authors': authors,};</span></span>
+<span class="line"><span></span></span></code></pre>
+<p>As your project grows, you are also free to reorganize your codebase and move logic out of the <code>src/content/config.ts</code> file. Defining your schemas separately can be useful for reusing schemas across multiple collections and sharing schemas with other parts of your project.</p>
+<p>src/content/config.ts</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>// 1. Import your utilities and schemasimport { defineCollection } from 'astro:content';import { blogSchema, authorSchema } from '../schemas';</span></span>
+<span class="line"><span>// 2. Define your collectionsconst blogCollection = defineCollection({  type: 'content',  schema: blogSchema,});const authorCollection = defineCollection({  type: 'data',  schema: authorSchema,});</span></span>
+<span class="line"><span>// 3. Export multiple collections to register themexport const collections = {  'blog': blogCollection,  'authors': authorCollection,};</span></span>
+<span class="line"><span></span></span></code></pre>
+<h3 id="using-third-party-collection-schemas">Using third-party collection schemas</h3>
+<p><a href="#using-third-party-collection-schemas">Section titled Using third-party collection schemas</a>
+You can import collection schemas from anywhere, including external npm packages. This can be useful when working with themes and libraries that provide their own collection schemas for you to use.</p>
+<p>src/content/config.ts</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>import { blogSchema } from 'my-blog-theme';const blogCollection = defineCollection({ type: 'content', schema: blogSchema });</span></span>
+<span class="line"><span>// Export the blog collection, using an external schema from 'my-blog-theme'export const collections = {  'blog': blogCollection,};</span></span>
+<span class="line"><span></span></span></code></pre>
+<h3 id="defining-datatypes-with-zod">Defining datatypes with Zod</h3>
+<p><a href="#defining-datatypes-with-zod">Section titled Defining datatypes with Zod</a>
+Astro uses <a href="https://github.com/colinhacks/zod">Zod</a> to power its content schemas. With Zod, Astro is able to validate every file’s frontmatter within a collection <em>and</em> provide automatic TypeScript types when you go to query content from inside your project.</p>
+<p>To use Zod in Astro, import the <code>z</code> utility from <code>"astro:content"</code>. This is a re-export of the Zod library, and it supports all of the features of Zod. See <a href="https://github.com/colinhacks/zod">Zod’s README</a> for complete documentation on how Zod works and what features are available.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>// Example: A cheatsheet of many common Zod datatypesimport { z, defineCollection } from 'astro:content';</span></span>
+<span class="line"><span>defineCollection({  schema: z.object({    isDraft: z.boolean(),    title: z.string(),    sortOrder: z.number(),    image: z.object({      src: z.string(),      alt: z.string(),    }),    author: z.string().default('Anonymous'),    language: z.enum(['en', 'es']),    tags: z.array(z.string()),    // An optional frontmatter property. Very common!    footnote: z.string().optional(),    // In frontmatter, dates written without quotes around them are interpreted as Date objects    publishDate: z.date(),    // You can also transform a date string (e.g. "2022-07-08") to a Date object    // publishDate: z.string().transform((str) => new Date(str)),    // Advanced: Validate that the string is also an email    authorContact: z.string().email(),    // Advanced: Validate that the string is also a URL    canonicalURL: z.string().url(),  })})</span></span>
+<span class="line"><span></span></span></code></pre>
+<h3 id="defining-collection-references">Defining collection references</h3>
+<p><a href="#defining-collection-references">Section titled Defining collection references</a>
+Collection entries can also “reference” other related entries.</p>
+<p>With the <code>reference()</code> function from the Collections API, you can define a property in a collection schema as an entry from another collection. For example, you can require that every <code>space-shuttle</code> entry includes a <code>pilot</code> property which uses the <code>pilot</code> collection’s own schema for type checking, autocomplete, and validation.</p>
+<p>A common example is a blog post that references reusable author profiles stored as JSON, or related post URLs stored in the same collection:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>import { defineCollection, reference, z } from 'astro:content';</span></span>
+<span class="line"><span>const blog = defineCollection({  type: 'content',  schema: z.object({    title: z.string(),    // Reference a single author from the `authors` collection by `id`    author: reference('authors'),    // Reference an array of related posts from the `blog` collection by `slug`    relatedPosts: z.array(reference('blog')),  })});</span></span>
+<span class="line"><span>const authors = defineCollection({  type: 'data',  schema: z.object({    name: z.string(),    portfolio: z.string().url(),  })});</span></span>
+<span class="line"><span>export const collections = { blog, authors };</span></span>
+<span class="line"><span></span></span></code></pre>
+<p>This example blog post specifies the <code>slug</code>s of related posts and the <code>id</code> of the post author:</p>
+<p>src/content/blog/welcome.md</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>---title: "Welcome to my blog"author: ben-holmes # references `src/content/authors/ben-holmes.json`relatedPosts:- about-me # references `src/content/blog/about-me.md`- my-year-in-review # references `src/content/blog/my-year-in-review.md`---</span></span>
+<span class="line"><span></span></span></code></pre>
+<h3 id="defining-custom-slugs">Defining custom slugs</h3>
+<p><a href="#defining-custom-slugs">Section titled Defining custom slugs</a>
+When using <code>type: 'content'</code>, every content entry generates a URL-friendly <code>slug</code> property from its <a href="/en/reference/modules/astro-content/#id">file <code>id</code></a>. The slug is used to query the entry directly from your collection. It is also useful when creating new pages and URLs from your content.</p>
+<p>You can override an entry’s generated slug by adding your own <code>slug</code> property to the file frontmatter. This is similar to the “permalink” feature of other web frameworks. <code>"slug"</code> is a special, reserved property name that is not allowed in your custom collection <code>schema</code> and will not appear in your entry’s <code>data</code> property.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>---title: My Blog Postslug: my-custom-slug/supports/slashes---Your blog post content here.</span></span>
+<span class="line"><span></span></span></code></pre>
+<h2 id="querying-collections">Querying Collections</h2>
+<p><a href="#querying-collections">Section titled Querying Collections</a>
+Astro provides two functions to query a collection and return one (or more) content entries: <a href="/en/reference/modules/astro-content/#getcollection"><code>getCollection()</code></a> and <a href="/en/reference/modules/astro-content/#getentry"><code>getEntry()</code></a>.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>import { getCollection, getEntry } from 'astro:content';</span></span>
+<span class="line"><span>// Get all entries from a collection.// Requires the name of the collection as an argument.// Example: retrieve `src/content/blog/**`const allBlogPosts = await getCollection('blog');</span></span>
+<span class="line"><span>// Get a single entry from a collection.// Requires the name of the collection and either// the entry `slug` (content collections) or `id` (data collections)// Example: retrieve `src/content/authors/grace-hopper.json`const graceHopperProfile = await getEntry('authors', 'grace-hopper');</span></span>
+<span class="line"><span></span></span></code></pre>
+<p>Both functions return content entries as defined by the <a href="/en/reference/modules/astro-content/#collectionentry"><code>CollectionEntry</code></a> type.</p>
+<h3 id="accessing-referenced-data">Accessing referenced data</h3>
+<p><a href="#accessing-referenced-data">Section titled Accessing referenced data</a>
+Any <a href="#defining-collection-references">references defined in your schema</a> must be queried separately after first querying your collection entry. You can use the <code>getEntry()</code> function again, or <code>getEntries()</code>, to retrieve the referenced entry from the returned <code>data</code> object.</p>
+<p>src/pages/blog/welcome.astro</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>---import { getEntry, getEntries } from 'astro:content';</span></span>
+<span class="line"><span>const blogPost = await getEntry('blog', 'welcome');</span></span>
+<span class="line"><span>// Resolve a singular referenceconst author = await getEntry(blogPost.data.author);// Resolve an array of referencesconst relatedPosts = await getEntries(blogPost.data.relatedPosts);---</span></span>
+<span class="line"><span>&#x3C;h1>{blogPost.data.title}&#x3C;/h1>&#x3C;p>Author: {author.data.name}&#x3C;/p></span></span>
+<span class="line"><span>&#x3C;!-- ... --></span></span>
+<span class="line"><span>&#x3C;h2>You might also like:&#x3C;/h2>{relatedPosts.map(p => (  &#x3C;a href={p.slug}>{p.data.title}&#x3C;/a>))}</span></span>
+<span class="line"><span></span></span></code></pre>
+<h3 id="filtering-collection-queries">Filtering collection queries</h3>
+<p><a href="#filtering-collection-queries">Section titled Filtering collection queries</a>
+<code>getCollection()</code> takes an optional “filter” callback that allows you to filter your query based on an entry’s <code>id</code> or <code>data</code> (frontmatter) properties. For collections of <code>type: 'content'</code>, you can also filter based on <code>slug</code>.</p>
+<p>Note</p>
+<p>The <code>slug</code> property is specific to content collections, and will not be available when filtering collections of JSON or YAML.</p>
+<p>You can use this to filter by any content criteria you like. For example, you can filter by properties like <code>draft</code> to prevent any draft blog posts from publishing to your blog:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>// Example: Filter out content entries with `draft: true`import { getCollection } from 'astro:content';const publishedBlogEntries = await getCollection('blog', ({ data }) => {  return data.draft !== true;});</span></span>
+<span class="line"><span></span></span></code></pre>
+<p>You can also create draft pages that are available when running the dev server, but not built in production:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>// Example: Filter out content entries with `draft: true` only when building for productionimport { getCollection } from 'astro:content';const blogEntries = await getCollection('blog', ({ data }) => {  return import.meta.env.PROD ? data.draft !== true : true;});</span></span>
+<span class="line"><span></span></span></code></pre>
+<p>The filter argument also supports filtering by nested directories within a collection. Since the <code>id</code> includes the full nested path, you can filter by the start of each <code>id</code> to only return items from a specific nested directory:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>// Example: Filter entries by sub-directory in the collectionimport { getCollection } from 'astro:content';const englishDocsEntries = await getCollection('docs', ({ id }) => {  return id.startsWith('en/');});</span></span>
+<span class="line"><span></span></span></code></pre>
+<h3 id="using-content-in-astro-templates">Using content in Astro templates</h3>
+<p><a href="#using-content-in-astro-templates">Section titled Using content in Astro templates</a>
+Once you have queried your collection entries, you can access each entry directly inside of your Astro component template. This lets you render HTML for things like links to your content (using the content <code>slug</code>) or information about your content (using the <code>data</code> property).</p>
+<p>For information about rendering your content to HTML, see <a href="#rendering-content-to-html">Rendering Content to HTML</a> below.</p>
+<p>src/pages/index.astro</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>---import { getCollection } from 'astro:content';const blogEntries = await getCollection('blog');---&#x3C;ul>  {blogEntries.map(blogPostEntry => (    &#x3C;li>      &#x3C;a href={`/my-blog-url/${blogPostEntry.slug}`}>{blogPostEntry.data.title}&#x3C;/a>      &#x3C;time datetime={blogPostEntry.data.publishedDate.toISOString()}>        {blogPostEntry.data.publishedDate.toDateString()}      &#x3C;/time>    &#x3C;/li>  ))}&#x3C;/ul></span></span>
+<span class="line"><span></span></span></code></pre>
+<h3 id="passing-content-as-props">Passing content as props</h3>
+<p><a href="#passing-content-as-props">Section titled Passing content as props</a>
+A component can also pass an entire content entry as a prop.</p>
+<p>If you do this, you can use the <a href="/en/reference/modules/astro-content/#collectionentry"><code>CollectionEntry</code></a> utility to correctly type your components props using TypeScript. This utility takes a string argument that matches the name of your collection schema, and will inherit all of the properties of that collection’s schema.</p>
+<p>src/components/BlogCard.astro</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>---import type { CollectionEntry } from 'astro:content';interface Props {  post: CollectionEntry&#x3C;'blog'>;}</span></span>
+<span class="line"><span>// `post` will match your 'blog' collection schema typeconst { post } = Astro.props;---</span></span>
+<span class="line"><span></span></span></code></pre>
+<h3 id="rendering-content-to-html">Rendering content to HTML</h3>
+<p><a href="#rendering-content-to-html">Section titled Rendering content to HTML</a>
+Once queried, you can render Markdown and MDX entries to HTML using the entry <code>render()</code> function property. Calling this function gives you access to rendered content and metadata, including both a <code>&#x3C;Content /></code> component and a list of all rendered headings.</p>
+<p>src/pages/render-example.astro</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>---import { getEntry } from 'astro:content';const entry = await getEntry('blog', 'post-1');const { Content, headings } = await entry.render();---&#x3C;p>Published on: {entry.data.published.toDateString()}&#x3C;/p>&#x3C;Content /></span></span>
+<span class="line"><span></span></span></code></pre>
+<h2 id="generating-routes-from-content">Generating Routes from Content</h2>
+<p><a href="#generating-routes-from-content">Section titled Generating Routes from Content</a>
+Content collections are stored outside of the <code>src/pages/</code> directory. This means that no routes are generated for your collection items by default. You will need to manually create a new <a href="/en/guides/routing/#dynamic-routes">dynamic route</a> to generate HTML pages from your collection entries. Your dynamic route will map the incoming request param (ex: <code>Astro.params.slug</code> in <code>src/pages/blog/[...slug].astro</code>) to fetch the correct entry inside a collection.</p>
+<p>The exact method for generating routes will depend on your build <a href="/en/reference/configuration-reference/#output"><code>output</code></a> mode: ‘static’ (the default) or ‘server’ (for SSR).</p>
+<h3 id="building-for-static-output-default">Building for static output (default)</h3>
+<p><a href="#building-for-static-output-default">Section titled Building for static output (default)</a>
+If you are building a static website (Astro’s default behavior), you would use the <a href="/en/reference/api-reference/#getstaticpaths"><code>getStaticPaths()</code></a> function to create multiple pages from a single <code>src/pages/</code> component during your build.</p>
+<p>Call <code>getCollection()</code> inside of <code>getStaticPaths()</code> to <a href="/en/guides/content-collections/#querying-collections">query your content or data collection</a>. Then, create your new URL paths using the <code>slug</code> property (content collections) or <code>id</code> property (data collections) of each content entry.</p>
+<p>src/pages/posts/[…slug].astro</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>---import { getCollection } from 'astro:content';// 1. Generate a new path for every collection entryexport async function getStaticPaths() {  const blogEntries = await getCollection('blog');  return blogEntries.map(entry => ({    params: { slug: entry.slug }, props: { entry },  }));}// 2. For your template, you can get the entry directly from the propconst { entry } = Astro.props;const { Content } = await entry.render();---&#x3C;h1>{entry.data.title}&#x3C;/h1>&#x3C;Content /></span></span>
+<span class="line"><span></span></span></code></pre>
+<p>This will generate a new page for every entry in the <code>blog</code> collection. For example, an entry at <code>src/content/blog/hello-world.md</code> will have a slug of <code>hello-world</code>, and therefore its final URL will be <code>/posts/hello-world/</code>.</p>
+<p>Note</p>
+<p>If your custom slugs contain the <code>/</code> character to produce URLs with multiple path segments, you must use a <a href="/en/guides/routing/#rest-parameters">rest parameter (<code>[...slug]</code>)</a> in the <code>.astro</code> filename for this dynamic routing page.</p>
+<h3 id="building-for-server-output-ssr">Building for server output (SSR)</h3>
+<p><a href="#building-for-server-output-ssr">Section titled Building for server output (SSR)</a>
+If you are building a dynamic website (using Astro’s SSR support), you are not expected to generate any paths ahead of time during the build. Instead, your page should examine the request (using <code>Astro.request</code> or <code>Astro.params</code>) to find the <code>slug</code> on-demand, and then fetch it using <a href="/en/reference/modules/astro-content/#getentry"><code>getEntry()</code></a>.</p>
+<p>src/pages/posts/[…slug].astro</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>---import { getEntry } from "astro:content";// 1. Get the slug from the incoming server requestconst { slug } = Astro.params;if (slug === undefined) {  throw new Error("Slug is required");}// 2. Query for the entry directly using the request slugconst entry = await getEntry("blog", slug);// 3. Redirect if the entry does not existif (entry === undefined) {  return Astro.redirect("/404");}// 4. (Optional) Render the entry to HTML in the templateconst { Content } = await entry.render();---</span></span>
+<span class="line"><span></span></span></code></pre>
+<p>Tip</p>
+<p>Explore the <code>src/pages/</code> folder of the <a href="https://github.com/withastro/blog-tutorial-demo/tree/content-collections/src/pages">blog tutorial demo code on GitHub</a> or <a href="https://stackblitz.com/github/withastro/blog-tutorial-demo/tree/content-collections?file=src/pages/blog.astro">open it in StackBlitz</a> to see full examples of creating pages from your collections for blog features like a list of blog posts, tags pages, and more!</p>
+<h2 id="migrating-from-file-based-routing">Migrating from File-Based Routing</h2>
+<p><a href="#migrating-from-file-based-routing">Section titled Migrating from File-Based Routing</a>
+If you have an existing Astro project, such as a blog, that uses Markdown or MDX files in subfolders inside <code>src/pages/</code>, consider migrating related content or data files to content collections.</p>
+<p>See how to convert a basic blog example from <code>src/pages/posts/</code> to <code>src/content/posts</code> in our <a href="/en/tutorials/add-content-collections/">step-by-step tutorial</a> that uses the codebase from <a href="https://github.com/withastro/blog-tutorial-demo">the Build a Blog tutorial’s finished project</a>.</p>
+<h2 id="enabling-json-schema-generation">Enabling JSON Schema Generation</h2>
+<p><a href="#enabling-json-schema-generation">Section titled Enabling JSON Schema Generation</a></p>
+<p><strong>Added in:</strong>
+<code>astro@4.13.0</code></p>
+<p>If you are working with collections of type <code>data</code>, Astro will auto-generate JSON schema files for your editor to get IntelliSense and type-checking. A separate file will be created for each data collection in your project based on your collections defined in <code>src/content/config.ts</code> using a library called <a href="https://github.com/StefanTerdell/zod-to-json-schema#known-issues"><code>zod-to-json-schema</code></a>.</p>
+<p>This feature requires you to manually set your schema’s file path as the value for <code>$schema</code> in each data entry file of the collection:</p>
+<p>src/content/authors/armand.json</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>{  "$schema": "../../../.astro/collections/authors.schema.json",  "name": "Armand",  "skills": ["Astro", "Starlight"]}</span></span>
+<span class="line"><span></span></span></code></pre>
+<p>Alternatively, you can set this value in your editor settings. For example, to set this value in <a href="https://code.visualstudio.com/docs/languages/json#_json-schemas-and-settings">VSCode’s <code>json.schemas</code> setting</a>, provide the path of files to match and the location of your JSON schema:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>{  "json.schemas": [    {      "fileMatch": [        "/src/content/authors/**"      ],      "url": "./.astro/collections/authors.schema.json"    }  ]}</span></span>
+<span class="line"><span></span></span></code></pre>
+<h2 id="enabling-build-caching">Enabling Build Caching</h2>
+<p><a href="#enabling-build-caching">Section titled Enabling Build Caching</a></p>
+<p><strong>Added in:</strong>
+<code>astro@3.5.0</code>
+Experimental</p>
+<p>If you are working with large collections, you may wish to enable cached builds with the <a href="/en/reference/configuration-reference/#experimentalcontentcollectioncache"><code>experimental.contentCollectionCache</code></a> flag. This experimental feature optimizes Astro’s build process, enabling unchanged collections to be stored and reused between builds.</p>
+<p>In many cases, this can lead to significant build performance improvements.</p>
+<p>While this feature stabilizes, you may run into issues with the stored cache. You can always reset your build cache by running the following command:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>npm run astro build -- --force</span></span>
+<span class="line"><span></span></span></code></pre>
+<h2 id="modifying-frontmatter-with-remark">Modifying Frontmatter with Remark</h2>
+<p><a href="#modifying-frontmatter-with-remark">Section titled Modifying Frontmatter with Remark</a>
+Caution</p>
+<p><strong>Not recommended.</strong> Remark and rehype plugins access the <em>raw</em> Markdown or MDX document frontmatter. This means that <code>remarkPluginFrontmatter</code> frontmatter is handled separately from your type-safe <code>schema</code>, and will not reflect any changes or defaults applied through Astro. Use at your own risk!</p>
+<p>Astro supports remark or rehype plugins that <a href="/en/guides/markdown-content/#modifying-frontmatter-programmatically">modify your frontmatter directly</a>. You can access this modified frontmatter inside of a content entry by using the <code>remarkPluginFrontmatter</code> property returned from <code>render()</code>:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>---import { getEntry } from 'astro:content';const blogPost = await getEntry('blog', 'post-1');const { remarkPluginFrontmatter } = await blogPost.render();---&#x3C;p>{blogPost.data.title} — {remarkPluginFrontmatter.readingTime}&#x3C;/p></span></span>
+<span class="line"><span></span></span></code></pre>
+<p><strong>Related recipe:</strong>
+<a href="/en/recipes/reading-time/">Add reading time</a></p>
+<p>The remark and rehype pipelines only run when your content is rendered, which explains why <code>remarkPluginFrontmatter</code> is only available after you call <code>render()</code> on your content entry. In contrast, <code>getCollection()</code> and <code>getEntry()</code> cannot return these values directly because they do not render your content.</p>
+<h2 id="working-with-dates-in-the-frontmatter">Working with dates in the frontmatter</h2>
+<p><a href="#working-with-dates-in-the-frontmatter">Section titled Working with dates in the frontmatter</a>
+Several date formats are possible in content collections, but your collection’s schema must match the format used in your Markdown or MDX YAML frontmatter.</p>
+<p>YAML uses the <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO-8601</a> standard to express dates. Use the format <code>yyyy-mm-dd</code> (e.g. <code>2021-07-28</code>) along with a schema type of <code>z.date()</code>:</p>
+<p>src/pages/posts/example-post.md</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>---title: My Blog PostpubDate: 2021-07-08---</span></span>
+<span class="line"><span></span></span></code></pre>
+<p>The date format will be specified in UTC if a timezone is not provided. If you need to specify a timezone, you can use the <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO 8601</a> format.</p>
+<p>src/pages/posts/example-post.md</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>---title: My Blog PostpubDate: 2021-07-08T12:00:00-04:00---</span></span>
+<span class="line"><span></span></span></code></pre>
+<p>To render only the <code>YYYY-MM-DD</code> from the full UTC timestamp, use the JavaScript <code>slice</code> method to remove the timestamp:</p>
+<p>src/layouts/ExampleLayout.astro</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>---const { frontmatter } = Astro.props;---&#x3C;h1>{frontmatter.title}&#x3C;/h1>&#x3C;p>{frontmatter.pubDate.toISOString().slice(0,10)}&#x3C;/p></span></span>
+<span class="line"><span></span></span></code></pre>
+<p>To see an example of using <code>toLocaleDateString</code> to format the day, month, and year instead, see the <a href="https://github.com/withastro/astro/blob/latest/examples/blog/src/components/FormattedDate.astro"><code>&#x3C;FormattedDate /></code> component</a> in the official Astro blog template.</p>
+<p>Learn</p> </div> <div class="prose-a:no-underline flex gap-2"> <span class="badge badge-outline badge-md"> <a href="/tags/tutorial/1/">tutorial</a> </span><span class="badge badge-outline badge-md"> <a href="/tags/Python/1/">Python</a> </span><span class="badge badge-outline badge-md"> <a href="/tags/Less/1/">Less</a> </span> </div> <div class="mt-4 flex justify-between"> <small>Publish on <span class="font-weight-bold">2024-02-26</span>，Update on <span class="font-weight-bold">2025-01-09</span></small> </div> </article> <div class="mt-12"> <div class="grid grid-cols-1 gap-4 md:grid-cols-3"> <div class="card mb-4 overflow-hidden rounded-xl border  transition-transform duration-500 hover:-translate-y-1 hover:scale-105"> <a href="/posts/learn-the-basics-basics-astro-pages/"> <picture> <source srcset="/_astro/photo-1463130456064-77fda7f96d6b_ZAMhtG.avif 392w, /_astro/photo-1463130456064-77fda7f96d6b_Z1MkAzp.avif 700w, /_astro/photo-1463130456064-77fda7f96d6b_zovdG.avif 980w, /_astro/photo-1463130456064-77fda7f96d6b_Z1fOymS.avif 1960w" type="image/avif" sizes="(max-width: 360px) 392px, 
+           (max-width: 720px) 700px, 
+           (max-width: 1600px) 980px, 
+           1960px"> <img src="/_astro/photo-1463130456064-77fda7f96d6b_Z1fOymS.avif" srcset="/_astro/photo-1463130456064-77fda7f96d6b_ZAMhtG.avif 392w, /_astro/photo-1463130456064-77fda7f96d6b_Z1MkAzp.avif 700w, /_astro/photo-1463130456064-77fda7f96d6b_zovdG.avif 980w, /_astro/photo-1463130456064-77fda7f96d6b_Z1fOymS.avif 1960w" alt="white concrete building wall" sizes="(max-width: 360px) 392px, 
+           (max-width: 720px) 700px, 
+           (max-width: 1600px) 980px, 
+           1960px" class="mx-auto w-full max-w-full object-cover" width="1960" height="1102" loading="lazy" decoding="async"> </picture> <div class="card-body"> <div class="flex items-center gap-1 text-xs"> <span class="badge badge-outline">documentation</span><span class="badge badge-outline">Python</span><span class="badge badge-outline">Less</span> </div> <p class="text-xs"><span class="font-weight-bold">2024-03-04</span></p> <h2 class="card-title">Pages</h2> </div> </a> </div><div class="card mb-4 overflow-hidden rounded-xl border  transition-transform duration-500 hover:-translate-y-1 hover:scale-105"> <a href="/posts/welcome-world-tutorial-0-introduction/"> <picture> <source srcset="/_astro/photo-1483366774565-c783b9f70e2c_jGYEQ.avif 392w, /_astro/photo-1483366774565-c783b9f70e2c_ZQPjpR.avif 700w, /_astro/photo-1483366774565-c783b9f70e2c_1uSMne.avif 980w, /_astro/photo-1483366774565-c783b9f70e2c_21yqnd.avif 1960w" type="image/avif" sizes="(max-width: 360px) 392px, 
+           (max-width: 720px) 700px, 
+           (max-width: 1600px) 980px, 
+           1960px"> <img src="/_astro/photo-1483366774565-c783b9f70e2c_21yqnd.avif" srcset="/_astro/photo-1483366774565-c783b9f70e2c_jGYEQ.avif 392w, /_astro/photo-1483366774565-c783b9f70e2c_ZQPjpR.avif 700w, /_astro/photo-1483366774565-c783b9f70e2c_1uSMne.avif 980w, /_astro/photo-1483366774565-c783b9f70e2c_21yqnd.avif 1960w" alt="worm's-eye view photography of concrete building" sizes="(max-width: 360px) 392px, 
+           (max-width: 720px) 700px, 
+           (max-width: 1600px) 980px, 
+           1960px" class="mx-auto w-full max-w-full object-cover" width="1960" height="1102" loading="lazy" decoding="async"> </picture> <div class="card-body"> <div class="flex items-center gap-1 text-xs"> <span class="badge badge-outline">astro-build</span><span class="badge badge-outline">Python</span><span class="badge badge-outline">Sass</span> </div> <p class="text-xs"><span class="font-weight-bold">2024-03-03</span></p> <h2 class="card-title">Build your first Astro Blog</h2> </div> </a> </div><div class="card mb-4 overflow-hidden rounded-xl border  transition-transform duration-500 hover:-translate-y-1 hover:scale-105"> <a href="/posts/routes-and-navigation-guides-view-transitions/"> <picture> <source srcset="/_astro/photo-1472377723522-4768db9c41ce_cr2OL.avif 392w, /_astro/photo-1472377723522-4768db9c41ce_ZY6gfW.avif 700w, /_astro/photo-1472377723522-4768db9c41ce_1nCPx9.avif 980w, /_astro/photo-1472377723522-4768db9c41ce_Z1EwWzk.avif 1960w" type="image/avif" sizes="(max-width: 360px) 392px, 
+           (max-width: 720px) 700px, 
+           (max-width: 1600px) 980px, 
+           1960px"> <img src="/_astro/photo-1472377723522-4768db9c41ce_Z1EwWzk.avif" srcset="/_astro/photo-1472377723522-4768db9c41ce_cr2OL.avif 392w, /_astro/photo-1472377723522-4768db9c41ce_ZY6gfW.avif 700w, /_astro/photo-1472377723522-4768db9c41ce_1nCPx9.avif 980w, /_astro/photo-1472377723522-4768db9c41ce_Z1EwWzk.avif 1960w" alt="white and brown concrete house near trees at daytime" sizes="(max-width: 360px) 392px, 
+           (max-width: 720px) 700px, 
+           (max-width: 1600px) 980px, 
+           1960px" class="mx-auto w-full max-w-full object-cover" width="1960" height="1102" loading="lazy" decoding="async"> </picture> <div class="card-body"> <div class="flex items-center gap-1 text-xs"> <span class="badge badge-outline">astro</span><span class="badge badge-outline">Python</span><span class="badge badge-outline">Less</span> </div> <p class="text-xs"><span class="font-weight-bold">2024-03-02</span></p> <h2 class="card-title">View Transitions</h2> </div> </a> </div> </div> </div> </main>  </main> <footer class="mx-auto mt-auto w-full max-w-[85rem] py-10"> <nav class="mx-auto w-full max-w-[85rem] px-4" aria-label="Footer"> <div class="flex flex-col items-center sm:flex-row sm:justify-between"> <div id="navbar-alignment" class="internal-links sm:order-2"> <div class="mt-2 flex flex-row gap-5 sm:mt-0 sm:flex-row sm:items-center sm:ps-5"> <a href="/posts/core-concepts-concepts-why-astro/" class="inline-flex gap-x-2 text-sm"> Astro </a><a href="/posts/assets-guides-styling/" class="inline-flex gap-x-2 text-sm"> Styling </a><a href="/tags/" class="inline-flex gap-x-2 text-sm"> Tags </a> </div> </div> <div class="mt-2 flex flex-wrap gap-2 sm:order-3 sm:mb-0 sm:gap-0"> <button type="button" class="relative inline-flex h-12 w-12 items-center gap-x-2 px-4 py-3 disabled:pointer-events-none disabled:opacity-50"> <a href="/rss.xml" class="absolute inset-0 z-10" aria-label="RSS"></a> <i class="i-tabler-rss icon-base"></i> </button><button type="button" class="relative inline-flex h-12 w-12 items-center gap-x-2 px-4 py-3 disabled:pointer-events-none disabled:opacity-50"> <a href="https://twitter.com/astrodotbuild" class="absolute inset-0 z-10" aria-label="Twitter"></a> <i class="i-tabler-brand-twitter icon-base"></i> </button><button type="button" class="relative inline-flex h-12 w-12 items-center gap-x-2 px-4 py-3 disabled:pointer-events-none disabled:opacity-50"> <a href="https://github.com/isooosi" class="absolute inset-0 z-10" aria-label="GitHub"></a> <i class="i-tabler-brand-github icon-base"></i> </button> </div> <div class="mt-2 sm:order-1 sm:mb-0"> <a class="flex-none text-sm" href="/" aria-label="Brand">AstroMelody &copy; 2025</a> </div> </div> </nav> </footer> </body></html>
